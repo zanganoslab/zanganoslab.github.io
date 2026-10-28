@@ -59,6 +59,57 @@ $("#servicios-lista").innerHTML = SERVICIOS.map((s) => `
     </div>
   </article>`).join("");
 
+/* ---------- Informes técnicos ---------- */
+const informesOrdenados = [...INFORMES].sort((a, b) => b.anio - a.anio);
+$("#informes-lista").innerHTML = informesOrdenados.map((r, k) => `
+  <article class="informe reveal">
+    <button class="informe-portada" data-informe="${k}" aria-label="Ver vista previa del informe">
+      <img src="${esc(r.paginas[0])}" alt="Portada del informe" loading="lazy">
+      <span>Vista previa</span>
+    </button>
+    <div class="informe-info">
+      <span class="informe-meta">${r.anio} · ${esc(r.solicitante)}</span>
+      <b>${cursiva(r.titulo)}</b>
+      <span class="informe-resumen">${cursiva(r.resumen)}</span>
+      <div class="informe-acciones">
+        <button class="btn btn-ghost btn-small" data-informe="${k}">Ver ${r.paginas.length} de ${r.totalPaginas} páginas</button>
+        <a class="btn btn-small" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent("Solicitud de informe: " + r.titulo)}">Solicitar informe completo</a>
+      </div>
+    </div>
+  </article>`).join("");
+
+/* Visor de la vista previa (páginas ampliadas) */
+const visor = $("#visor");
+const visorImg = visor.querySelector("img");
+let paginas = [], actual = 0;
+const mostrarPagina = (i) => {
+  actual = (i + paginas.length) % paginas.length;
+  visorImg.src = paginas[actual];
+  visorImg.alt = `Vista previa, página ${actual + 1} de ${paginas.length}`;
+  visor.querySelector(".visor-contador").textContent = `Vista previa · página ${actual + 1} de ${paginas.length}`;
+};
+const cerrarVisor = () => { visor.hidden = true; document.body.style.overflow = ""; };
+$("#informes-lista").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-informe]");
+  if (!b) return;
+  paginas = informesOrdenados[Number(b.dataset.informe)].paginas;
+  visor.querySelectorAll(".visor-nav").forEach((n) => (n.hidden = paginas.length < 2));
+  mostrarPagina(0);
+  visor.hidden = false;
+  document.body.style.overflow = "hidden";
+  visor.querySelector(".visor-cerrar").focus();
+});
+visor.querySelector(".visor-cerrar").addEventListener("click", cerrarVisor);
+visor.querySelector(".visor-ant").addEventListener("click", () => mostrarPagina(actual - 1));
+visor.querySelector(".visor-sig").addEventListener("click", () => mostrarPagina(actual + 1));
+visor.addEventListener("click", (e) => { if (e.target === visor) cerrarVisor(); });
+document.addEventListener("keydown", (e) => {
+  if (visor.hidden) return;
+  if (e.key === "Escape") cerrarVisor();
+  if (e.key === "ArrowLeft") mostrarPagina(actual - 1);
+  if (e.key === "ArrowRight") mostrarPagina(actual + 1);
+});
+
 /* ---------- Equipo ---------- */
 function tarjetaPersona(p) {
   const avatar = p.foto
@@ -86,6 +137,7 @@ const itemColaborador = (c) => c.perfil
   : `<li class="reveal"><b>${esc(c.nombre)}</b><span>${esc(c.inst)}</span></li>`;
 $("#colaboradores").innerHTML = COLABORADORES.map(itemColaborador).join("");
 $("#instituciones").innerHTML = INSTITUCIONES.map(itemColaborador).join("");
+$("#productores").innerHTML = PRODUCTORES.map(itemColaborador).join("");
 
 /* ---------- Publicaciones (búsqueda + filtro por año) ---------- */
 let anioActivo = "todos";

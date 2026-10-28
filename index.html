@@ -40,7 +40,7 @@
   <!-- Manual de identidad: Futura PT (principal) + Goldman (complementaria).
        Futura PT es de pago (Adobe Fonts); Jost es su equivalente libre más cercano. -->
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261028">
+  <link rel="stylesheet" href="css/styles.css?v=2026102803">
 </head>
 <body id="top">
 
@@ -134,8 +134,21 @@
         <h2>Ponemos la ciencia al servicio de la apicultura</h2>
         <p class="section-intro">Ofrecemos a apicultores, criaderos de reinas e instituciones la experiencia y las herramientas que desarrollamos en nuestras investigaciones.</p>
         <div class="servicios" id="servicios-lista"></div>
+
+        <h3 class="group-title" id="informes">Informes técnicos</h3>
+        <p class="section-intro">Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Por confidencialidad con nuestros clientes mostramos una vista previa; el informe completo puede solicitarse por correo.</p>
+        <div class="informes" id="informes-lista"></div>
       </div>
     </section>
+
+    <!-- Visor de la vista previa de informes -->
+    <div class="visor" id="visor" hidden>
+      <button class="visor-cerrar" aria-label="Cerrar">✕</button>
+      <button class="visor-nav visor-ant" aria-label="Página anterior">‹</button>
+      <img alt="">
+      <button class="visor-nav visor-sig" aria-label="Página siguiente">›</button>
+      <p class="visor-contador"></p>
+    </div>
 
     <!-- ============ EQUIPO ============ -->
     <section class="section" id="equipo">
@@ -155,6 +168,9 @@
 
         <h3 class="group-title">Instituciones educativas</h3>
         <ul class="collab" id="instituciones"></ul>
+
+        <h3 class="group-title">Productores, cooperativas y organizaciones</h3>
+        <ul class="collab" id="productores"></ul>
       </div>
     </section>
 
@@ -218,7 +234,7 @@
     </div>
   </footer>
 
-  <script src="js/datos.js?v=20261028"></script>
-  <script src="js/main.js?v=20261028"></script>
+  <script src="js/datos.js?v=2026102803"></script>
+  <script src="js/main.js?v=2026102803"></script>
 </body>
 </html>

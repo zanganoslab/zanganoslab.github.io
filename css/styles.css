@@ -162,6 +162,37 @@ mark {
 .servicio-para { font-size: .95rem; }
 .servicio-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.4rem; }
 
+/* Informes técnicos (vista previa + solicitud) */
+#informes { margin-top: 3.5rem; }
+.informes { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(460px, 100%), 1fr)); gap: 20px; }
+.informe {
+  display: flex; gap: 20px; align-items: flex-start; padding: 22px;
+  background: var(--fondo-alt); border: 1px solid var(--borde); border-radius: var(--radio);
+}
+.informe-portada {
+  flex: none; position: relative; width: 120px; padding: 0; border: 1px solid var(--borde); border-radius: 6px;
+  overflow: hidden; background: var(--blanco); cursor: zoom-in; box-shadow: 0 4px 14px rgba(48, 24, 17, .12);
+  transition: transform .2s;
+}
+.informe-portada:hover { transform: translateY(-2px) rotate(-1deg); }
+.informe-portada img { width: 100%; aspect-ratio: 210 / 297; object-fit: cover; object-position: top; }
+.informe-portada span {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 4px; text-align: center;
+  background: var(--cafe); color: var(--amarillo); font-family: var(--tech); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em;
+}
+.informe-info { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.informe-meta { font-family: var(--tech); font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--cafe-suave); }
+.informe b { font-size: 1.05rem; line-height: 1.3; }
+.informe-resumen { font-size: .92rem; color: var(--cafe-suave); }
+.informe-acciones { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.informe-acciones .btn { font-size: .85rem; cursor: pointer; font-family: inherit; }
+@media (max-width: 520px) {
+  .informe { flex-direction: column; }
+  .informe-portada { width: 140px; }
+}
+/* La vista previa del informe se muestra sobre fondo blanco, como una hoja */
+#visor img { background: var(--blanco); }
+
 /* ---------- Equipo ---------- */
 .group-title { margin: 2.5rem 0 1.2rem; padding-bottom: .4rem; border-bottom: 3px solid var(--amarillo); display: inline-block; }
 .team { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }

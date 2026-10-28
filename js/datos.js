@@ -62,6 +62,42 @@ const SERVICIOS = [
   }
 ];
 
+/* ---------- Informes técnicos ----------
+   Informes de servicios realizados. Por confidencialidad con los clientes solo se
+   muestra una vista previa (pocas páginas, sin mapas ni coordenadas) y el informe
+   completo se solicita por correo.
+   paginas: imágenes de la vista previa en img/informes/<carpeta>/01.jpg, 02.jpg…
+            se declaran con vistaPrevia("carpeta", cantidad).
+   Se ordenan solos, el más reciente primero. */
+const vistaPrevia = (carpeta, cantidad) =>
+  Array.from({ length: cantidad }, (_, i) => `img/informes/${carpeta}/${String(i + 1).padStart(2, "0")}.jpg`);
+const INFORMES = [
+  {
+    anio: 2023,
+    titulo: "Detección de áreas de apareamiento de abejas melíferas en Pirity, Villamontes, Bolivia",
+    solicitante: "Federación Regional de Apicultores del Gran Chaco y ONG Ayuda en Acción",
+    resumen: "Se identificaron dos ACZ cerca del Módulo de Crianza de Reinas de Pirity y se dictó un taller de campo sobre búsqueda de ACZ para más de 60 apicultores de distintas asociaciones de Bolivia.",
+    paginas: vistaPrevia("villamontes-2023", 3),
+    totalPaginas: 9
+  },
+  {
+    anio: 2019,
+    titulo: "Detección de áreas de apareamiento de abejas melíferas en Bandera Bajada, Santiago del Estero",
+    solicitante: "Cooperativa Coopsol",
+    resumen: "Se halló un ACZ en bosque chaqueño, con más de mil zánganos y sin infestación de Varroa: la primera ACZ encontrada por el equipo en un paisaje de bosque. Incluye recomendaciones para un plan reproductivo con genética local.",
+    paginas: vistaPrevia("bandera-bajada-2019", 3),
+    totalPaginas: 10
+  },
+  {
+    anio: 2019,
+    titulo: "Detección de áreas de apareamiento de abejas melíferas en San Salvador, Entre Ríos",
+    solicitante: "Reinas del Litoral",
+    resumen: "Se identificaron una zona de apareamiento principal y una satélite, se analizó la diversidad genética y el nivel de Varroa de los zánganos, y se propuso un plan reproductivo para el parque de fecundación de la cabaña.",
+    paginas: vistaPrevia("san-salvador-2019", 2),
+    totalPaginas: 5
+  }
+];
+
 /* ---------- Equipo ----------
    grupo: "principal" o "activos"
    foto: ruta a una imagen (ej. "img/equipo/alberto.jpg"). Si se deja vacío se muestran las iniciales. */
@@ -150,6 +186,7 @@ const COLABORADORES = [
   { nombre: "Robyn Underwood", inst: "Penn State University, EE. UU.", perfil: "https://www.researchgate.net/profile/Robyn-Underwood" },
   { nombre: "María Ayup", inst: "Profesora, Universidad Nacional de Tucumán (UNT)", perfil: "https://www.researchgate.net/profile/Maria-Ayup-2" },
   { nombre: "Rodrigo Velarde", inst: "", perfil: "https://orcid.org/0000-0002-3298-824X" }, // PENDIENTE: institución
+  { nombre: "Verónica Albarracín", inst: "LADEAS – Laboratorio de Diagnóstico de Enfermedades Apícolas, FAZ-UNT", perfil: "https://faz.unt.edu.ar/ladeas/" },
   { nombre: "José Marcelo Durand", inst: "FACET, UNT", perfil: "" }
 ];
 
@@ -159,6 +196,16 @@ const COLABORADORES = [
 const INSTITUCIONES = [
   { nombre: "Escuela de Agricultura y Sacarotecnia", inst: "Escuela preuniversitaria, UNT", perfil: "https://www.eas.unt.edu.ar/" },
   { nombre: "Escuela Técnica Prof. Rafael Marino", inst: "Secundaria técnica, Tafí Viejo", perfil: "https://escuela-tecnica-prof-r-marino.webnode.page/" }
+];
+
+/* ---------- Productores, cooperativas y organizaciones ----------
+   Productores apícolas y organizaciones con los que trabajamos. perfil: sitio web o red social (opcional). */
+const PRODUCTORES = [
+  { nombre: "Cooperativa Mora Micuna", inst: "Alberdi, Tucumán · Mario Gallo", perfil: "" },
+  { nombre: "Mieles Don Bordallo", inst: "Famaillá, Tucumán · Víctor Bordallo", perfil: "https://www.instagram.com/mielesdonbordallo/" },
+  { nombre: "Cooperativa Coopsol", inst: "Bandera Bajada, Santiago del Estero", perfil: "" },
+  { nombre: "Reinas del Litoral", inst: "Cabaña de reinas · San Salvador, Entre Ríos", perfil: "" },
+  { nombre: "Federación Regional de Apicultores del Gran Chaco", inst: "Villamontes, Bolivia · junto a la ONG Ayuda en Acción", perfil: "" }
 ];
 
 /* ---------- Publicaciones ----------
