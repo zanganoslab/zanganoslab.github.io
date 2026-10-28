@@ -5,6 +5,8 @@
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s = "") => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ESPECIES = /\b(Apis mellifera|A\. mellifera|Varroa destructor|V\. destructor|Nosema|Varroa|Apis)\b/g; // nombres científicos en cursiva
+const cursiva = (s = "") => esc(s).replace(ESPECIES, "<i>$1</i>");
 const fechaLarga = (iso) => {
   const [a, m, d] = iso.split("-").map(Number);
   return new Date(a, m - 1, d).toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" });
@@ -35,11 +37,11 @@ if (!n) {
 
   $("#articulo").innerHTML = `
     <p class="eyebrow">Noticias y eventos</p>
-    <h1>${esc(n.titulo)}</h1>
+    <h1>${cursiva(n.titulo)}</h1>
     <time class="articulo-fecha" datetime="${esc(n.fecha)}">${fechaLarga(n.fecha)}</time>
     ${fotos[0] ? `<button class="articulo-portada" data-i="0" aria-label="Ampliar foto"><img src="${esc(fotos[0])}" alt="Foto principal de la noticia"></button>` : ""}
     <div class="articulo-texto">
-      ${n.cuerpo.map((p) => `<p>${esc(p)}</p>`).join("")}
+      ${n.cuerpo.map((p) => `<p>${cursiva(p)}</p>`).join("")}
     </div>
     ${fotos.length > 1 ? `
       <h2 class="galeria-titulo">Galería <span>${fotos.length} fotos</span></h2>
@@ -97,7 +99,7 @@ $("#otras-noticias").innerHTML = ordenadas.filter((x) => x.id !== id).slice(0, 3
     ${x.fotos && x.fotos[0] ? `<img class="nota-portada" src="${esc(x.fotos[0])}" alt="" loading="lazy">` : `<div class="franja"></div>`}
     <div class="nota-body">
       <time datetime="${esc(x.fecha)}">${fechaLarga(x.fecha)}</time>
-      <h3>${esc(x.titulo)}</h3>
+      <h3>${cursiva(x.titulo)}</h3>
       <span class="nota-mas">Leer nota →</span>
     </div>
   </a>`).join("");

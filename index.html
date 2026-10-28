@@ -3,25 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zánganos Lab | Laboratorio de investigación en zánganos de Apis mellifera</title>
-  <meta name="description" content="Zánganos Lab: laboratorio pionero en el estudio integral de los zánganos de Apis mellifera. Biología, genética, comportamiento, sanidad y tecnología apícola. Tucumán, Argentina.">
+  <title>Zánganos Lab | Laboratorio de investigación en zánganos de Apis mellifera · IER-CONICET, Tucumán</title>
+  <meta name="description" content="Zánganos Lab (IER-CONICET, Tucumán, Argentina): laboratorio pionero en el estudio de los zánganos de Apis mellifera. Áreas de congregación de zánganos (ACZ), genética, sanidad, morfometría y tecnología apícola.">
   <meta name="theme-color" content="#301811">
   <link rel="icon" href="img/logo/icono.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/logo/icono.png">
-  <link rel="canonical" href="https://zanganoslab-coder.github.io/">
+  <link rel="canonical" href="https://zanganoslab.github.io/">
+  <!-- Google Search Console: pegue aquí la etiqueta de verificación que le dé Google, por ejemplo:
+       <meta name="google-site-verification" content="CODIGO"> -->
   <!-- Vista previa al compartir el enlace (WhatsApp, Facebook, LinkedIn…) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zanganoslab-coder.github.io/">
+  <meta property="og:url" content="https://zanganoslab.github.io/">
   <meta property="og:title" content="Zánganos Lab">
-  <meta property="og:description" content="Laboratorio de investigación en zánganos de Apis mellifera. Tucumán, Argentina.">
-  <meta property="og:image" content="https://zanganoslab-coder.github.io/img/logo/icono.png">
+  <meta property="og:description" content="Laboratorio de investigación en zánganos de Apis mellifera. IER-CONICET, Tucumán, Argentina.">
+  <meta property="og:image" content="https://zanganoslab.github.io/img/logo/icono.png">
   <meta name="twitter:card" content="summary">
+  <!-- Datos estructurados: ayudan a Google a entender quiénes somos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Zánganos Lab",
+    "alternateName": ["Laboratorio de Investigación en Zánganos", "Laboratorio de Zánganos IER-CONICET", "ZanganosLab"],
+    "description": "Laboratorio de investigación en zánganos de Apis mellifera: áreas de congregación de zánganos, genética, sanidad, morfometría y tecnología apícola.",
+    "url": "https://zanganoslab.github.io/",
+    "logo": "https://zanganoslab.github.io/img/logo/icono.png",
+    "email": "zanganoslab@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "San Miguel de Tucumán", "addressRegion": "Tucumán", "addressCountry": "AR" },
+    "parentOrganization": { "@type": "ResearchOrganization", "name": "Instituto de Ecología Regional (IER-CONICET-UNT)" },
+    "sameAs": ["https://www.instagram.com/zanganoslab.ier/"],
+    "knowsAbout": ["Apis mellifera", "zánganos", "áreas de congregación de zánganos", "apicultura", "sanidad apícola", "morfometría", "magnetorrecepción"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Manual de identidad: Futura PT (principal) + Goldman (complementaria).
        Futura PT es de pago (Adobe Fonts); Jost es su equivalente libre más cercano. -->
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=2026101902">
+  <link rel="stylesheet" href="css/styles.css?v=20261028">
 </head>
 <body id="top">
 
@@ -37,6 +56,7 @@
       <nav id="menu" class="menu">
         <a href="#nosotros">¿Quiénes somos?</a>
         <a href="#investigacion">Investigación</a>
+        <a href="#servicios">Servicios</a>
         <a href="#equipo">Equipo</a>
         <a href="#publicaciones">Publicaciones</a>
         <a href="#noticias">Noticias</a>
@@ -104,6 +124,16 @@
         <h2>Líneas de investigación</h2>
         <p class="section-intro">Buscamos comprender mejor la biología, el comportamiento, la fisiología y más características de los zánganos de <i>Apis mellifera</i>, contribuyendo a la apicultura y la conservación de las abejas.</p>
         <div class="cards" id="lineas"></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <p class="eyebrow">Servicios al público</p>
+        <h2>Ponemos la ciencia al servicio de la apicultura</h2>
+        <p class="section-intro">Ofrecemos a apicultores, criaderos de reinas e instituciones la experiencia y las herramientas que desarrollamos en nuestras investigaciones.</p>
+        <div class="servicios" id="servicios-lista"></div>
       </div>
     </section>
 
@@ -188,7 +218,7 @@
     </div>
   </footer>
 
-  <script src="js/datos.js?v=2026101902"></script>
-  <script src="js/main.js?v=2026101902"></script>
+  <script src="js/datos.js?v=20261028"></script>
+  <script src="js/main.js?v=20261028"></script>
 </body>
 </html>

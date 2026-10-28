@@ -139,6 +139,29 @@ mark {
 }
 .card p { color: var(--cafe-suave); font-size: .97rem; margin: 0; }
 
+/* ---------- Servicios ---------- */
+.servicios { display: grid; gap: 24px; }
+.servicio {
+  background: var(--blanco); border: 1px solid var(--borde); border-left: 6px solid var(--amarillo);
+  border-radius: var(--radio); padding: clamp(24px, 4vw, 40px); box-shadow: var(--sombra);
+}
+.servicio-cabecera { display: flex; align-items: center; gap: 18px; margin-bottom: 1rem; }
+.servicio .icono {
+  flex: none; width: 52px; height: 58px; display: grid; place-items: center; font-size: 1.5rem;
+  background: var(--amarillo); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.servicio h3 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); margin: 0; }
+.servicio > p { color: var(--cafe-suave); max-width: 760px; }
+.servicio-sub { font-family: var(--tech); text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: var(--cafe) !important; margin: 1.4rem 0 .6rem; }
+.servicio ul { list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px 24px; }
+.servicio li { position: relative; padding-left: 26px; font-size: .97rem; }
+.servicio li::before {
+  content: ""; position: absolute; left: 0; top: .35em; width: 14px; height: 16px; background: var(--amarillo);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.servicio-para { font-size: .95rem; }
+.servicio-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.4rem; }
+
 /* ---------- Equipo ---------- */
 .group-title { margin: 2.5rem 0 1.2rem; padding-bottom: .4rem; border-bottom: 3px solid var(--amarillo); display: inline-block; }
 .team { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }

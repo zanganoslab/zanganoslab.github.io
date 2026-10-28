@@ -6,6 +6,9 @@
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s = "") => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+// Nombres científicos en cursiva (la abreviatura "L." y "sp." quedan en redonda, como indica la norma)
+const ESPECIES = /\b(Apis mellifera|A\. mellifera|Varroa destructor|V\. destructor|Nosema|Varroa|Apis)\b/g;
+const cursiva = (s = "") => esc(s).replace(ESPECIES, "<i>$1</i>");
 const iniciales = (nombre) => nombre.split(/\s+/).filter(Boolean).slice(0, 2).map((p) => p[0]).join("").toUpperCase();
 
 /* ---------- Menú móvil ---------- */
@@ -28,7 +31,7 @@ $("#stats").innerHTML = [
   [PUBLICACIONES.length, "publicaciones científicas"],
   [EQUIPO.length, "integrantes del equipo"],
   [COLABORADORES.length, "colaboradores externos"],
-  [`${Math.min(...anios)}`, "primera DCA reportada en Argentina"]
+  [`${Math.min(...anios)}`, "primera ACZ reportada en Argentina"]
 ].map(([n, t]) => `<div class="stat reveal"><b>${n}</b><span>${t}</span></div>`).join("");
 
 /* ---------- Líneas de investigación ---------- */
@@ -36,7 +39,24 @@ $("#lineas").innerHTML = LINEAS.map((l) => `
   <article class="card reveal">
     <div class="icono" aria-hidden="true">${l.icono}</div>
     <h3>${esc(l.titulo)}</h3>
-    <p>${esc(l.texto)}</p>
+    <p>${cursiva(l.texto)}</p>
+  </article>`).join("");
+
+/* ---------- Servicios ---------- */
+$("#servicios-lista").innerHTML = SERVICIOS.map((s) => `
+  <article class="servicio reveal">
+    <div class="servicio-cabecera">
+      <div class="icono" aria-hidden="true">${s.icono}</div>
+      <h3>${cursiva(s.titulo)}</h3>
+    </div>
+    <p>${cursiva(s.texto)}</p>
+    ${s.incluye && s.incluye.length ? `<p class="servicio-sub">El servicio incluye</p>
+      <ul>${s.incluye.map((i) => `<li>${cursiva(i)}</li>`).join("")}</ul>` : ""}
+    ${s.destinatarios ? `<p class="servicio-para"><b>Dirigido a:</b> ${cursiva(s.destinatarios)}</p>` : ""}
+    <div class="servicio-acciones">
+      <a class="btn" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent("Consulta: " + s.titulo)}">Solicitar información</a>
+      <a class="btn btn-ghost" href="https://forms.gle/fyNdcRGHBRVpUUo99" target="_blank" rel="noopener">Completar formulario</a>
+    </div>
   </article>`).join("");
 
 /* ---------- Equipo ---------- */
@@ -54,7 +74,7 @@ function tarjetaPersona(p) {
       <div>
         <h4>${esc(p.nombre)}</h4>
         <p class="rol">${esc(p.rol)}</p>
-        <p>${esc(p.texto)}</p>
+        <p>${cursiva(p.texto)}</p>
         <div class="links">${links}</div>
       </div>
     </article>`;
@@ -93,10 +113,10 @@ function renderPubs() {
     <li class="pub">
       <div class="pub-anio">${p.anio}</div>
       <div>
-        <h3>${esc(p.titulo)}</h3>
+        <h3>${cursiva(p.titulo)}</h3>
         <p class="autores">${esc(p.autores)}</p>
         <p class="revista">${esc(p.revista)}</p>
-        ${p.resumen ? `<details><summary>Ver resumen</summary><p>${esc(p.resumen)}</p></details>` : ""}
+        ${p.resumen ? `<details><summary>Ver resumen</summary><p>${cursiva(p.resumen)}</p></details>` : ""}
         ${p.doi ? `<div class="acciones"><a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">Leer el artículo ↗</a><span>DOI: ${esc(p.doi)}</span></div>` : ""}
       </div>
     </li>`).join("");
@@ -116,8 +136,8 @@ $("#noticias-lista").innerHTML = [...NOTICIAS].sort((a, b) => b.fecha.localeComp
       : `<div class="franja"></div>`}
     <div class="nota-body">
       <time datetime="${esc(n.fecha)}">${fechaLarga(n.fecha)}</time>
-      <h3>${esc(n.titulo)}</h3>
-      <p>${esc(n.resumen)}</p>
+      <h3>${cursiva(n.titulo)}</h3>
+      <p>${cursiva(n.resumen)}</p>
       <span class="nota-mas">Leer nota${n.fotos && n.fotos.length > 1 ? ` · ${n.fotos.length} fotos` : ""} →</span>
     </div>
   </a>`).join("");

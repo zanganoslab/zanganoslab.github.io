@@ -10,17 +10,22 @@ const LINEAS = [
   {
     icono: "📍",
     titulo: "Áreas de congregación de zánganos",
-    texto: "Localizamos y caracterizamos las áreas de congregación (DCAs) donde zánganos y reinas se aparean, usando globos, barriletes y drones con feromonas."
+    texto: "Localizamos y caracterizamos las áreas de congregación de zánganos (ACZ), donde zánganos y reinas se aparean, usando globos, barriletes y drones con feromonas."
   },
   {
     icono: "🧲",
     titulo: "Magnetorrecepción",
-    texto: "Estudiamos la relación entre el campo magnético terrestre, la magnetita en el abdomen de los zánganos y la ubicación de las DCAs."
+    texto: "Estudiamos la relación entre el campo magnético terrestre, la magnetita en el abdomen de los zánganos y la ubicación de las ACZ."
   },
   {
     icono: "🔬",
     titulo: "Sanidad apícola",
-    texto: "Evaluamos Varroosis, Nosemosis y virus en apiarios y DCAs, y el papel de los zánganos en la dispersión de enfermedades."
+    texto: "Evaluamos varroosis, nosemosis y virus en apiarios y ACZ, y el papel de los zánganos en la dispersión de enfermedades."
+  },
+  {
+    icono: "📐",
+    titulo: "Morfometría",
+    texto: "Medimos la forma y el tamaño de alas y cuerpo de los zánganos colectados en las ACZ para estimar su origen, el grado de africanización y la calidad reproductiva de las poblaciones."
   },
   {
     icono: "🧬",
@@ -36,6 +41,24 @@ const LINEAS = [
     icono: "🤝",
     titulo: "Etnobiología y divulgación",
     texto: "Indagamos qué saben la comunidad científica y apícola sobre los zánganos, y compartimos el conocimiento a través de cursos y encuentros."
+  }
+];
+
+/* ---------- Servicios al público ----------
+   Para sumar un servicio, copie un bloque { ... } y complete los campos.
+   incluye: lista de lo que comprende el servicio (una línea por elemento). */
+const SERVICIOS = [
+  {
+    icono: "📍",
+    titulo: "Identificación de áreas de congregación de zánganos (ACZ)",
+    texto: "Localizamos y caracterizamos las ACZ cercanas a su apiario o criadero de reinas. Conocer dónde se aparean las reinas permite planificar la reproducción, conservar los ecotipos locales y vigilar la sanidad de los zánganos de la zona.",
+    incluye: [
+      "Análisis previo del paisaje con imágenes satelitales",
+      "Muestreo en campo con drones y señuelos con feromona",
+      "Georreferenciación y mapa de las ACZ encontradas",
+      "Informe con recomendaciones para el manejo reproductivo"
+    ],
+    destinatarios: "Apicultores, criaderos de reinas, cooperativas e instituciones."
   }
 ];
 
@@ -66,7 +89,7 @@ const EQUIPO = [
     nombre: "Harold Pulido-Guarín",
     rol: "Biólogo · Becario doctoral CONICET",
     foto: "img/equipo/harold-pulido.jpg",
-    texto: "Interesado en la ecología del paisaje y el comportamiento animal, especialmente en insectos y abejas nativas. Estudia la posible relación entre el campo magnético terrestre y las áreas de congregación de zánganos (DCAs) de Apis mellifera.",
+    texto: "Interesado en la ecología del paisaje y el comportamiento animal, especialmente en insectos y abejas nativas. Estudia la posible relación entre el campo magnético terrestre y las áreas de congregación de zánganos (ACZ) de Apis mellifera.",
     email: "hypg0315@gmail.com",
     researchgate: "https://www.researchgate.net/profile/Harold-Pulido-Guarin-2"
   },
@@ -91,7 +114,7 @@ const EQUIPO = [
     nombre: "Ailen Contreras",
     rol: "Estudiante de Biología · Fac. Cs. Naturales e IML, UNT",
     foto: "img/equipo/ailen-contreras.jpg",
-    texto: "Su estudio evalúa la morfometría de zánganos colectados en áreas de congregación (DCAs) de Apis mellifera.",
+    texto: "Su estudio evalúa la morfometría de zánganos colectados en áreas de congregación de zánganos (ACZ) de Apis mellifera.",
     email: "zanganoslab@gmail.com"
   },
   {
