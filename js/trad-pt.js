@@ -585,5 +585,19 @@ TRAD.pt = {
   "Registros de campo de Zánganos Lab":
     "Registros de campo do Zánganos Lab",
   "Informe técnico para la Cooperativa Coopsol (2019)":
-    "Relatório técnico para a Cooperativa Coopsol (2019)"
+    "Relatório técnico para a Cooperativa Coopsol (2019)",
+  "<span aria-hidden=\"true\">📍</span> Explorar el mapa de ACZ":
+    "<span aria-hidden=\"true\">📍</span> Explorar o mapa de ACZ",
+  "Áreas de congregación de zánganos confirmadas en América":
+    "Áreas de congregação de zangões confirmadas nas Américas",
+  "Localizamos cada área en el campo y la revisitamos en temporadas siguientes. Descubra dónde se reúnen los zánganos para aparearse en Argentina, Bolivia y Puerto Rico.":
+    "Localizamos cada área em campo e a revisitamos nas temporadas seguintes. Descubra onde os zangões se reúnem para acasalar na Argentina, na Bolívia e em Porto Rico.",
+  "<span aria-hidden=\"true\">📍</span> Explorar el mapa":
+    "<span aria-hidden=\"true\">📍</span> Explorar o mapa",
+  "Abrir el mapa de ACZ":
+    "Abrir o mapa de ACZ",
+  "Abrir el mapa →":
+    "Abrir o mapa →",
+  "ACZ confirmadas":
+    "ACZ confirmadas"
 };

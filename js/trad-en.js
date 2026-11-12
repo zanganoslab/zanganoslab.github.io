@@ -583,5 +583,19 @@ TRAD.en = {
   "Registros de campo de Zánganos Lab":
     "Zánganos Lab field records",
   "Informe técnico para la Cooperativa Coopsol (2019)":
-    "Technical report for the Coopsol Cooperative (2019)"
+    "Technical report for the Coopsol Cooperative (2019)",
+  "<span aria-hidden=\"true\">📍</span> Explorar el mapa de ACZ":
+    "<span aria-hidden=\"true\">📍</span> Explore the DCA map",
+  "Áreas de congregación de zánganos confirmadas en América":
+    "Confirmed drone congregation areas in the Americas",
+  "Localizamos cada área en el campo y la revisitamos en temporadas siguientes. Descubra dónde se reúnen los zánganos para aparearse en Argentina, Bolivia y Puerto Rico.":
+    "We locate each area in the field and revisit it in the following seasons. Discover where drones gather to mate in Argentina, Bolivia and Puerto Rico.",
+  "<span aria-hidden=\"true\">📍</span> Explorar el mapa":
+    "<span aria-hidden=\"true\">📍</span> Explore the map",
+  "Abrir el mapa de ACZ":
+    "Open the DCA map",
+  "Abrir el mapa →":
+    "Open the map →",
+  "ACZ confirmadas":
+    "confirmed DCAs"
 };

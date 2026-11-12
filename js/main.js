@@ -35,6 +35,44 @@ $("#stats").innerHTML = [
   [`${Math.min(...anios)}`, "primera ACZ reportada en Argentina"]
 ].map(([n, t]) => `<div class="stat reveal"><b>${n}</b><span>${tr(t)}</span></div>`).join("");
 
+/* ---------- Vista previa del mapa de ACZ (datos en js/acz.js) ---------- */
+if (typeof ACZ !== "undefined" && $("#mapa-home-cifras")) {
+  const confirmadasACZ = ACZ.filter((a) => a.estado === "confirmada").length;
+  const paisesACZ = new Set(ACZ.map((a) => a.pais)).size;
+  $("#mapa-home-cifras").innerHTML = [
+    [confirmadasACZ, "ACZ confirmadas"],
+    [paisesACZ, "países y territorios"],
+    [`${Math.round((confirmadasACZ / ACZ.length) * 100)} %`, "confirmadas por revisita"]
+  ].map(([n, t]) => `<div><b>${n}</b><span>${tr(t)}</span></div>`).join("");
+
+  // La biblioteca del mapa (Leaflet) se descarga recién cuando la sección está por verse
+  const cargarMini = () => {
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css";
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+    js.onload = () => {
+      const mini = L.map("mapa-mini", {
+        zoomControl: false, attributionControl: false, dragging: false, scrollWheelZoom: false,
+        doubleClickZoom: false, boxZoom: false, keyboard: false, touchZoom: false, tap: false
+      });
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19 }).addTo(mini);
+      mini.fitBounds(L.latLngBounds(ACZ.map((a) => [a.lat, a.lng])).pad(0.12));
+      ACZ.forEach((a) => L.circleMarker([a.lat, a.lng], {
+        radius: 7, weight: 2, color: "#fff", fillOpacity: 1,
+        fillColor: a.precision === "aproximada" ? "#a8a8a7" : a.estado === "confirmada" ? "#f6c401" : "#301811"
+      }).addTo(mini));
+    };
+    document.body.appendChild(js);
+  };
+  const obsMini = new IntersectionObserver((ent) => {
+    if (ent.some((e) => e.isIntersecting)) { obsMini.disconnect(); cargarMini(); }
+  }, { rootMargin: "300px" });
+  obsMini.observe($("#mapa-mini"));
+}
+
 /* ---------- Líneas de investigación ---------- */
 $("#lineas").innerHTML = LINEAS.map((l) => `
   <article class="card reveal">

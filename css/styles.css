@@ -364,19 +364,41 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
 .ig-cta b { color: var(--blanco); }
 .ig-flecha { margin-left: auto; font-size: 1.4rem; color: var(--amarillo) !important; }
 
-/* Acceso al mapa desde la portada */
-.mapa-cta {
-  display: flex; align-items: center; gap: 18px; margin-top: 28px; padding: 22px 26px;
-  background: var(--amarillo); color: var(--cafe); border-radius: var(--radio); text-decoration: none;
-  transition: transform .2s, box-shadow .2s;
+/* ---------- Mapa de ACZ en la portada ---------- */
+/* Botón amarillo destacado (portada y sección del mapa) */
+.btn-mapa { background: var(--amarillo); border-color: var(--amarillo); color: var(--cafe); }
+.btn-mapa:hover { background: var(--cafe); border-color: var(--cafe); color: var(--amarillo); }
+
+/* Sección con vista previa del mapa, sobre fondo café */
+.mapa-home { background: var(--cafe); color: var(--blanco); padding: clamp(48px, 7vw, 84px) 0; }
+.mapa-home-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; }
+.mapa-home .eyebrow { color: var(--amarillo); }
+.mapa-home h2 { color: var(--blanco); }
+.mapa-home-texto > p { color: #e6dcd8; font-size: 1.05rem; }
+.mapa-home-cifras { display: flex; flex-wrap: wrap; gap: 28px; margin: 24px 0 28px; }
+.mapa-home-cifras b { display: block; font-family: var(--tech); font-size: 2.2rem; color: var(--amarillo); line-height: 1.1; }
+.mapa-home-cifras span { font-size: .88rem; color: var(--gris); }
+.mapa-home-vista {
+  position: relative; display: block; border-radius: var(--radio); overflow: hidden; text-decoration: none;
+  border: 3px solid var(--amarillo); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); transition: transform .25s;
 }
-.mapa-cta:hover { transform: translateY(-2px); box-shadow: var(--sombra); }
-.mapa-cta b { display: block; font-size: 1.15rem; }
-.mapa-cta-icono {
-  flex: none; width: 52px; height: 58px; display: grid; place-items: center; font-size: 1.5rem; background: var(--cafe);
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+.mapa-home-vista:hover { transform: translateY(-4px) rotate(-.5deg); }
+#mapa-mini { height: 420px; background: #dfe8ea; pointer-events: none; z-index: 0; }
+.mapa-home-abrir {
+  position: absolute; right: 14px; bottom: 14px; z-index: 500; padding: 8px 16px; border-radius: 999px;
+  background: var(--cafe); color: var(--amarillo); font-weight: 600; font-size: .92rem;
 }
-.mapa-cta .ig-flecha { color: var(--cafe) !important; }
+@media (max-width: 900px) {
+  .mapa-home-grid { grid-template-columns: 1fr; gap: 28px; }
+  #mapa-mini { height: 320px; }
+}
+
+/* "Mapa ACZ" resaltado en el menú con un hexágono amarillo */
+.menu a[href^="mapa.html"]::before {
+  content: ""; display: inline-block; width: 11px; height: 12px; margin-right: 6px; vertical-align: -1px;
+  background: var(--amarillo); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.menu a[href^="mapa.html"] { font-weight: 600; }
 
 /* ---------- Mapa de ACZ (mapa.html) ---------- */
 .mapa-intro { padding-bottom: 32px; }
