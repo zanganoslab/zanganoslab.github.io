@@ -8,7 +8,8 @@ const $ = (sel) => document.querySelector(sel);
 const esc = (s = "") => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 // Nombres científicos en cursiva (la abreviatura "L." y "sp." quedan en redonda, como indica la norma)
 const ESPECIES = /\b(Apis mellifera|A\. mellifera|Varroa destructor|V\. destructor|Nosema|Varroa|Apis)\b/g;
-const cursiva = (s = "") => esc(s).replace(ESPECIES, "<i>$1</i>");
+// tr() traduce al idioma elegido (js/i18n.js); si no hay traducción, deja el español
+const cursiva = (s = "") => esc(tr(s)).replace(ESPECIES, "<i>$1</i>");
 const iniciales = (nombre) => nombre.split(/\s+/).filter(Boolean).slice(0, 2).map((p) => p[0]).join("").toUpperCase();
 
 /* ---------- Menú móvil ---------- */
@@ -32,13 +33,13 @@ $("#stats").innerHTML = [
   [EQUIPO.length, "integrantes del equipo"],
   [COLABORADORES.length, "colaboradores externos"],
   [`${Math.min(...anios)}`, "primera ACZ reportada en Argentina"]
-].map(([n, t]) => `<div class="stat reveal"><b>${n}</b><span>${t}</span></div>`).join("");
+].map(([n, t]) => `<div class="stat reveal"><b>${n}</b><span>${tr(t)}</span></div>`).join("");
 
 /* ---------- Líneas de investigación ---------- */
 $("#lineas").innerHTML = LINEAS.map((l) => `
   <article class="card reveal">
     <div class="icono" aria-hidden="true">${l.icono}</div>
-    <h3>${esc(l.titulo)}</h3>
+    <h3>${cursiva(l.titulo)}</h3>
     <p>${cursiva(l.texto)}</p>
   </article>`).join("");
 
@@ -50,12 +51,12 @@ $("#servicios-lista").innerHTML = SERVICIOS.map((s) => `
       <h3>${cursiva(s.titulo)}</h3>
     </div>
     <p>${cursiva(s.texto)}</p>
-    ${s.incluye && s.incluye.length ? `<p class="servicio-sub">El servicio incluye</p>
+    ${s.incluye && s.incluye.length ? `<p class="servicio-sub">${tr("El servicio incluye")}</p>
       <ul>${s.incluye.map((i) => `<li>${cursiva(i)}</li>`).join("")}</ul>` : ""}
-    ${s.destinatarios ? `<p class="servicio-para"><b>Dirigido a:</b> ${cursiva(s.destinatarios)}</p>` : ""}
+    ${s.destinatarios ? `<p class="servicio-para"><b>${tr("Dirigido a:")}</b> ${cursiva(s.destinatarios)}</p>` : ""}
     <div class="servicio-acciones">
-      <a class="btn" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent("Consulta: " + s.titulo)}">Solicitar información</a>
-      <a class="btn btn-ghost" href="https://forms.gle/fyNdcRGHBRVpUUo99" target="_blank" rel="noopener">Completar formulario</a>
+      <a class="btn" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent(tr("Consulta: ") + tr(s.titulo))}">${tr("Solicitar información")}</a>
+      <a class="btn btn-ghost" href="https://forms.gle/fyNdcRGHBRVpUUo99" target="_blank" rel="noopener">${tr("Completar formulario")}</a>
     </div>
   </article>`).join("");
 
@@ -63,17 +64,17 @@ $("#servicios-lista").innerHTML = SERVICIOS.map((s) => `
 const informesOrdenados = [...INFORMES].sort((a, b) => b.anio - a.anio);
 $("#informes-lista").innerHTML = informesOrdenados.map((r, k) => `
   <article class="informe reveal">
-    <button class="informe-portada" data-informe="${k}" aria-label="Ver vista previa del informe">
-      <img src="${esc(r.paginas[0])}" alt="Portada del informe" loading="lazy">
-      <span>Vista previa</span>
+    <button class="informe-portada" data-informe="${k}" aria-label="${tr("Ver vista previa del informe")}">
+      <img src="${esc(r.paginas[0])}" alt="${tr("Portada del informe")}" loading="lazy">
+      <span>${tr("Vista previa")}</span>
     </button>
     <div class="informe-info">
-      <span class="informe-meta">${r.anio} · ${esc(r.solicitante)}</span>
+      <span class="informe-meta">${r.anio} · ${cursiva(r.solicitante)}</span>
       <b>${cursiva(r.titulo)}</b>
       <span class="informe-resumen">${cursiva(r.resumen)}</span>
       <div class="informe-acciones">
-        <button class="btn btn-ghost btn-small" data-informe="${k}">Ver ${r.paginas.length} de ${r.totalPaginas} páginas</button>
-        <a class="btn btn-small" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent("Solicitud de informe: " + r.titulo)}">Solicitar informe completo</a>
+        <button class="btn btn-ghost btn-small" data-informe="${k}">${tr("Ver {n} de {t} páginas", { n: r.paginas.length, t: r.totalPaginas })}</button>
+        <a class="btn btn-small" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent(tr("Solicitud de informe: ") + tr(r.titulo))}">${tr("Solicitar informe completo")}</a>
       </div>
     </div>
   </article>`).join("");
@@ -85,8 +86,8 @@ let paginas = [], actual = 0;
 const mostrarPagina = (i) => {
   actual = (i + paginas.length) % paginas.length;
   visorImg.src = paginas[actual];
-  visorImg.alt = `Vista previa, página ${actual + 1} de ${paginas.length}`;
-  visor.querySelector(".visor-contador").textContent = `Vista previa · página ${actual + 1} de ${paginas.length}`;
+  visorImg.alt = tr("Vista previa, página {n} de {t}", { n: actual + 1, t: paginas.length });
+  visor.querySelector(".visor-contador").textContent = tr("Vista previa · página {n} de {t}", { n: actual + 1, t: paginas.length });
 };
 const cerrarVisor = () => { visor.hidden = true; document.body.style.overflow = ""; };
 $("#informes-lista").addEventListener("click", (e) => {
@@ -113,7 +114,7 @@ document.addEventListener("keydown", (e) => {
 /* ---------- Equipo ---------- */
 function tarjetaPersona(p) {
   const avatar = p.foto
-    ? `<img class="avatar" src="${esc(p.foto)}" alt="Foto de ${esc(p.nombre)}" loading="lazy">`
+    ? `<img class="avatar" src="${esc(p.foto)}" alt="${esc(tr("Foto de {nombre}", { nombre: p.nombre }))}" loading="lazy">`
     : `<div class="avatar" aria-hidden="true">${iniciales(p.nombre)}</div>`;
   const links = [
     p.email && `<a href="mailto:${esc(p.email)}">✉ ${esc(p.email)}</a>`,
@@ -124,7 +125,7 @@ function tarjetaPersona(p) {
       ${avatar}
       <div>
         <h4>${esc(p.nombre)}</h4>
-        <p class="rol">${esc(p.rol)}</p>
+        <p class="rol">${cursiva(p.rol)}</p>
         <p>${cursiva(p.texto)}</p>
         <div class="links">${links}</div>
       </div>
@@ -133,8 +134,8 @@ function tarjetaPersona(p) {
 $("#equipo-principal").innerHTML = EQUIPO.filter((p) => p.grupo === "principal").map(tarjetaPersona).join("");
 $("#equipo-activos").innerHTML = EQUIPO.filter((p) => p.grupo === "activos").map(tarjetaPersona).join("");
 const itemColaborador = (c) => c.perfil
-  ? `<li class="reveal"><a href="${esc(c.perfil)}" target="_blank" rel="noopener"><b>${esc(c.nombre)} ↗</b><span>${esc(c.inst)}</span></a></li>`
-  : `<li class="reveal"><b>${esc(c.nombre)}</b><span>${esc(c.inst)}</span></li>`;
+  ? `<li class="reveal"><a href="${esc(c.perfil)}" target="_blank" rel="noopener"><b>${esc(c.nombre)} ↗</b><span>${cursiva(c.inst)}</span></a></li>`
+  : `<li class="reveal"><b>${esc(c.nombre)}</b><span>${cursiva(c.inst)}</span></li>`;
 $("#colaboradores").innerHTML = COLABORADORES.map(itemColaborador).join("");
 $("#instituciones").innerHTML = INSTITUCIONES.map(itemColaborador).join("");
 $("#productores").innerHTML = PRODUCTORES.map(itemColaborador).join("");
@@ -144,7 +145,7 @@ let anioActivo = "todos";
 const aniosUnicos = [...new Set(anios)].sort((a, b) => b - a);
 const chips = $("#pub-anios");
 chips.innerHTML = ["todos", ...aniosUnicos].map((a) =>
-  `<button class="chip" data-anio="${a}" aria-pressed="${a === "todos"}">${a === "todos" ? "Todos" : a}</button>`).join("");
+  `<button class="chip" data-anio="${a}" aria-pressed="${a === "todos"}">${a === "todos" ? tr("Todos") : a}</button>`).join("");
 chips.addEventListener("click", (e) => {
   const b = e.target.closest(".chip");
   if (!b) return;
@@ -168,8 +169,8 @@ function renderPubs() {
         <h3>${cursiva(p.titulo)}</h3>
         <p class="autores">${esc(p.autores)}</p>
         <p class="revista">${esc(p.revista)}</p>
-        ${p.resumen ? `<details><summary>Ver resumen</summary><p>${cursiva(p.resumen)}</p></details>` : ""}
-        ${p.doi ? `<div class="acciones"><a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">Leer el artículo ↗</a><span>DOI: ${esc(p.doi)}</span></div>` : ""}
+        ${p.resumen ? `<details><summary>${tr("Ver resumen")}</summary><p>${cursiva(p.resumen)}</p></details>` : ""}
+        ${p.doi ? `<div class="acciones"><a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">${tr("Leer el artículo ↗")}</a><span>DOI: ${esc(p.doi)}</span></div>` : ""}
       </div>
     </li>`).join("");
   $("#pub-vacio").hidden = lista.length > 0;
@@ -177,10 +178,7 @@ function renderPubs() {
 renderPubs();
 
 /* ---------- Noticias ---------- */
-function fechaLarga(iso) {
-  const [a, m, d] = iso.split("-").map(Number);
-  return new Date(a, m - 1, d).toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" });
-}
+// fechaLarga() está en js/i18n.js (usa el idioma elegido)
 $("#noticias-lista").innerHTML = [...NOTICIAS].sort((a, b) => b.fecha.localeCompare(a.fecha)).map((n) => `
   <a class="nota reveal" href="noticia.html?id=${encodeURIComponent(n.id)}">
     ${n.fotos && n.fotos.length
@@ -190,38 +188,38 @@ $("#noticias-lista").innerHTML = [...NOTICIAS].sort((a, b) => b.fecha.localeComp
       <time datetime="${esc(n.fecha)}">${fechaLarga(n.fecha)}</time>
       <h3>${cursiva(n.titulo)}</h3>
       <p>${cursiva(n.resumen)}</p>
-      <span class="nota-mas">Leer nota${n.fotos && n.fotos.length > 1 ? ` · ${n.fotos.length} fotos` : ""} →</span>
+      <span class="nota-mas">${tr("Leer nota")}${n.fotos && n.fotos.length > 1 ? " · " + tr("{n} fotos", { n: n.fotos.length }) : ""} →</span>
     </div>
   </a>`).join("");
 
 /* ---------- Multimedia ---------- */
-const ETIQUETA_MEDIO = { video: "Video", audio: "Audio", facebook: "Video · Facebook", youtube: "Video · YouTube" };
+const ETIQUETA_MEDIO = { video: tr("Video"), audio: tr("Audio"), facebook: tr("Video") + " · Facebook", youtube: tr("Video") + " · YouTube" };
 const idYouTube = (url) => (url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/) || [])[1];
 
 function reproductor(m) {
   if (m.tipo === "video") {
     return `<video controls preload="none" playsinline poster="${esc(m.portada || "")}">
       <source src="${esc(m.archivo)}" type="video/mp4">
-      Su navegador no puede reproducir este video. <a href="${esc(m.archivo)}">Descárguelo aquí</a>.
+      ${tr("Su navegador no puede reproducir este video.")} <a href="${esc(m.archivo)}">${tr("Descárguelo aquí")}</a>.
     </video>`;
   }
   if (m.tipo === "audio") {
     return `<audio controls preload="none" src="${esc(m.archivo)}">
-      Su navegador no puede reproducir este audio. <a href="${esc(m.archivo)}">Descárguelo aquí</a>.
+      ${tr("Su navegador no puede reproducir este audio.")} <a href="${esc(m.archivo)}">${tr("Descárguelo aquí")}</a>.
     </audio>`;
   }
   if (m.tipo === "facebook") {
     const src = "https://www.facebook.com/plugins/video.php?show_text=false&width=380&href=" + encodeURIComponent(m.enlace);
-    return `<div class="marco-vertical"><iframe src="${src}" title="${esc(m.titulo)}" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+    return `<div class="marco-vertical"><iframe src="${src}" title="${esc(tr(m.titulo))}" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
   }
   if (m.tipo === "youtube" && idYouTube(m.enlace)) {
-    return `<div class="marco-horizontal"><iframe src="https://www.youtube-nocookie.com/embed/${idYouTube(m.enlace)}" title="${esc(m.titulo)}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`;
+    return `<div class="marco-horizontal"><iframe src="https://www.youtube-nocookie.com/embed/${idYouTube(m.enlace)}" title="${esc(tr(m.titulo))}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`;
   }
   return "";
 }
 
 function tarjetaMedio(m) {
-  const meta = [ETIQUETA_MEDIO[m.tipo], m.medio, m.fecha, m.duracion].filter(Boolean).map(esc).join(" · ");
+  const meta = [ETIQUETA_MEDIO[m.tipo], tr(m.medio), m.fecha, m.duracion].filter(Boolean).map(esc).join(" · ");
   return `
     <article class="medio medio-${esc(m.tipo)}${m.destacado ? " medio-destacado" : ""} reveal">
       <div class="medio-reproductor">${reproductor(m)}</div>
@@ -229,14 +227,15 @@ function tarjetaMedio(m) {
         <span class="medio-meta">${meta}</span>
         <h3>${cursiva(m.titulo)}</h3>
         ${m.descripcion ? `<p>${cursiva(m.descripcion)}</p>` : ""}
-        ${m.enlace ? `<a href="${esc(m.enlace)}" target="_blank" rel="noopener">Ver en ${m.tipo === "youtube" ? "YouTube" : "Facebook"} ↗</a>` : ""}
+        ${m.enlace ? `<a href="${esc(m.enlace)}" target="_blank" rel="noopener">${tr("Ver en {red} ↗", { red: m.tipo === "youtube" ? "YouTube" : "Facebook" })}</a>` : ""}
       </div>
     </article>`;
 }
 $("#multimedia-destacado").innerHTML = MULTIMEDIA.filter((m) => m.destacado).map(tarjetaMedio).join("");
 $("#multimedia-lista").innerHTML = MULTIMEDIA.filter((m) => !m.destacado).map(tarjetaMedio).join("");
 
-/* ---------- Pie y resaltado del menú ---------- */
+/* ---------- Pie, idioma de los enlaces y resaltado del menú ---------- */
+enlacesConIdioma();
 $("#anio").textContent = new Date().getFullYear();
 
 const enlaces = [...menu.querySelectorAll("a[href^='#']")];

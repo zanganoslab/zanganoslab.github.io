@@ -25,3 +25,11 @@ zanganos-lab/
 - **GitHub Pages:** suba la carpeta a un repositorio → Settings → Pages → rama `main`. Queda en `usuario.github.io/repositorio`.
 - **Netlify Drop:** arrastre la carpeta a https://app.netlify.com/drop.
 - Ambos permiten conectar un dominio propio (ej. `zanganoslab.com.ar`).
+
+## Idiomas (español, inglés y portugués)
+
+- El selector **ES · EN · PT** está arriba a la derecha. Cada idioma tiene su dirección: `?lang=en`, `?lang=pt`.
+- El español es el original: el contenido se sigue editando en `js/datos.js` y `js/acz.js`.
+- Las traducciones están en `js/trad-en.js` y `js/trad-pt.js`, como pares `"texto en español": "traducción"`.
+- **Al agregar o cambiar un texto en español**, agregue su par en los dos archivos de traducción, copiando el texto en español exactamente igual. Si falta, la página lo muestra en español (no se rompe).
+- Terminología: en inglés "drone congregation area (DCA)"; en portugués "área de congregação de zangões (ACZ)".

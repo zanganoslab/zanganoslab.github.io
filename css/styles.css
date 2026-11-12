@@ -79,10 +79,21 @@ mark {
   background: rgba(255, 255, 255, .94); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--borde);
 }
+.site-header .container { width: min(1320px, 100% - 32px); }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 84px; gap: 16px; }
 /* Tamaño mínimo digital del isologo horizontal: 160 px de ancho (manual 2.5) */
 .brand img { width: 170px; height: auto; }
-.menu { display: flex; align-items: center; gap: 26px; }
+.menu { display: flex; align-items: center; gap: 22px; margin-left: auto; }
+
+/* Selector de idioma (ES · EN · PT) */
+.menu { order: 1; }
+.idiomas { order: 2; }
+.nav-toggle { order: 3; }
+.idiomas { display: flex; flex: none; border: 1px solid var(--borde); border-radius: 999px; overflow: hidden; font-family: var(--tech); font-size: .78rem; }
+.idiomas a { padding: 6px 10px; color: var(--cafe-suave); text-decoration: none; letter-spacing: .04em; }
+.idiomas a + a { border-left: 1px solid var(--borde); }
+.idiomas a:hover { color: var(--cafe); background: var(--fondo-alt); }
+.idiomas a[aria-current] { background: var(--cafe); color: var(--amarillo); }
 .menu a:not(.btn) { color: var(--cafe); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 4px 0; border-bottom: 2px solid transparent; }
 .menu a:not(.btn):hover, .menu a.activo { border-bottom-color: var(--amarillo); }
 .nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
@@ -429,8 +440,9 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
 
 /* ---------- Responsive ---------- */
 .menu a { white-space: nowrap; }
-/* Menú desplegable: se activa antes que el resto del diseño móvil porque el menú tiene 8 enlaces */
-@media (max-width: 1100px) {
+/* Menú desplegable: se activa antes que el resto del diseño móvil porque el menú tiene 9 enlaces y el selector de idioma */
+@media (max-width: 1240px) {
+  .idiomas { margin-left: auto; }
   .nav-toggle { display: block; }
   .menu {
     position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch;

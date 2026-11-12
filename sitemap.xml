@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zanganoslab.github.io/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://zanganoslab.github.io/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://zanganoslab.github.io/mapa.html</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://zanganoslab.github.io/noticia.html?id=titulo-edgardo-2026</loc></url>
   <url><loc>https://zanganoslab.github.io/noticia.html?id=identidad-visual-2026</loc></url>
@@ -13,4 +13,8 @@
   <url><loc>https://zanganoslab.github.io/noticia.html?id=curso-apicultura-2026</loc></url>
   <url><loc>https://zanganoslab.github.io/noticia.html?id=magnetometro-iar-2026</loc></url>
   <url><loc>https://zanganoslab.github.io/noticia.html?id=curso-uruguay-2026</loc></url>
+  <url><loc>https://zanganoslab.github.io/?lang=en</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://zanganoslab.github.io/?lang=pt</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://zanganoslab.github.io/mapa.html?lang=en</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://zanganoslab.github.io/mapa.html?lang=pt</loc><lastmod>2026-11-14</lastmod></url>
 </urlset>
