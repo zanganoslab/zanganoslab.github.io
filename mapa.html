@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa de áreas de congregación de zánganos (ACZ) en América | Zánganos Lab</title>
+  <meta name="description" content="Mapa científico de las áreas de congregación de zánganos (ACZ) de Apis mellifera registradas por Zánganos Lab en Argentina, Bolivia y Puerto Rico, con criterio de validación y fuentes publicadas.">
+  <meta name="theme-color" content="#301811">
+  <link rel="icon" href="img/logo/icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/logo/icono.png">
+  <link rel="canonical" href="https://zanganoslab.github.io/mapa.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zanganoslab.github.io/mapa.html">
+  <meta property="og:title" content="Mapa de ACZ en América | Zánganos Lab">
+  <meta property="og:description" content="Áreas de congregación de zánganos registradas por Zánganos Lab en Argentina, Bolivia y Puerto Rico.">
+  <meta property="og:image" content="https://zanganoslab.github.io/img/logo/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Leaflet: biblioteca libre para mapas interactivos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=2026111305">
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Zánganos Lab, inicio">
+        <img src="img/logo/logo-horizontal.svg" alt="Zánganos Lab" width="170" height="70">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="index.html#nosotros">¿Quiénes somos?</a>
+        <a href="index.html#investigacion">Investigación</a>
+        <a href="mapa.html" class="activo">Mapa ACZ</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#publicaciones">Publicaciones</a>
+        <a href="index.html#noticias">Noticias</a>
+        <a href="index.html#multimedia">Multimedia</a>
+        <a href="index.html#contacto" class="btn btn-small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section mapa-intro">
+      <div class="container">
+        <p class="eyebrow">Mapa de ACZ</p>
+        <h1>Áreas de congregación de zánganos en América</h1>
+        <p class="section-intro">Las áreas de congregación de zánganos (ACZ) son los lugares donde zánganos de muchas colonias se reúnen para aparearse con las reinas. Este mapa reúne las ACZ de <i>Apis mellifera</i> registradas por nuestro equipo y colaboradores en América Latina y el Caribe, cada una respaldada por trabajo de campo y, cuando corresponde, por una publicación científica.</p>
+        <div class="mapa-cifras" id="mapa-cifras"></div>
+      </div>
+    </section>
+
+    <section class="mapa-wrap">
+      <div class="container mapa-grid">
+        <div class="mapa-panel">
+          <div class="mapa-filtros" role="group" aria-label="Filtrar por país" id="mapa-filtros"></div>
+          <ol class="mapa-lista" id="mapa-lista"></ol>
+        </div>
+        <div class="mapa-contenedor">
+          <div id="mapa" role="region" aria-label="Mapa interactivo de áreas de congregación de zánganos"></div>
+          <div class="mapa-leyenda">
+            <span><i class="ley ley-confirmada"></i>Confirmada</span>
+            <span><i class="ley ley-registrada"></i>Registrada</span>
+            <span><i class="ley ley-aproximada"></i>Ubicación estimada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container mapa-criterios">
+        <div>
+          <p class="eyebrow">Criterio de validación</p>
+          <h2>¿Cuándo consideramos confirmada una ACZ?</h2>
+          <p>Una ACZ se mantiene en el mismo lugar año tras año, aunque cada temporada nacen zánganos nuevos que nunca la visitaron. Por eso, además de encontrarla una vez, la volvemos a visitar.</p>
+        </div>
+        <ol class="criterios">
+          <li><b>Registro inicial.</b> Se localiza el área siguiendo la ruta de los zánganos desde un apiario, con globo, barrilete o dron con feromona de reina, y se georreferencia.</li>
+          <li><b>Revisita en años siguientes.</b> El área se vuelve a muestrear en temporadas reproductivas posteriores, en el mismo lugar.</li>
+          <li><b>Más de 50 zánganos en cada revisita.</b> Solo cuando cada revisita atrae más de 50 zánganos al señuelo, el área se marca como <b>confirmada</b>. Mientras tanto figura como <b>registrada</b>.</li>
+        </ol>
+      </div>
+
+      <div class="container mapa-notas">
+        <div>
+          <h3>Privacidad de los apicultores</h3>
+          <p>Las ACZ suelen estar cerca de apiarios privados. Por eso el mapa muestra zonas aproximadas, de alrededor de 1 km, y no coordenadas exactas. Para fines de investigación o conservación, puede solicitarnos los datos precisos.</p>
+          <a class="btn btn-small" href="mailto:zanganoslab@gmail.com?subject=Solicitud%20de%20coordenadas%20de%20ACZ">Solicitar datos</a>
+        </div>
+        <div>
+          <h3>¿Encontró una ACZ?</h3>
+          <p>Si es apicultor o investigador y cree haber encontrado un área de congregación en América Latina, escríbanos. Podemos ayudarle a confirmarla con nuestro protocolo y sumarla al mapa.</p>
+          <a class="btn btn-small btn-ghost" href="index.html#servicios">Ver servicio de identificación de ACZ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <img src="img/logo/logo-horizontal-fondo-oscuro.svg" alt="Zánganos Lab" class="footer-logo" width="200" height="82">
+      <div>
+        <p>Laboratorio de investigación en zánganos de <i>Apis mellifera</i>.</p>
+        <p>Mapa base: © colaboradores de OpenStreetMap.</p>
+        <p>© <span id="anio"></span> Zánganos Lab · <a href="#top">Volver arriba ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="js/acz.js?v=2026111305"></script>
+  <script src="js/mapa.js?v=2026111305"></script>
+</body>
+</html>
