@@ -194,6 +194,48 @@ $("#noticias-lista").innerHTML = [...NOTICIAS].sort((a, b) => b.fecha.localeComp
     </div>
   </a>`).join("");
 
+/* ---------- Multimedia ---------- */
+const ETIQUETA_MEDIO = { video: "Video", audio: "Audio", facebook: "Video · Facebook", youtube: "Video · YouTube" };
+const idYouTube = (url) => (url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/) || [])[1];
+
+function reproductor(m) {
+  if (m.tipo === "video") {
+    return `<video controls preload="none" playsinline poster="${esc(m.portada || "")}">
+      <source src="${esc(m.archivo)}" type="video/mp4">
+      Su navegador no puede reproducir este video. <a href="${esc(m.archivo)}">Descárguelo aquí</a>.
+    </video>`;
+  }
+  if (m.tipo === "audio") {
+    return `<audio controls preload="none" src="${esc(m.archivo)}">
+      Su navegador no puede reproducir este audio. <a href="${esc(m.archivo)}">Descárguelo aquí</a>.
+    </audio>`;
+  }
+  if (m.tipo === "facebook") {
+    const src = "https://www.facebook.com/plugins/video.php?show_text=false&width=380&href=" + encodeURIComponent(m.enlace);
+    return `<div class="marco-vertical"><iframe src="${src}" title="${esc(m.titulo)}" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+  }
+  if (m.tipo === "youtube" && idYouTube(m.enlace)) {
+    return `<div class="marco-horizontal"><iframe src="https://www.youtube-nocookie.com/embed/${idYouTube(m.enlace)}" title="${esc(m.titulo)}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`;
+  }
+  return "";
+}
+
+function tarjetaMedio(m) {
+  const meta = [ETIQUETA_MEDIO[m.tipo], m.medio, m.fecha, m.duracion].filter(Boolean).map(esc).join(" · ");
+  return `
+    <article class="medio medio-${esc(m.tipo)}${m.destacado ? " medio-destacado" : ""} reveal">
+      <div class="medio-reproductor">${reproductor(m)}</div>
+      <div class="medio-info">
+        <span class="medio-meta">${meta}</span>
+        <h3>${cursiva(m.titulo)}</h3>
+        ${m.descripcion ? `<p>${cursiva(m.descripcion)}</p>` : ""}
+        ${m.enlace ? `<a href="${esc(m.enlace)}" target="_blank" rel="noopener">Ver en ${m.tipo === "youtube" ? "YouTube" : "Facebook"} ↗</a>` : ""}
+      </div>
+    </article>`;
+}
+$("#multimedia-destacado").innerHTML = MULTIMEDIA.filter((m) => m.destacado).map(tarjetaMedio).join("");
+$("#multimedia-lista").innerHTML = MULTIMEDIA.filter((m) => !m.destacado).map(tarjetaMedio).join("");
+
 /* ---------- Pie y resaltado del menú ---------- */
 $("#anio").textContent = new Date().getFullYear();
 

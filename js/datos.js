@@ -325,6 +325,51 @@ const PUBLICACIONES = [
   }
 ];
 
+/* ---------- Multimedia: videos y audios ----------
+   tipo:
+     "video"    → video propio: guarde el .mp4 en media/video/ y una imagen de portada (.jpg)
+     "audio"    → audio propio: guarde el .mp3 en media/audio/
+     "facebook" → video publicado en Facebook (se inserta en la página): pegue el enlace en "enlace"
+     "youtube"  → video de YouTube: pegue el enlace en "enlace"
+   destacado: true → se muestra grande, arriba de todo (conviene uno solo). */
+const MULTIMEDIA = [
+  {
+    tipo: "video",
+    destacado: true,
+    titulo: "Zánganos Lab en tres minutos",
+    medio: "Zánganos Lab",
+    duracion: "3:13",
+    descripcion: "¿Sabía que los zánganos de las abejas cumplen un papel crucial en la salud de las colonias? Este video resume varios de nuestros trabajos sobre el tema.",
+    archivo: "media/video/zanganos-lab-presentacion.mp4",
+    portada: "media/video/zanganos-lab-presentacion.jpg"
+  },
+  {
+    tipo: "audio",
+    titulo: "Entrevista al biólogo Harold Pulido-Guarín",
+    medio: "La Miel en tu Radio",
+    duracion: "19:21",
+    descripcion: "Conversación sobre los zánganos de Apis mellifera y el trabajo del laboratorio.",
+    archivo: "media/audio/entrevista-miel-en-tu-radio.mp3"
+  },
+  {
+    tipo: "audio",
+    titulo: "Entrevista en «De la colmena al gallinero»",
+    medio: "De la colmena al gallinero",
+    fecha: "2026",
+    duracion: "7:28",
+    descripcion: "Entrevista radial sobre la investigación de Zánganos Lab.",
+    archivo: "media/audio/entrevista-de-la-colmena-al-gallinero-2026.mp3"
+  },
+  {
+    tipo: "facebook",
+    titulo: "Científicos del CONICET investigaron en San Salvador áreas naturales de reproducción de abejas",
+    medio: "Mercurio Noticias",
+    fecha: "2019",
+    descripcion: "Nota sobre la búsqueda de áreas de congregación de zánganos en San Salvador, Entre Ríos.",
+    enlace: "https://www.facebook.com/reel/1559140778742172"
+  }
+];
+
 /* ---------- Noticias ----------
    Cada noticia tiene su propia página (noticia.html?id=...). Para agregar una:
    1. Cree una carpeta en img/noticias/ con las fotos numeradas: 01.jpg, 02.jpg, 03.jpg…

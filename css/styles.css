@@ -311,6 +311,35 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
 .footer-logo { width: 200px; height: auto; }
 .footer-grid p { margin: 0 0 4px; }
 
+/* ---------- Multimedia ---------- */
+.medios { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 20px; align-items: start; }
+.medio { background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; }
+.medio-info { padding: 20px 22px 22px; }
+.medio-meta { font-family: var(--tech); font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--cafe-suave); }
+.medio h3 { font-size: 1.12rem; margin: .4em 0 .5em; }
+.medio p { font-size: .95rem; color: var(--cafe-suave); margin: 0 0 .6em; }
+.medio-info a { font-size: .9rem; font-weight: 600; }
+.medio video { display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--cafe-profundo); }
+/* Audio: reproductor sobre una banda café con el hexágono de la marca */
+.medio-audio .medio-reproductor {
+  padding: 26px 20px 18px; background: var(--cafe) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34L28 66zm0 32V66' fill='none' stroke='%23f6c401' stroke-opacity='.12' stroke-width='1.2'/%3E%3C/svg%3E");
+}
+.medio-audio .medio-reproductor::before {
+  content: "🎙"; display: grid; place-items: center; width: 52px; height: 58px; margin-bottom: 14px; font-size: 1.5rem;
+  background: var(--amarillo); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.medio audio { display: block; width: 100%; height: 44px; }
+/* Videos de redes: vertical (reels) y horizontal (YouTube) */
+.medio-facebook .medio-reproductor { background: var(--cafe-profundo); display: flex; justify-content: center; }
+.marco-vertical { width: 100%; max-width: 380px; aspect-ratio: 380 / 476; }
+.marco-horizontal { width: 100%; aspect-ratio: 16 / 9; }
+.marco-vertical iframe, .marco-horizontal iframe { width: 100%; height: 100%; border: 0; display: block; }
+/* Video destacado: grande, con el texto al costado */
+.medio-destacado { display: grid; grid-template-columns: 1.6fr 1fr; align-items: center; margin-bottom: 24px; }
+.medio-destacado .medio-info { padding: 28px 32px; }
+.medio-destacado h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
+@media (max-width: 900px) { .medio-destacado { grid-template-columns: 1fr; } }
+
 /* ---------- Invitación a Instagram ---------- */
 .ig-cta {
   display: flex; align-items: center; gap: 18px; margin-top: 28px; padding: 20px 24px;
@@ -333,20 +362,24 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 900px) {
+.menu a { white-space: nowrap; }
+/* Menú desplegable: se activa antes que el resto del diseño móvil porque el menú tiene 8 enlaces */
+@media (max-width: 1100px) {
   .nav-toggle { display: block; }
   .menu {
     position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch;
     gap: 0; background: var(--blanco); border-bottom: 1px solid var(--borde);
     max-height: 0; overflow: hidden; transition: max-height .3s ease;
   }
-  .menu.abierto { max-height: 420px; }
+  .menu.abierto { max-height: 80vh; overflow-y: auto; }
   .menu a { padding: 14px 16px; border-top: 1px solid var(--borde); }
   .menu a:not(.btn) { border-bottom: 0; }
   .menu .btn { margin: 12px 16px; text-align: center; }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+@media (max-width: 900px) {
   .hero-grid, .two-col, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero-visual { order: -1; }
   .hero-logo { width: 220px; }
