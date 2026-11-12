@@ -42,6 +42,7 @@ if (!n) {
     ${fotos[0] ? `<button class="articulo-portada" data-i="0" aria-label="Ampliar foto"><img src="${esc(fotos[0])}" alt="Foto principal de la noticia"></button>` : ""}
     <div class="articulo-texto">
       ${n.cuerpo.map((p) => `<p>${cursiva(p)}</p>`).join("")}
+      ${(n.enlaces || []).map((e) => `<p><a class="btn" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.texto)} ↗</a></p>`).join("")}
     </div>
     ${fotos.length > 1 ? `
       <h2 class="galeria-titulo">Galería <span>${fotos.length} fotos</span></h2>

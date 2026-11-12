@@ -6,41 +6,52 @@
    ========================================================== */
 
 /* ---------- Líneas de investigación ---------- */
+// Las 8 líneas publicadas en Instagram el 6 de julio de 2026, más Etnobiología y divulgación
 const LINEAS = [
   {
     icono: "📍",
-    titulo: "Áreas de congregación de zánganos",
-    texto: "Localizamos y caracterizamos las áreas de congregación de zánganos (ACZ), donde zánganos y reinas se aparean, usando globos, barriletes y drones con feromonas."
+    titulo: "Áreas de congregación de zánganos (ACZ)",
+    texto: "Localizamos y caracterizamos los espacios de reproducción entre machos y reinas, usando globos, barriletes y drones con feromonas."
+  },
+  {
+    icono: "🩺",
+    titulo: "Salud apícola",
+    texto: "Evaluamos el estado, las amenazas y el bienestar de las colonias: varroosis, nosemosis y virus en apiarios y ACZ, y el papel de los zánganos en la dispersión de enfermedades."
+  },
+  {
+    icono: "🗺️",
+    titulo: "Ecología del paisaje",
+    texto: "Analizamos cómo el entorno, la cobertura del suelo y el territorio influyen en la ubicación de las ACZ y en la dinámica de las abejas."
+  },
+  {
+    icono: "📏",
+    titulo: "Morfometría",
+    texto: "Medimos la forma y el tamaño de alas y cuerpo de los zánganos colectados en las ACZ para entender su éxito reproductivo, su origen y el grado de africanización."
   },
   {
     icono: "🧲",
     titulo: "Magnetorrecepción",
-    texto: "Estudiamos la relación entre el campo magnético terrestre, la magnetita en el abdomen de los zánganos y la ubicación de las ACZ."
+    texto: "Investigamos cómo los zánganos usan el campo magnético terrestre para orientarse, y su relación con la magnetita del abdomen y la ubicación de las ACZ."
   },
   {
-    icono: "🔬",
-    titulo: "Sanidad apícola",
-    texto: "Evaluamos varroosis, nosemosis y virus en apiarios y ACZ, y el papel de los zánganos en la dispersión de enfermedades."
-  },
-  {
-    icono: "📐",
-    titulo: "Morfometría",
-    texto: "Medimos la forma y el tamaño de alas y cuerpo de los zánganos colectados en las ACZ para estimar su origen, el grado de africanización y la calidad reproductiva de las poblaciones."
+    icono: "🧠",
+    titulo: "Comportamiento",
+    texto: "Estudiamos los patrones de vuelo, la actividad diaria y los roles reproductivos de los zánganos, con observación directa, video y tecnología RFID."
   },
   {
     icono: "🧬",
-    titulo: "Genética e hibridación",
-    texto: "Analizamos la diversidad genética y la hibridación entre linajes africanizados y europeos de Apis mellifera en Argentina."
+    titulo: "Genética",
+    texto: "Analizamos la diversidad, los linajes y la identidad de las poblaciones de Apis mellifera, incluida la hibridación entre linajes africanizados y europeos en Argentina."
   },
   {
-    icono: "📡",
-    titulo: "Tecnología y monitoreo",
-    texto: "Desarrollamos herramientas como RFID, sensores ambientales, magnetómetros de bajo costo y un Kit Apícola IoT para el monitoreo remoto de colmenas."
+    icono: "📲",
+    titulo: "Monitoreo inteligente de colmenas",
+    texto: "Usamos tecnología remota y sensores para el seguimiento en tiempo real: RFID, sensores ambientales, magnetómetros de bajo costo y un Kit Apícola IoT."
   },
   {
     icono: "🤝",
     titulo: "Etnobiología y divulgación",
-    texto: "Indagamos qué saben la comunidad científica y apícola sobre los zánganos, y compartimos el conocimiento a través de cursos y encuentros."
+    texto: "Indagamos qué saben la comunidad científica, los apicultores y el público en general sobre los zánganos, y compartimos el conocimiento a través de cursos, charlas y encuentros."
   }
 ];
 
@@ -131,18 +142,18 @@ const EQUIPO = [
   },
   {
     grupo: "activos",
-    nombre: "Ailen Araoz",
+    nombre: "Ailen Valentina Aráoz",
     rol: "Estudiante de Biología · Fac. Cs. Naturales e IML, UNT",
     foto: "img/equipo/ailen-araoz.jpg",
-    texto: "Su estudio se relaciona con el seguimiento de la actividad de zánganos de Apis mellifera y su relación con las condiciones ambientales.",
+    texto: "Caracteriza la actividad de vuelo de los zánganos de Apis mellifera mediante tecnología RFID y su relación con las condiciones ambientales, comparando temporadas reproductivas en el Noroeste Argentino.",
     email: "zanganoslab@gmail.com"
   },
   {
     grupo: "activos",
     nombre: "Edgardo Díaz",
-    rol: "Estudiante de Ingeniería Electrónica · FACET, UNT",
+    rol: "Ingeniero Electrónico · FACET, UNT",
     foto: "img/equipo/edgardo-diaz.jpg",
-    texto: "Desarrolla un Kit Apícola tecnológico que permite el monitoreo remoto de colmenas de Apis mellifera.",
+    texto: "Desarrolló el Kit Apícola IoT, que permite el monitoreo remoto de colmenas de Apis mellifera.",
     email: "edgardordiaz95@gmail.com"
   },
   {
@@ -384,6 +395,72 @@ const galeria = (carpeta, cantidad, ext = "jpg") =>
   Array.from({ length: cantidad }, (_, i) => `img/noticias/${carpeta}/${String(i + 1).padStart(2, "0")}.${ext}`);
 
 const NOTICIAS = [
+  {
+    id: "titulo-edgardo-2026",
+    fecha: "2026-11-10",
+    titulo: "Edgardo Díaz se recibió de Ingeniero Electrónico",
+    resumen: "Nuestro colaborador obtuvo su título de grado en la FACET-UNT tras defender su proyecto final sobre datasets IoT e inteligencia artificial.",
+    cuerpo: [
+      "Desde Zánganos Lab celebramos con orgullo el logro de nuestro colaborador Edgardo Díaz, quien obtuvo su título de grado de Ingeniero Electrónico en la Facultad de Ciencias Exactas y Tecnología (FACET) de la Universidad Nacional de Tucumán.",
+      "Edgardo presentó y defendió su Proyecto Final: \"Creación de datasets IoT para el estudio de ocupación y consumo energético en inmuebles inteligentes mediante IA\".",
+      "Celebramos este importante paso en su trayectoria académica y profesional, y destacamos el esfuerzo, la dedicación y el compromiso que implica alcanzar esta meta. ¡Le deseamos muchos éxitos en su ejercicio profesional!"
+    ],
+    fotos: galeria("titulo-edgardo-2026", 1, "webp"),
+    instagram: "https://www.instagram.com/p/Dfk1yXTh2oS/"
+  },
+  {
+    id: "identidad-visual-2026",
+    fecha: "2026-10-30",
+    titulo: "Renovamos nuestra identidad visual",
+    resumen: "Estrenamos una nueva imagen que representa la esencia científica y tecnológica del laboratorio.",
+    cuerpo: [
+      "Estrenamos una nueva imagen que representa nuestra esencia científica y tecnológica, y que acompaña el camino que seguimos construyendo a través de la investigación.",
+      "El nuevo isologo reúne los elementos que definen nuestro trabajo: el hexágono del panal, el zángano como protagonista, el ADN en sus alas, por la genética, y un chip con engranaje en el tórax, por la tecnología y el monitoreo inteligente.",
+      "Una identidad renovada para seguir compartiendo nuestras investigaciones, acercar la ciencia a la comunidad y explorar el fascinante mundo de las abejas. ¡Lo invitamos a acompañarnos en esta nueva etapa!"
+    ],
+    fotos: galeria("identidad-visual-2026", 8),
+    instagram: "https://www.instagram.com/p/DfIxqxmCZaF/"
+  },
+  {
+    id: "jornada-ier-2026",
+    fecha: "2026-10-20",
+    titulo: "Zánganos Lab en la XVI Jornada Interna del Instituto de Ecología Regional",
+    resumen: "Cinco presentaciones del equipo sobre magnetita, sanidad apícola, magnetismo, morfometría y lo que se sabe sobre los zánganos.",
+    cuerpo: [
+      "Integrantes de Zánganos Lab participaron en la XVI Jornada Interna del Instituto de Ecología Regional (IER-CONICET-UNT), realizada los días 19 y 20 de octubre.",
+      "El encuentro reunió a investigadores, becarios y estudiantes para compartir avances, presentar nuevas líneas de investigación y conocer los trabajos que desarrollan los distintos equipos.",
+      "Entre las presentaciones relacionadas con nuestras líneas de investigación: Valentina Paz, «Cuantificación de magnetita en Apis sp.»; Karen Escalante, «La importancia de las Áreas de Congregación de Zánganos (ACZ) en el monitoreo sanitario apícola»; Harold Pulido-Guarín, «Zánganos y magnetismo»; Ailen Contreras, «Anatomía de un pretendiente: morfometría de zánganos de Apis mellifera»; y Noelia Luna y Agustín Cebe, «¿Qué sabemos sobre los zánganos de las abejas melíferas?».",
+      "Estos espacios de intercambio permiten conocer diferentes perspectivas, compartir experiencias y fortalecer los vínculos entre quienes integran la comunidad científica del Instituto."
+    ],
+    fotos: galeria("jornada-ier-2026", 6, "webp"),
+    instagram: "https://www.instagram.com/p/DfTQH1eDaJR/"
+  },
+  {
+    id: "publicacion-magnetismo-2026",
+    fecha: "2026-08-17",
+    titulo: "Nueva publicación: tres métodos para medir el campo magnético terrestre en áreas de congregación de zánganos",
+    resumen: "Publicamos en Environmental Entomology una comparación de métodos accesibles para medir la intensidad del campo magnético en las ACZ.",
+    cuerpo: [
+      "Publicamos un nuevo artículo científico en la revista Environmental Entomology: «Tres métodos para medir la intensidad del campo magnético de la Tierra en áreas de congregación de zánganos de Apis mellifera (Hymenoptera: Apidae)».",
+      "Comparamos dos aplicaciones móviles (Crowdmag y Phyphox) y un magnetómetro de bajo costo en tres ACZ de Argentina. Los tres métodos detectaron variaciones del campo magnético, pero el magnetómetro de bajo costo ofreció las lecturas más consistentes, lo que lo convierte en una herramienta accesible y confiable para estudios apícolas.",
+      "Este trabajo forma parte de la beca doctoral de Harold Pulido-Guarín y sienta las bases para estudiar el posible papel del campo magnético en la formación de las ACZ y en la orientación de los zánganos durante los vuelos de apareamiento."
+    ],
+    enlaces: [{ texto: "Leer el artículo (DOI: 10.1093/ee/nvag056)", url: "https://doi.org/10.1093/ee/nvag056" }],
+    instagram: "https://www.instagram.com/p/DcPGst6jYY9/"
+  },
+  {
+    id: "jovenes-investigadores-2026",
+    fecha: "2026-08-15",
+    titulo: "Ailen Valentina Aráoz, clasificada para las 33.ª Jornadas de Jóvenes Investigadores de la AUGM",
+    resumen: "Ailen presentó su investigación sobre la actividad de vuelo de los zánganos medida con tecnología RFID.",
+    cuerpo: [
+      "Felicitamos a Ailen Valentina Aráoz por su excelente presentación en la clasificatoria de la Universidad Nacional de Tucumán rumbo a las 33.ª Jornadas de Jóvenes Investigadores de la Asociación de Universidades Grupo Montevideo (AUGM).",
+      "Ailen presentó su investigación titulada «Caracterización de la actividad de vuelo de zánganos de Apis mellifera mediante tecnología RFID: comparación entre dos temporadas reproductivas en el Noroeste Argentino».",
+      "La instancia clasificatoria fue el paso previo a las jornadas internacionales, realizadas del 20 al 22 de octubre de 2026 en la Universidade Federal do Rio Grande do Sul (UFRGS), en Porto Alegre, Brasil.",
+      "Su trabajo con sistemas de monitoreo inteligente (RFID) es un aporte fundamental para entender el comportamiento de los machos en nuestra región. ¡Felicitaciones, Ailen, por todo su esfuerzo y dedicación!"
+    ],
+    instagram: "https://www.instagram.com/p/DcEztbdCQZm/"
+  },
   {
     id: "filapi-2026",
     fecha: "2026-09-06",
