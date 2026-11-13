@@ -45,7 +45,7 @@ function enlacesConIdioma(raiz = document) {
   if (LANG === "es") return;
   raiz.querySelectorAll("a[href]").forEach((a) => {
     const href = a.getAttribute("href");
-    if (!/^(index|noticia|mapa)\.html/.test(href) || /[?&]lang=/.test(href)) return;
+    if (!/^(index|noticia|mapa|juego)\.html/.test(href) || /[?&]lang=/.test(href)) return;
     const [ruta, hash] = href.split("#");
     a.setAttribute("href", ruta + (ruta.includes("?") ? "&" : "?") + "lang=" + LANG + (hash ? "#" + hash : ""));
   });

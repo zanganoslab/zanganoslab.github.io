@@ -599,5 +599,147 @@ TRAD.pt = {
   "Abrir el mapa →":
     "Abrir o mapa →",
   "ACZ confirmadas":
-    "ACZ confirmadas"
+    "ACZ confirmadas",
+  "Vuelo nupcial: el juego de las áreas de congregación de zánganos | Zánganos Lab":
+    "Voo nupcial: o jogo das áreas de congregação de zangões | Zánganos Lab",
+  "Juego educativo de Zánganos Lab: guíe a una reina de Apis mellifera hasta el área de congregación de zánganos, aparéese con zánganos de muchas colonias y vuelva a la colmena.":
+    "Jogo educativo do Zánganos Lab: guie uma rainha de Apis mellifera até a área de congregação de zangões, acasale com zangões de muitas colônias e volte para a colmeia.",
+  "Vuelo nupcial | Zánganos Lab":
+    "Voo nupcial | Zánganos Lab",
+  "¿Puede guiar a la reina hasta el área de congregación de zánganos?":
+    "Você consegue guiar a rainha até a área de congregação de zangões?",
+  "Juego educativo":
+    "Jogo educativo",
+  "Vuelo nupcial":
+    "Voo nupcial",
+  "Guíe a una joven reina hasta el área de congregación de zánganos, aparéese con zánganos de muchas colonias y vuelva a la colmena antes de que termine la tarde.":
+    "Guie uma jovem rainha até a área de congregação de zangões, acasale com zangões de muitas colônias e volte para a colmeia antes que a tarde termine.",
+  "Campo de juego: paisaje con la colmena, claros, bosques y zánganos":
+    "Campo de jogo: paisagem com a colmeia, clareiras, matas e zangões",
+  "Hora":
+    "Hora",
+  "Energía":
+    "Energia",
+  "Apareamientos":
+    "Acasalamentos",
+  "Colonias":
+    "Colônias",
+  "Viento":
+    "Vento",
+  "¿Puede guiar a la reina hasta la ACZ?":
+    "Você consegue guiar a rainha até a ACZ?",
+  "<b>Encuentre la ACZ.</b> Solo uno de los claros es un área de congregación: busque un lugar abierto, rodeado de árboles y protegido del viento.":
+    "<b>Encontre a ACZ.</b> Apenas uma das clareiras é uma área de congregação: procure um lugar aberto, cercado de árvores e protegido do vento.",
+  "<b>Aparéese con muchos zánganos.</b> Cada color es una colonia distinta: cuantas más colonias, más diversidad genética. Evite a sus hermanos, los zánganos amarillos.":
+    "<b>Acasale com muitos zangões.</b> Cada cor é uma colônia diferente: quanto mais colônias, mais diversidade genética. Evite seus irmãos, os zangões amarelos.",
+  "<b>Cuídese de las aves</b> y de las ráfagas de viento.":
+    "<b>Cuidado com as aves</b> e com as rajadas de vento.",
+  "<b>Vuelva a la colmena</b> antes de las 17:30.":
+    "<b>Volte para a colmeia</b> antes das 17h30.",
+  "Mueva a la reina tocando o arrastrando sobre el campo, o con las flechas del teclado.":
+    "Mova a rainha tocando ou arrastando sobre o campo, ou com as setas do teclado.",
+  "<i class=\"ley-j ley-reina\"></i>Reina":
+    "<i class=\"ley-j ley-reina\"></i>Rainha",
+  "<i class=\"ley-j ley-zangano\"></i>Zánganos de otras colonias":
+    "<i class=\"ley-j ley-zangano\"></i>Zangões de outras colônias",
+  "<i class=\"ley-j ley-hermano\"></i>Hermanos":
+    "<i class=\"ley-j ley-hermano\"></i>Irmãos",
+  "<i class=\"ley-j ley-ave\"></i>Ave":
+    "<i class=\"ley-j ley-ave\"></i>Ave",
+  "Despegar":
+    "Decolar",
+  "Volar de nuevo":
+    "Voar de novo",
+  "Ver las ACZ reales en el mapa":
+    "Ver as ACZ reais no mapa",
+  "La ciencia detrás del juego":
+    "A ciência por trás do jogo",
+  "La reina de <i>Apis mellifera</i> se aparea en pleno vuelo, pocos días después de nacer, en un área de congregación de zánganos (ACZ): un lugar donde se reúnen miles de zánganos de muchas colonias. Al aparearse con zánganos de colonias distintas, su descendencia gana diversidad genética, lo que hace a la colonia más resistente a enfermedades y a los cambios del ambiente.":
+    "A rainha de <i>Apis mellifera</i> acasala em pleno voo, poucos dias depois de nascer, em uma área de congregação de zangões (ACZ): um lugar onde se reúnem milhares de zangões de muitas colônias. Ao acasalar com zangões de colônias diferentes, sua descendência ganha diversidade genética, o que torna a colônia mais resistente a doenças e às mudanças do ambiente.",
+  "Cada elemento del juego está basado en nuestras investigaciones: el horario de vuelo de la tarde, los claros rodeados de árboles donde se forman las ACZ, las aves insectívoras que observamos cazando en ellas y la importancia de evitar el apareamiento entre hermanos.":
+    "Cada elemento do jogo é baseado em nossas pesquisas: o horário de voo da tarde, as clareiras cercadas de árvores onde se formam as ACZ, as aves insetívoras que observamos caçando nelas e a importância de evitar o acasalamento entre irmãos.",
+  "Explorar el mapa de ACZ":
+    "Explorar o mapa de ACZ",
+  "Colmena":
+    "Colmeia",
+  "La reina se quedó sin energía":
+    "A rainha ficou sem energia",
+  "Los vuelos nupciales son exigentes y arriesgados: no todas las reinas regresan a la colmena.":
+    "Os voos nupciais são exigentes e arriscados: nem todas as rainhas voltam para a colmeia.",
+  "Se hizo tarde":
+    "Ficou tarde",
+  "Al caer la tarde baja la temperatura y terminan los vuelos de apareamiento. La reina no logró volver a tiempo.":
+    "Ao cair da tarde a temperatura baixa e terminam os voos de acasalamento. A rainha não conseguiu voltar a tempo.",
+  "¡La reina volvió a la colmena!":
+    "A rainha voltou para a colmeia!",
+  "Su colonia tendrá una gran diversidad genética: obreras con distintas habilidades y más resistencia a enfermedades como la varroosis.":
+    "Sua colônia terá uma grande diversidade genética: operárias com diferentes habilidades e mais resistência a doenças como a varroose.",
+  "Buen vuelo. Con zánganos de más colonias, su descendencia habría sido todavía más diversa.":
+    "Bom voo. Com zangões de mais colônias, sua descendência teria sido ainda mais diversa.",
+  "La reina se apareó, pero con zánganos de pocas colonias: su descendencia tendrá poca diversidad genética.":
+    "A rainha acasalou, mas com zangões de poucas colônias: sua descendência terá pouca diversidade genética.",
+  "Se apareó con {n} hermanos: en la naturaleza, las reinas vuelan a ACZ alejadas de su colmena para evitarlo.":
+    "Ela acasalou com {n} irmãos: na natureza, as rainhas voam para ACZ distantes da colmeia para evitar isso.",
+  "apareamientos":
+    "acasalamentos",
+  "colonias distintas":
+    "colônias diferentes",
+  "diversidad genética":
+    "diversidade genética",
+  "hermanos":
+    "irmãos",
+  "¡nuevo récord!":
+    "novo recorde!",
+  "puntos (récord: {r})":
+    "pontos (recorde: {r})",
+  "¿Sabía que…?":
+    "Você sabia…?",
+  "Son las 14:00: en las horas cálidas de la tarde salen las reinas y los zánganos a sus vuelos de apareamiento.":
+    "São 14h: nas horas quentes da tarde, rainhas e zangões saem para seus voos de acasalamento.",
+  "Pista: las ACZ se forman en claros abiertos, rodeados de árboles que las protegen del viento.":
+    "Dica: as ACZ se formam em clareiras abertas, cercadas de árvores que as protegem do vento.",
+  "¡Ráfaga de viento! El viento desvía el vuelo; dentro de la ACZ, los árboles la protegen.":
+    "Rajada de vento! O vento desvia o voo; dentro da ACZ, as árvores protegem você.",
+  "Se acaba la tarde: vuelva a la colmena.":
+    "A tarde está acabando: volte para a colmeia.",
+  "Este campo abierto está expuesto al viento: aquí no se forma una ACZ.":
+    "Este campo aberto está exposto ao vento: aqui não se forma uma ACZ.",
+  "Este claro es demasiado cerrado: los zánganos necesitan espacio abierto para volar.":
+    "Esta clareira é fechada demais: os zangões precisam de espaço aberto para voar.",
+  "¡Encontró la ACZ! Aquí se reúnen miles de zánganos de muchas colonias.":
+    "Você encontrou a ACZ! Aqui se reúnem milhares de zangões de muitas colônias.",
+  "Los zánganos amarillos son sus hermanos: evítelos para que la colonia tenga más diversidad genética.":
+    "Os zangões amarelos são seus irmãos: evite-os para que a colônia tenha mais diversidade genética.",
+  "Se apareó con un hermano: eso reduce la diversidad genética de la colonia.":
+    "Você acasalou com um irmão: isso reduz a diversidade genética da colônia.",
+  "¡Primer apareamiento! El zángano muere después de aparearse.":
+    "Primeiro acasalamento! O zangão morre depois de acasalar.",
+  "¡La espermateca está llena! Vuelva a la colmena.":
+    "A espermateca está cheia! Volte para a colmeia.",
+  "Una reina se aparea con 12 a 20 zánganos en promedio, ¡y se registraron hasta 70!":
+    "Uma rainha acasala com 12 a 20 zangões em média, e já foram registrados até 70!",
+  "Todavía no se apareó: busque el área de congregación.":
+    "Você ainda não acasalou: procure a área de congregação.",
+  "¡Cuidado! Aves insectívoras, como la tijereta, aprovechan las ACZ para cazar.":
+    "Cuidado! Aves insetívoras, como a tesourinha, aproveitam as ACZ para caçar.",
+  "Una reina se aparea en pleno vuelo con 12 a 20 zánganos en promedio, y se registraron hasta 70.":
+    "Uma rainha acasala em pleno voo com 12 a 20 zangões em média, e já foram registrados até 70.",
+  "La reina guarda los espermatozoides en la espermateca y los usa durante toda su vida, que puede durar varios años.":
+    "A rainha guarda os espermatozoides na espermateca e os usa durante toda a vida, que pode durar vários anos.",
+  "Las ACZ se mantienen en el mismo lugar año tras año, aunque cada temporada nacen zánganos nuevos que nunca las visitaron.":
+    "As ACZ permanecem no mesmo lugar ano após ano, embora a cada temporada nasçam novos zangões que nunca as visitaram.",
+  "Una ACZ puede reunir miles de zánganos llegados de colonias que están a varios kilómetros.":
+    "Uma ACZ pode reunir milhares de zangões vindos de colônias a vários quilômetros de distância.",
+  "Los zánganos mueren después de aparearse: su único rol en la colonia es reproductivo.":
+    "Os zangões morrem depois de acasalar: seu único papel na colônia é reprodutivo.",
+  "Zánganos Lab confirmó 27 ACZ en Argentina, Bolivia y Puerto Rico.":
+    "O Zánganos Lab confirmou 27 ACZ na Argentina, na Bolívia e em Porto Rico.",
+  "<span aria-hidden=\"true\">🎮</span> Jugar: Vuelo nupcial":
+    "<span aria-hidden=\"true\">🎮</span> Jogar: Voo nupcial",
+  "Aprenda jugando":
+    "Aprenda jogando",
+  "En el juego «Vuelo nupcial», guíe a una reina hasta el área de congregación, aparéese con zánganos de muchas colonias y descubra por qué la diversidad genética es clave para la colonia.":
+    "No jogo \"Voo nupcial\", guie uma rainha até a área de congregação, acasale com zangões de muitas colônias e descubra por que a diversidade genética é fundamental para a colônia.",
+  "<span aria-hidden=\"true\">🎮</span> Jugar":
+    "<span aria-hidden=\"true\">🎮</span> Jogar"
 };

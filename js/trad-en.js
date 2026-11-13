@@ -597,5 +597,147 @@ TRAD.en = {
   "Abrir el mapa →":
     "Open the map →",
   "ACZ confirmadas":
-    "confirmed DCAs"
+    "confirmed DCAs",
+  "Vuelo nupcial: el juego de las áreas de congregación de zánganos | Zánganos Lab":
+    "Mating flight: the drone congregation area game | Zánganos Lab",
+  "Juego educativo de Zánganos Lab: guíe a una reina de Apis mellifera hasta el área de congregación de zánganos, aparéese con zánganos de muchas colonias y vuelva a la colmena.":
+    "An educational game by Zánganos Lab: guide an Apis mellifera queen to the drone congregation area, mate with drones from many colonies and fly back to the hive.",
+  "Vuelo nupcial | Zánganos Lab":
+    "Mating flight | Zánganos Lab",
+  "¿Puede guiar a la reina hasta el área de congregación de zánganos?":
+    "Can you guide the queen to the drone congregation area?",
+  "Juego educativo":
+    "Educational game",
+  "Vuelo nupcial":
+    "Mating flight",
+  "Guíe a una joven reina hasta el área de congregación de zánganos, aparéese con zánganos de muchas colonias y vuelva a la colmena antes de que termine la tarde.":
+    "Guide a young queen to the drone congregation area, mate with drones from many colonies and fly back to the hive before the afternoon is over.",
+  "Campo de juego: paisaje con la colmena, claros, bosques y zánganos":
+    "Game field: a landscape with the hive, clearings, woods and drones",
+  "Hora":
+    "Time",
+  "Energía":
+    "Energy",
+  "Apareamientos":
+    "Matings",
+  "Colonias":
+    "Colonies",
+  "Viento":
+    "Wind",
+  "¿Puede guiar a la reina hasta la ACZ?":
+    "Can you guide the queen to the DCA?",
+  "<b>Encuentre la ACZ.</b> Solo uno de los claros es un área de congregación: busque un lugar abierto, rodeado de árboles y protegido del viento.":
+    "<b>Find the DCA.</b> Only one of the clearings is a congregation area: look for an open place, surrounded by trees and sheltered from the wind.",
+  "<b>Aparéese con muchos zánganos.</b> Cada color es una colonia distinta: cuantas más colonias, más diversidad genética. Evite a sus hermanos, los zánganos amarillos.":
+    "<b>Mate with many drones.</b> Each color is a different colony: the more colonies, the more genetic diversity. Avoid your brothers, the yellow drones.",
+  "<b>Cuídese de las aves</b> y de las ráfagas de viento.":
+    "<b>Watch out for birds</b> and gusts of wind.",
+  "<b>Vuelva a la colmena</b> antes de las 17:30.":
+    "<b>Fly back to the hive</b> before 5:30 p.m.",
+  "Mueva a la reina tocando o arrastrando sobre el campo, o con las flechas del teclado.":
+    "Move the queen by tapping or dragging on the field, or with the arrow keys.",
+  "<i class=\"ley-j ley-reina\"></i>Reina":
+    "<i class=\"ley-j ley-reina\"></i>Queen",
+  "<i class=\"ley-j ley-zangano\"></i>Zánganos de otras colonias":
+    "<i class=\"ley-j ley-zangano\"></i>Drones from other colonies",
+  "<i class=\"ley-j ley-hermano\"></i>Hermanos":
+    "<i class=\"ley-j ley-hermano\"></i>Brothers",
+  "<i class=\"ley-j ley-ave\"></i>Ave":
+    "<i class=\"ley-j ley-ave\"></i>Bird",
+  "Despegar":
+    "Take off",
+  "Volar de nuevo":
+    "Fly again",
+  "Ver las ACZ reales en el mapa":
+    "See the real DCAs on the map",
+  "La ciencia detrás del juego":
+    "The science behind the game",
+  "La reina de <i>Apis mellifera</i> se aparea en pleno vuelo, pocos días después de nacer, en un área de congregación de zánganos (ACZ): un lugar donde se reúnen miles de zánganos de muchas colonias. Al aparearse con zánganos de colonias distintas, su descendencia gana diversidad genética, lo que hace a la colonia más resistente a enfermedades y a los cambios del ambiente.":
+    "The <i>Apis mellifera</i> queen mates in mid-flight, a few days after emerging, at a drone congregation area (DCA): a place where thousands of drones from many colonies gather. By mating with drones from different colonies, her offspring gain genetic diversity, which makes the colony more resistant to disease and to environmental change.",
+  "Cada elemento del juego está basado en nuestras investigaciones: el horario de vuelo de la tarde, los claros rodeados de árboles donde se forman las ACZ, las aves insectívoras que observamos cazando en ellas y la importancia de evitar el apareamiento entre hermanos.":
+    "Every element of the game is based on our research: the afternoon flight window, the tree-lined clearings where DCAs form, the insectivorous birds we have observed hunting in them and the importance of avoiding mating between siblings.",
+  "Explorar el mapa de ACZ":
+    "Explore the DCA map",
+  "Colmena":
+    "Hive",
+  "La reina se quedó sin energía":
+    "The queen ran out of energy",
+  "Los vuelos nupciales son exigentes y arriesgados: no todas las reinas regresan a la colmena.":
+    "Mating flights are demanding and risky: not every queen makes it back to the hive.",
+  "Se hizo tarde":
+    "It got too late",
+  "Al caer la tarde baja la temperatura y terminan los vuelos de apareamiento. La reina no logró volver a tiempo.":
+    "As evening falls the temperature drops and mating flights end. The queen didn't make it back in time.",
+  "¡La reina volvió a la colmena!":
+    "The queen made it back to the hive!",
+  "Su colonia tendrá una gran diversidad genética: obreras con distintas habilidades y más resistencia a enfermedades como la varroosis.":
+    "Your colony will have great genetic diversity: workers with different skills and more resistance to diseases such as varroosis.",
+  "Buen vuelo. Con zánganos de más colonias, su descendencia habría sido todavía más diversa.":
+    "Good flight. With drones from more colonies, her offspring would have been even more diverse.",
+  "La reina se apareó, pero con zánganos de pocas colonias: su descendencia tendrá poca diversidad genética.":
+    "The queen mated, but with drones from few colonies: her offspring will have little genetic diversity.",
+  "Se apareó con {n} hermanos: en la naturaleza, las reinas vuelan a ACZ alejadas de su colmena para evitarlo.":
+    "She mated with {n} brothers: in nature, queens fly to DCAs far from their hive to avoid this.",
+  "apareamientos":
+    "matings",
+  "colonias distintas":
+    "different colonies",
+  "diversidad genética":
+    "genetic diversity",
+  "hermanos":
+    "brothers",
+  "¡nuevo récord!":
+    "new record!",
+  "puntos (récord: {r})":
+    "points (record: {r})",
+  "¿Sabía que…?":
+    "Did you know…?",
+  "Son las 14:00: en las horas cálidas de la tarde salen las reinas y los zánganos a sus vuelos de apareamiento.":
+    "It's 2 p.m.: in the warm afternoon hours, queens and drones head out on their mating flights.",
+  "Pista: las ACZ se forman en claros abiertos, rodeados de árboles que las protegen del viento.":
+    "Hint: DCAs form in open clearings, surrounded by trees that shelter them from the wind.",
+  "¡Ráfaga de viento! El viento desvía el vuelo; dentro de la ACZ, los árboles la protegen.":
+    "Gust of wind! The wind pushes you off course; inside the DCA, the trees shelter you.",
+  "Se acaba la tarde: vuelva a la colmena.":
+    "The afternoon is ending: fly back to the hive.",
+  "Este campo abierto está expuesto al viento: aquí no se forma una ACZ.":
+    "This open field is exposed to the wind: no DCA forms here.",
+  "Este claro es demasiado cerrado: los zánganos necesitan espacio abierto para volar.":
+    "This clearing is too enclosed: drones need open space to fly.",
+  "¡Encontró la ACZ! Aquí se reúnen miles de zánganos de muchas colonias.":
+    "You found the DCA! Thousands of drones from many colonies gather here.",
+  "Los zánganos amarillos son sus hermanos: evítelos para que la colonia tenga más diversidad genética.":
+    "The yellow drones are your brothers: avoid them so the colony gets more genetic diversity.",
+  "Se apareó con un hermano: eso reduce la diversidad genética de la colonia.":
+    "You mated with a brother: that reduces the colony's genetic diversity.",
+  "¡Primer apareamiento! El zángano muere después de aparearse.":
+    "First mating! The drone dies after mating.",
+  "¡La espermateca está llena! Vuelva a la colmena.":
+    "The spermatheca is full! Fly back to the hive.",
+  "Una reina se aparea con 12 a 20 zánganos en promedio, ¡y se registraron hasta 70!":
+    "A queen mates with 12 to 20 drones on average, and up to 70 have been recorded!",
+  "Todavía no se apareó: busque el área de congregación.":
+    "You haven't mated yet: look for the congregation area.",
+  "¡Cuidado! Aves insectívoras, como la tijereta, aprovechan las ACZ para cazar.":
+    "Watch out! Insectivorous birds, such as the fork-tailed flycatcher, use DCAs as hunting grounds.",
+  "Una reina se aparea en pleno vuelo con 12 a 20 zánganos en promedio, y se registraron hasta 70.":
+    "A queen mates in mid-flight with 12 to 20 drones on average, and up to 70 have been recorded.",
+  "La reina guarda los espermatozoides en la espermateca y los usa durante toda su vida, que puede durar varios años.":
+    "The queen stores the sperm in her spermatheca and uses it for the rest of her life, which can last several years.",
+  "Las ACZ se mantienen en el mismo lugar año tras año, aunque cada temporada nacen zánganos nuevos que nunca las visitaron.":
+    "DCAs stay in the same place year after year, even though new drones that have never visited them are born each season.",
+  "Una ACZ puede reunir miles de zánganos llegados de colonias que están a varios kilómetros.":
+    "A DCA can gather thousands of drones coming from colonies several kilometers away.",
+  "Los zánganos mueren después de aparearse: su único rol en la colonia es reproductivo.":
+    "Drones die after mating: their only role in the colony is reproduction.",
+  "Zánganos Lab confirmó 27 ACZ en Argentina, Bolivia y Puerto Rico.":
+    "Zánganos Lab has confirmed 27 DCAs in Argentina, Bolivia and Puerto Rico.",
+  "<span aria-hidden=\"true\">🎮</span> Jugar: Vuelo nupcial":
+    "<span aria-hidden=\"true\">🎮</span> Play: Mating flight",
+  "Aprenda jugando":
+    "Learn by playing",
+  "En el juego «Vuelo nupcial», guíe a una reina hasta el área de congregación, aparéese con zánganos de muchas colonias y descubra por qué la diversidad genética es clave para la colonia.":
+    "In the game \"Mating flight\", guide a queen to the congregation area, mate with drones from many colonies and discover why genetic diversity is key for the colony.",
+  "<span aria-hidden=\"true\">🎮</span> Jugar":
+    "<span aria-hidden=\"true\">🎮</span> Play"
 };

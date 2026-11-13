@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vuelo nupcial: el juego de las áreas de congregación de zánganos | Zánganos Lab</title>
+  <meta name="description" content="Juego educativo de Zánganos Lab: guíe a una reina de Apis mellifera hasta el área de congregación de zánganos, aparéese con zánganos de muchas colonias y vuelva a la colmena.">
+  <meta name="theme-color" content="#301811">
+  <link rel="icon" href="img/logo/icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/logo/icono.png">
+  <link rel="canonical" href="https://zanganoslab.github.io/juego.html">
+  <!-- Versiones en otros idiomas (para Google) -->
+  <link rel="alternate" hreflang="es" href="https://zanganoslab.github.io/juego.html">
+  <link rel="alternate" hreflang="en" href="https://zanganoslab.github.io/juego.html?lang=en">
+  <link rel="alternate" hreflang="pt" href="https://zanganoslab.github.io/juego.html?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://zanganoslab.github.io/juego.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zanganoslab.github.io/juego.html">
+  <meta property="og:title" content="Vuelo nupcial | Zánganos Lab">
+  <meta property="og:description" content="¿Puede guiar a la reina hasta el área de congregación de zánganos?">
+  <meta property="og:image" content="https://zanganoslab.github.io/img/logo/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2026111603">
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Zánganos Lab, inicio">
+        <img src="img/logo/logo-horizontal.svg" alt="Zánganos Lab" width="170" height="70">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="index.html#nosotros">¿Quiénes somos?</a>
+        <a href="index.html#investigacion">Investigación</a>
+        <a href="mapa.html">Mapa ACZ</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#publicaciones">Publicaciones</a>
+        <a href="index.html#noticias">Noticias</a>
+        <a href="index.html#multimedia">Multimedia</a>
+        <a href="index.html#contacto" class="btn btn-small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="juego-pagina">
+    <div class="container">
+      <p class="eyebrow">Juego educativo</p>
+      <h1>Vuelo nupcial</h1>
+      <p class="section-intro">Guíe a una joven reina hasta el área de congregación de zánganos, aparéese con zánganos de muchas colonias y vuelva a la colmena antes de que termine la tarde.</p>
+
+      <div class="juego con-panel" id="juego">
+        <canvas id="lienzo" aria-label="Campo de juego: paisaje con la colmena, claros, bosques y zánganos"></canvas>
+
+        <!-- Indicadores durante la partida -->
+        <div class="juego-hud" id="hud" hidden>
+          <div class="hud-item"><span>Hora</span><b id="hud-hora">14:00</b></div>
+          <div class="hud-item hud-energia"><span>Energía</span><div class="barra"><i id="hud-energia"></i></div></div>
+          <div class="hud-item"><span>Apareamientos</span><b id="hud-aparea">0 / 20</b></div>
+          <div class="hud-item"><span>Colonias</span><b id="hud-colonias">0 / 7</b></div>
+          <div class="hud-viento" id="hud-viento" hidden><span id="hud-viento-flecha">➜</span> <span>Viento</span></div>
+        </div>
+        <div class="juego-aviso" id="aviso" role="status" aria-live="polite"></div>
+
+        <!-- Pantalla de inicio -->
+        <div class="juego-panel" id="panel-inicio">
+          <div class="panel-caja">
+            <h2>¿Puede guiar a la reina hasta la ACZ?</h2>
+            <ul class="instrucciones">
+              <li><b>Encuentre la ACZ.</b> Solo uno de los claros es un área de congregación: busque un lugar abierto, rodeado de árboles y protegido del viento.</li>
+              <li><b>Aparéese con muchos zánganos.</b> Cada color es una colonia distinta: cuantas más colonias, más diversidad genética. Evite a sus hermanos, los zánganos amarillos.</li>
+              <li><b>Cuídese de las aves</b> y de las ráfagas de viento.</li>
+              <li><b>Vuelva a la colmena</b> antes de las 17:30.</li>
+            </ul>
+            <p class="controles">Mueva a la reina tocando o arrastrando sobre el campo, o con las flechas del teclado.</p>
+            <div class="leyenda-juego">
+              <span><i class="ley-j ley-reina"></i>Reina</span>
+              <span><i class="ley-j ley-zangano"></i>Zánganos de otras colonias</span>
+              <span><i class="ley-j ley-hermano"></i>Hermanos</span>
+              <span><i class="ley-j ley-ave"></i>Ave</span>
+            </div>
+            <button class="btn btn-mapa" id="btn-jugar">Despegar</button>
+          </div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div class="juego-panel" id="panel-final" hidden>
+          <div class="panel-caja">
+            <p class="estrellas" id="final-estrellas" aria-hidden="true"></p>
+            <h2 id="final-titulo"></h2>
+            <p id="final-mensaje"></p>
+            <div class="final-cifras" id="final-cifras"></div>
+            <div class="final-dato" id="final-dato"></div>
+            <div class="final-acciones">
+              <button class="btn btn-mapa" id="btn-otra">Volar de nuevo</button>
+              <a class="btn btn-ghost" href="mapa.html">Ver las ACZ reales en el mapa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="juego-ciencia">
+        <div>
+          <h2>La ciencia detrás del juego</h2>
+          <p>La reina de <i>Apis mellifera</i> se aparea en pleno vuelo, pocos días después de nacer, en un área de congregación de zánganos (ACZ): un lugar donde se reúnen miles de zánganos de muchas colonias. Al aparearse con zánganos de colonias distintas, su descendencia gana diversidad genética, lo que hace a la colonia más resistente a enfermedades y a los cambios del ambiente.</p>
+          <p>Cada elemento del juego está basado en nuestras investigaciones: el horario de vuelo de la tarde, los claros rodeados de árboles donde se forman las ACZ, las aves insectívoras que observamos cazando en ellas y la importancia de evitar el apareamiento entre hermanos.</p>
+        </div>
+        <a class="btn" href="mapa.html">Explorar el mapa de ACZ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <img src="img/logo/logo-horizontal-fondo-oscuro.svg" alt="Zánganos Lab" class="footer-logo" width="200" height="82">
+      <div>
+        <p>Laboratorio de investigación en zánganos de <i>Apis mellifera</i>.</p>
+        <p>Síganos en Instagram: <a href="https://www.instagram.com/zanganoslab.ier/" target="_blank" rel="noopener">@zanganoslab.ier</a></p>
+        <p>© <span id="anio"></span> Zánganos Lab · <a href="#top">Volver arriba ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/trad-en.js?v=2026111603"></script>
+  <script src="js/trad-pt.js?v=2026111603"></script>
+  <script src="js/i18n.js?v=2026111603"></script>
+  <script src="js/juego.js?v=2026111603"></script>
+</body>
+</html>

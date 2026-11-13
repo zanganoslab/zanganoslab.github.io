@@ -378,6 +378,12 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
 .mapa-home-cifras { display: flex; flex-wrap: wrap; gap: 28px; margin: 24px 0 28px; }
 .mapa-home-cifras b { display: block; font-family: var(--tech); font-size: 2.2rem; color: var(--amarillo); line-height: 1.1; }
 .mapa-home-cifras span { font-size: .88rem; color: var(--gris); }
+.mapa-home-botones { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-claro { background: transparent; border-color: var(--blanco); color: var(--blanco); }
+.btn-claro:hover { background: var(--blanco); border-color: var(--blanco); color: var(--cafe); }
+.mapa-nota-juego { grid-column: 1 / -1; background: var(--cafe); color: var(--blanco); border-color: var(--cafe) !important; }
+.mapa-nota-juego h3 { color: var(--amarillo); }
+.mapa-notas .mapa-nota-juego p { color: #e6dcd8; }
 .mapa-home-vista {
   position: relative; display: block; border-radius: var(--radio); overflow: hidden; text-decoration: none;
   border: 3px solid var(--amarillo); box-shadow: 0 18px 40px rgba(0, 0, 0, .35); transition: transform .25s;
@@ -451,6 +457,64 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
   .mapa-lista { max-height: none; }
 }
 @media (max-width: 520px) { .mapa-cifras { grid-template-columns: repeat(3, 1fr); gap: 8px; } .mapa-cifras .stat { padding: 12px; } .mapa-cifras .stat b { font-size: 1.5rem; } }
+
+/* ---------- Juego "Vuelo nupcial" (juego.html) ---------- */
+.juego-pagina { padding: clamp(32px, 5vw, 56px) 0 clamp(48px, 7vw, 80px); }
+.juego-pagina h1 { font-size: clamp(2rem, 4.4vw, 3rem); }
+.juego { position: relative; display: flex; justify-content: center; background: var(--cafe); border-radius: var(--radio); padding: 10px; }
+#lienzo { display: block; border-radius: 10px; touch-action: none; cursor: crosshair; background: #cfe3a3; }
+.juego-hud {
+  position: absolute; top: 18px; left: 50%; transform: translateX(-50%); z-index: 2;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; padding: 8px 14px;
+  background: rgba(48, 24, 17, .88); color: var(--blanco); border-radius: 12px; font-size: .82rem; max-width: calc(100% - 36px);
+}
+.juego-hud[hidden] { display: none; }
+.hud-item { display: flex; align-items: center; gap: 6px; }
+.hud-item span { color: var(--gris); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; font-family: var(--tech); }
+.hud-item b { font-family: var(--tech); color: var(--amarillo); }
+.hud-energia .barra { width: 70px; height: 8px; background: rgba(255,255,255,.2); border-radius: 4px; overflow: hidden; }
+.hud-energia .barra i { display: block; height: 100%; width: 100%; background: var(--amarillo); transition: width .2s; }
+.hud-viento { color: #9fd3ff; font-weight: 600; }
+.hud-viento[hidden] { display: none; }
+#hud-viento-flecha { display: inline-block; }
+.juego-aviso {
+  position: absolute; left: 50%; bottom: 22px; transform: translate(-50%, 10px); z-index: 2; width: min(560px, calc(100% - 40px));
+  padding: 10px 16px; border-radius: 12px; background: var(--blanco); color: var(--cafe); border-left: 5px solid var(--amarillo);
+  box-shadow: var(--sombra); font-size: .95rem; opacity: 0; transition: opacity .3s, transform .3s; pointer-events: none;
+}
+.juego-aviso.visible { opacity: 1; transform: translate(-50%, 0); }
+.juego-panel { position: absolute; inset: 10px; z-index: 3; display: grid; place-items: center; padding: 16px; background: rgba(30, 15, 10, .55); border-radius: 10px; overflow-y: auto; }
+.juego-panel[hidden] { display: none; }
+.panel-caja { background: var(--blanco); border-radius: var(--radio); padding: clamp(20px, 3vw, 32px); max-width: 560px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,.35); text-align: center; }
+.panel-caja h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+.instrucciones { text-align: left; padding-left: 1.2em; margin: 0 0 12px; display: grid; gap: 6px; font-size: .95rem; color: var(--cafe-suave); }
+.instrucciones b { color: var(--cafe); }
+.controles { font-size: .88rem; color: var(--cafe-suave); }
+.leyenda-juego { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; font-size: .82rem; margin-bottom: 18px; }
+.ley-j { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.ley-reina { background: #c98a1b; box-shadow: 0 0 0 2px #f6c401; }
+.ley-zangano { background: conic-gradient(#c0392b 0 25%, #2e86c1 0 50%, #27ae60 0 75%, #8e44ad 0); }
+.ley-hermano { background: #f6c401; box-shadow: 0 0 0 1px #301811; }
+.ley-ave { background: #1e1e2a; border-radius: 2px; }
+.estrellas { font-size: 2rem; color: var(--amarillo); letter-spacing: 6px; margin: 0; text-shadow: 0 1px 0 var(--cafe); }
+.final-cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 10px; margin: 16px 0; }
+.final-cifras div { background: var(--fondo-alt); border-radius: 10px; padding: 10px 6px; }
+.final-cifras b { display: block; font-family: var(--tech); font-size: 1.3rem; }
+.final-cifras span { font-size: .75rem; color: var(--cafe-suave); }
+.final-dato { text-align: left; font-size: .92rem; background: #fdf3c4; border-radius: 10px; padding: 12px 14px; margin-bottom: 16px; }
+.final-acciones { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.final-acciones .btn, #btn-jugar { cursor: pointer; font-family: inherit; }
+.juego-ciencia { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: end; margin-top: 40px; padding: 28px; background: var(--fondo-alt); border-radius: var(--radio); }
+.juego-ciencia p { color: var(--cafe-suave); }
+@media (max-width: 700px) {
+  /* En pantallas chicas, inicio y resultados se muestran en lugar del campo, no encima */
+  .juego.con-panel #lienzo { display: none; }
+  .juego.con-panel .juego-panel { position: static; background: none; padding: 0; }
+  .juego.con-panel { padding: 12px; }
+  .juego-ciencia { grid-template-columns: 1fr; }
+  .juego-hud { gap: 4px 10px; font-size: .75rem; top: 14px; }
+  .hud-energia .barra { width: 50px; }
+}
 
 /* ---------- Animación al hacer scroll ---------- */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
