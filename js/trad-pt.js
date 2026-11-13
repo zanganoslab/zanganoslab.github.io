@@ -741,5 +741,19 @@ TRAD.pt = {
   "En el juego «Vuelo nupcial», guíe a una reina hasta el área de congregación, aparéese con zánganos de muchas colonias y descubra por qué la diversidad genética es clave para la colonia.":
     "No jogo \"Voo nupcial\", guie uma rainha até a área de congregação, acasale com zangões de muitas colônias e descubra por que a diversidade genética é fundamental para a colônia.",
   "<span aria-hidden=\"true\">🎮</span> Jugar":
-    "<span aria-hidden=\"true\">🎮</span> Jogar"
+    "<span aria-hidden=\"true\">🎮</span> Jogar",
+  "Lugar de trabajo<b>Instituto de Ecología Regional (IER)</b>UNT – CONICET · Yerba Buena, Tucumán ↗":
+    "Local de trabalho<b>Instituto de Ecologia Regional (IER)</b>UNT – CONICET · Yerba Buena, Tucumán, Argentina ↗",
+  "Instituto de Ecología Regional (IER), UNT – CONICET":
+    "Instituto de Ecologia Regional (IER), UNT – CONICET",
+  "Dónde estamos":
+    "Onde estamos",
+  "Instituto de Ecología Regional (IER)":
+    "Instituto de Ecologia Regional (IER)",
+  "Zánganos Lab funciona en el Instituto de Ecología Regional, unidad ejecutora de la Universidad Nacional de Tucumán y el CONICET, en el Edificio Las Cúpulas de la Residencia Universitaria de Horco Molle, Yerba Buena, Tucumán, Argentina.":
+    "O Zánganos Lab funciona no Instituto de Ecologia Regional, unidade executora da Universidade Nacional de Tucumán e do CONICET, no Edifício Las Cúpulas da Residência Universitária de Horco Molle, Yerba Buena, Tucumán, Argentina.",
+  "Visitar el sitio del IER ↗":
+    "Visitar o site do IER ↗",
+  "Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Los informes completos son confidenciales: aquí mostramos solo una vista previa.":
+    "Alguns dos trabalhos que realizamos para produtores, cooperativas e instituições da Argentina e da Bolívia. Os relatórios completos são confidenciais: aqui mostramos apenas uma prévia."
 };

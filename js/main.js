@@ -112,7 +112,6 @@ $("#informes-lista").innerHTML = informesOrdenados.map((r, k) => `
       <span class="informe-resumen">${cursiva(r.resumen)}</span>
       <div class="informe-acciones">
         <button class="btn btn-ghost btn-small" data-informe="${k}">${tr("Ver {n} de {t} páginas", { n: r.paginas.length, t: r.totalPaginas })}</button>
-        <a class="btn btn-small" href="mailto:zanganoslab@gmail.com?subject=${encodeURIComponent(tr("Solicitud de informe: ") + tr(r.titulo))}">${tr("Solicitar informe completo")}</a>
       </div>
     </div>
   </article>`).join("");

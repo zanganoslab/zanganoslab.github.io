@@ -739,5 +739,19 @@ TRAD.en = {
   "En el juego «Vuelo nupcial», guíe a una reina hasta el área de congregación, aparéese con zánganos de muchas colonias y descubra por qué la diversidad genética es clave para la colonia.":
     "In the game \"Mating flight\", guide a queen to the congregation area, mate with drones from many colonies and discover why genetic diversity is key for the colony.",
   "<span aria-hidden=\"true\">🎮</span> Jugar":
-    "<span aria-hidden=\"true\">🎮</span> Play"
+    "<span aria-hidden=\"true\">🎮</span> Play",
+  "Lugar de trabajo<b>Instituto de Ecología Regional (IER)</b>UNT – CONICET · Yerba Buena, Tucumán ↗":
+    "Workplace<b>Institute of Regional Ecology (IER)</b>UNT – CONICET · Yerba Buena, Tucumán, Argentina ↗",
+  "Instituto de Ecología Regional (IER), UNT – CONICET":
+    "Institute of Regional Ecology (IER), UNT – CONICET",
+  "Dónde estamos":
+    "Where we are",
+  "Instituto de Ecología Regional (IER)":
+    "Institute of Regional Ecology (IER)",
+  "Zánganos Lab funciona en el Instituto de Ecología Regional, unidad ejecutora de la Universidad Nacional de Tucumán y el CONICET, en el Edificio Las Cúpulas de la Residencia Universitaria de Horco Molle, Yerba Buena, Tucumán, Argentina.":
+    "Zánganos Lab is based at the Institute of Regional Ecology, a research unit of the National University of Tucumán and CONICET, in the Las Cúpulas building at the Horco Molle University Residence, Yerba Buena, Tucumán, Argentina.",
+  "Visitar el sitio del IER ↗":
+    "Visit the IER website ↗",
+  "Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Los informes completos son confidenciales: aquí mostramos solo una vista previa.":
+    "Some of the work we have done for producers, cooperatives and institutions in Argentina and Bolivia. The full reports are confidential: here we only show a preview."
 };

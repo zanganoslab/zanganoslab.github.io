@@ -75,8 +75,8 @@ const SERVICIOS = [
 
 /* ---------- Informes técnicos ----------
    Informes de servicios realizados. Por confidencialidad con los clientes solo se
-   muestra una vista previa (pocas páginas, sin mapas ni coordenadas) y el informe
-   completo se solicita por correo.
+   muestra una vista previa (pocas páginas, sin mapas ni coordenadas). Los informes
+   completos son confidenciales y no se ofrecen en la web.
    paginas: imágenes de la vista previa en img/informes/<carpeta>/01.jpg, 02.jpg…
             se declaran con vistaPrevia("carpeta", cantidad).
    Se ordenan solos, el más reciente primero. */
