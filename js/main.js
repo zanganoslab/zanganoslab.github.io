@@ -73,6 +73,21 @@ if (typeof ACZ !== "undefined" && $("#mapa-home-cifras")) {
   obsMini.observe($("#mapa-mini"));
 }
 
+/* ---------- Colmena en vivo: adelanto (datos en js/colmena-api.js) ---------- */
+if (typeof ColmenaAPI !== "undefined" && $("#envivo-home")) {
+  const MOSTRAR = ["temperatura_crias", "temperatura_interior_colmena", "humedad_interior_colmena"];
+  ColmenaAPI.ultimas((r) => {
+    if (!r.ok) { if (!$("#home-valores").children.length) $("#home-estado").textContent = tr("Datos no disponibles"); return; }
+    const { generado, estado, mapa } = r.datos;
+    $("#home-estado").textContent = tr(ColmenaAPI.ESTADOS[estado] || estado);
+    $("#home-punto").className = "punto-estado " + estado;
+    const tiempos = Object.values(mapa).map((m) => +m.fecha);
+    $("#home-ultimo").textContent = tiempos.length ? "· " + tr("último dato {t}", { t: ColmenaAPI.hace((generado - Math.max(...tiempos)) / 1000) }) : "";
+    $("#home-valores").innerHTML = MOSTRAR.filter((k) => mapa[k] && !mapa[k].sinLectura).map((k) =>
+      `<div><span>${esc(tr(ColmenaAPI.VARIABLES[k].nombre))}</span><b>${ColmenaAPI.numero(mapa[k].value)} ${esc(mapa[k].unit)}</b></div>`).join("");
+  });
+}
+
 /* ---------- Líneas de investigación ---------- */
 $("#lineas").innerHTML = LINEAS.map((l) => `
   <article class="card reveal">

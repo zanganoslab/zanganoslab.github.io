@@ -755,5 +755,107 @@ TRAD.pt = {
   "Visitar el sitio del IER ↗":
     "Visitar o site do IER ↗",
   "Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Los informes completos son confidenciales: aquí mostramos solo una vista previa.":
-    "Alguns dos trabalhos que realizamos para produtores, cooperativas e instituições da Argentina e da Bolívia. Os relatórios completos são confidenciais: aqui mostramos apenas uma prévia."
+    "Alguns dos trabalhos que realizamos para produtores, cooperativas e instituições da Argentina e da Bolívia. Os relatórios completos são confidenciais: aqui mostramos apenas uma prévia.",
+  "Colmena en vivo: monitoreo de temperatura y humedad | Zánganos Lab":
+    "Colmeia ao vivo: monitoramento de temperatura e umidade | Zánganos Lab",
+  "Datos en tiempo real de una colmena de Apis mellifera monitoreada por Zánganos Lab con el Kit Apícola IoT: temperatura y humedad del interior, de las crías y del exterior.":
+    "Dados em tempo real de uma colmeia de Apis mellifera monitorada pelo Zánganos Lab com o Kit Apícola IoT: temperatura e umidade do interior, da cria e do exterior.",
+  "Colmena en vivo | Zánganos Lab":
+    "Colmeia ao vivo | Zánganos Lab",
+  "Temperatura y humedad de una colmena monitoreada en tiempo real.":
+    "Temperatura e umidade de uma colmeia monitorada em tempo real.",
+  "Colmena en vivo":
+    "Colmeia ao vivo",
+  "Temperatura y humedad de una colmena de <i>Apis mellifera</i> medidas cada cinco minutos con el Kit Apícola IoT, desarrollado en nuestro laboratorio por Edgardo Díaz.":
+    "Temperatura e umidade de uma colmeia de <i>Apis mellifera</i> medidas a cada cinco minutos com o Kit Apícola IoT, desenvolvido em nosso laboratório por Edgardo Díaz.",
+  "Conectando…":
+    "Conectando…",
+  "Últimas horas":
+    "Últimas horas",
+  "Período del gráfico":
+    "Período do gráfico",
+  "Temperatura (°C)":
+    "Temperatura (°C)",
+  "Humedad (%)":
+    "Umidade (%)",
+  "¿Cómo leer estos datos?":
+    "Como ler estes dados?",
+  "<b>Las abejas regulan la temperatura de las crías.</b> Cuando hay cría, las obreras mantienen el centro del nido cerca de 34–35 °C, generando calor con sus músculos de vuelo o ventilando y acarreando agua para enfriarlo.":
+    "<b>As abelhas regulam a temperatura da cria.</b> Quando há cria, as operárias mantêm o centro do ninho perto de 34–35 °C, gerando calor com os músculos de voo ou ventilando e trazendo água para resfriá-lo.",
+  "<b>El interior acompaña más al ambiente.</b> Fuera del área de cría, la temperatura varía más con el día y la noche, y la humedad suele ser alta por la respiración de las abejas y la maduración de la miel.":
+    "<b>O interior acompanha mais o ambiente.</b> Fora da área de cria, a temperatura varia mais entre o dia e a noite, e a umidade costuma ser alta por causa da respiração das abelhas e da maturação do mel.",
+  "<b>Comparar interior y exterior</b> permite ver cuánto aísla y regula la colonia, y detectar problemas como una colonia débil o la pérdida de la reina.":
+    "<b>Comparar interior e exterior</b> permite ver quanto a colônia isola e regula o ambiente, e detectar problemas como uma colônia fraca ou a perda da rainha.",
+  "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmena en vivo":
+    "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmeia ao vivo",
+  "Ver datos y gráficos":
+    "Ver dados e gráficos",
+  "hace instantes":
+    "agora mesmo",
+  "hace {n} min":
+    "há {n} min",
+  "hace {n} h":
+    "há {n} h",
+  "hace {n} días":
+    "há {n} dias",
+  "En línea":
+    "On-line",
+  "Con retraso":
+    "Com atraso",
+  "Sin conexión":
+    "Sem conexão",
+  "Sin datos":
+    "Sem dados",
+  "Temperatura interior de la colmena":
+    "Temperatura interna da colmeia",
+  "Humedad interior de la colmena":
+    "Umidade interna da colmeia",
+  "Temperatura de las crías":
+    "Temperatura da cria",
+  "Humedad de las crías":
+    "Umidade da cria",
+  "Temperatura exterior":
+    "Temperatura externa",
+  "Humedad exterior":
+    "Umidade externa",
+  "Interior":
+    "Interior",
+  "Crías":
+    "Cria",
+  "Exterior":
+    "Exterior",
+  "Interior de la colmena":
+    "Interior da colmeia",
+  "Área de cría":
+    "Área de cria",
+  "Demasiadas consultas: se actualizará en unos minutos.":
+    "Muitas consultas: será atualizado em alguns minutos.",
+  "Servicio de datos no disponible momentáneamente: se reintentará en unos minutos.":
+    "Serviço de dados indisponível no momento: será tentado novamente em alguns minutos.",
+  "Datos no disponibles":
+    "Dados indisponíveis",
+  "último dato {t}":
+    "último dado {t}",
+  "Todavía no hay datos de la colmena.":
+    "Ainda não há dados da colmeia.",
+  "Temperatura":
+    "Temperatura",
+  "Humedad":
+    "Umidade",
+  "sin dato":
+    "sem dado",
+  "sin lectura":
+    "sem leitura",
+  "El sensor exterior no está enviando lecturas válidas.":
+    "O sensor externo não está enviando leituras válidas.",
+  "Datos no disponibles momentáneamente.":
+    "Dados indisponíveis no momento.",
+  "Para períodos de más de 24 horas, cada punto es el promedio de 15 minutos.":
+    "Para períodos de mais de 24 horas, cada ponto é a média de 15 minutos.",
+  "Cada punto es una lectura del sensor (una cada 5 minutos aproximadamente).":
+    "Cada ponto é uma leitura do sensor (cerca de uma a cada 5 minutos).",
+  "Sin datos en este período.":
+    "Sem dados neste período.",
+  "Gráfico de las últimas horas":
+    "Gráfico das últimas horas"
 };

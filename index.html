@@ -45,7 +45,7 @@
   <!-- Manual de identidad: Futura PT (principal) + Goldman (complementaria).
        Futura PT es de pago (Adobe Fonts); Jost es su equivalente libre más cercano. -->
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=2026111702">
+  <link rel="stylesheet" href="css/styles.css?v=2026111801">
 </head>
 <body id="top">
 
@@ -164,6 +164,16 @@
         <h2>Líneas de investigación</h2>
         <p class="section-intro">Buscamos comprender mejor la biología, el comportamiento, la fisiología y más características de los zánganos de <i>Apis mellifera</i>, contribuyendo a la apicultura y la conservación de las abejas.</p>
         <div class="cards" id="lineas"></div>
+
+        <!-- Adelanto de los datos en vivo (js/colmena-api.js) -->
+        <div class="envivo-home" id="envivo-home">
+          <div>
+            <h3><span class="punto-estado" id="home-punto"></span> Colmena en vivo</h3>
+            <p class="monitoreo-estado"><span><b id="home-estado">Conectando…</b> <span id="home-ultimo"></span></span></p>
+            <div class="envivo-valores" id="home-valores"></div>
+          </div>
+          <a class="btn" href="monitoreo.html">Ver datos y gráficos</a>
+        </div>
       </div>
     </section>
 
@@ -289,11 +299,12 @@
     </div>
   </footer>
 
-  <script src="js/trad-en.js?v=2026111702"></script>
-  <script src="js/trad-pt.js?v=2026111702"></script>
-  <script src="js/i18n.js?v=2026111702"></script>
-  <script src="js/datos.js?v=2026111702"></script>
-  <script src="js/acz.js?v=2026111702"></script>
-  <script src="js/main.js?v=2026111702"></script>
+  <script src="js/trad-en.js?v=2026111801"></script>
+  <script src="js/trad-pt.js?v=2026111801"></script>
+  <script src="js/i18n.js?v=2026111801"></script>
+  <script src="js/datos.js?v=2026111801"></script>
+  <script src="js/acz.js?v=2026111801"></script>
+  <script src="js/colmena-api.js?v=2026111801"></script>
+  <script src="js/main.js?v=2026111801"></script>
 </body>
 </html>

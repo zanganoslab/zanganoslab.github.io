@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colmena en vivo: monitoreo de temperatura y humedad | Zánganos Lab</title>
+  <meta name="description" content="Datos en tiempo real de una colmena de Apis mellifera monitoreada por Zánganos Lab con el Kit Apícola IoT: temperatura y humedad del interior, de las crías y del exterior.">
+  <meta name="theme-color" content="#301811">
+  <link rel="icon" href="img/logo/icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/logo/icono.png">
+  <link rel="canonical" href="https://zanganoslab.github.io/monitoreo.html">
+  <!-- Versiones en otros idiomas (para Google) -->
+  <link rel="alternate" hreflang="es" href="https://zanganoslab.github.io/monitoreo.html">
+  <link rel="alternate" hreflang="en" href="https://zanganoslab.github.io/monitoreo.html?lang=en">
+  <link rel="alternate" hreflang="pt" href="https://zanganoslab.github.io/monitoreo.html?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://zanganoslab.github.io/monitoreo.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zanganoslab.github.io/monitoreo.html">
+  <meta property="og:title" content="Colmena en vivo | Zánganos Lab">
+  <meta property="og:description" content="Temperatura y humedad de una colmena monitoreada en tiempo real.">
+  <meta property="og:image" content="https://zanganoslab.github.io/img/logo/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2026111801">
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Zánganos Lab, inicio">
+        <img src="img/logo/logo-horizontal.svg" alt="Zánganos Lab" width="170" height="70">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="index.html#nosotros">¿Quiénes somos?</a>
+        <a href="index.html#investigacion">Investigación</a>
+        <a href="mapa.html">Mapa ACZ</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#publicaciones">Publicaciones</a>
+        <a href="index.html#noticias">Noticias</a>
+        <a href="index.html#multimedia">Multimedia</a>
+        <a href="index.html#contacto" class="btn btn-small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section monitoreo">
+    <div class="container">
+      <p class="eyebrow">Monitoreo inteligente de colmenas</p>
+      <h1>Colmena en vivo</h1>
+      <p class="section-intro">Temperatura y humedad de una colmena de <i>Apis mellifera</i> medidas cada cinco minutos con el Kit Apícola IoT, desarrollado en nuestro laboratorio por Edgardo Díaz.</p>
+
+      <div class="monitoreo-estado" role="status" aria-live="polite">
+        <span class="punto-estado" id="punto-estado"></span>
+        <span><b id="estado-dispositivo">Conectando…</b> <span id="ultimo-dato"></span></span>
+        <span class="aviso-servicio" id="aviso-servicio" hidden></span>
+      </div>
+
+      <div class="lecturas" id="lecturas"></div>
+
+      <div class="graficos-cabecera">
+        <h2>Últimas horas</h2>
+        <div class="chips" id="rango" role="group" aria-label="Período del gráfico">
+          <button class="chip" data-horas="6" aria-pressed="false">6 h</button>
+          <button class="chip" data-horas="24" aria-pressed="true">24 h</button>
+          <button class="chip" data-horas="72" aria-pressed="false">72 h</button>
+        </div>
+      </div>
+      <div class="graficos">
+        <figure class="grafico"><figcaption>Temperatura (°C)</figcaption><div id="grafico-temperatura" class="grafico-lienzo"></div></figure>
+        <figure class="grafico"><figcaption>Humedad (%)</figcaption><div id="grafico-humedad" class="grafico-lienzo"></div></figure>
+      </div>
+      <p class="nota-grafico" id="nota-grafico"></p>
+
+      <div class="monitoreo-ciencia">
+        <h2>¿Cómo leer estos datos?</h2>
+        <ul>
+          <li><b>Las abejas regulan la temperatura de las crías.</b> Cuando hay cría, las obreras mantienen el centro del nido cerca de 34–35 °C, generando calor con sus músculos de vuelo o ventilando y acarreando agua para enfriarlo.</li>
+          <li><b>El interior acompaña más al ambiente.</b> Fuera del área de cría, la temperatura varía más con el día y la noche, y la humedad suele ser alta por la respiración de las abejas y la maduración de la miel.</li>
+          <li><b>Comparar interior y exterior</b> permite ver cuánto aísla y regula la colonia, y detectar problemas como una colonia débil o la pérdida de la reina.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <img src="img/logo/logo-horizontal-fondo-oscuro.svg" alt="Zánganos Lab" class="footer-logo" width="200" height="82">
+      <a class="footer-sede" href="https://ier.conicet.gov.ar/" target="_blank" rel="noopener">
+        <img src="img/instituciones/ier.png" alt="Instituto de Ecología Regional (IER), UNT – CONICET" width="113" height="89">
+        <span>Lugar de trabajo<b>Instituto de Ecología Regional (IER)</b>UNT – CONICET · Yerba Buena, Tucumán ↗</span>
+      </a>
+      <div>
+        <p>Laboratorio de investigación en zánganos de <i>Apis mellifera</i>.</p>
+        <p>Síganos en Instagram: <a href="https://www.instagram.com/zanganoslab.ier/" target="_blank" rel="noopener">@zanganoslab.ier</a></p>
+        <p>© <span id="anio"></span> Zánganos Lab · <a href="#top">Volver arriba ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/trad-en.js?v=2026111801"></script>
+  <script src="js/trad-pt.js?v=2026111801"></script>
+  <script src="js/i18n.js?v=2026111801"></script>
+  <script src="js/colmena-api.js?v=2026111801"></script>
+  <script src="js/monitoreo.js?v=2026111801"></script>
+</body>
+</html>

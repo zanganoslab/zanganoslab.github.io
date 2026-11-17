@@ -753,5 +753,107 @@ TRAD.en = {
   "Visitar el sitio del IER ↗":
     "Visit the IER website ↗",
   "Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Los informes completos son confidenciales: aquí mostramos solo una vista previa.":
-    "Some of the work we have done for producers, cooperatives and institutions in Argentina and Bolivia. The full reports are confidential: here we only show a preview."
+    "Some of the work we have done for producers, cooperatives and institutions in Argentina and Bolivia. The full reports are confidential: here we only show a preview.",
+  "Colmena en vivo: monitoreo de temperatura y humedad | Zánganos Lab":
+    "Live hive: temperature and humidity monitoring | Zánganos Lab",
+  "Datos en tiempo real de una colmena de Apis mellifera monitoreada por Zánganos Lab con el Kit Apícola IoT: temperatura y humedad del interior, de las crías y del exterior.":
+    "Real-time data from an Apis mellifera hive monitored by Zánganos Lab with the IoT Beekeeping Kit: temperature and humidity inside the hive, in the brood area and outside.",
+  "Colmena en vivo | Zánganos Lab":
+    "Live hive | Zánganos Lab",
+  "Temperatura y humedad de una colmena monitoreada en tiempo real.":
+    "Temperature and humidity of a hive monitored in real time.",
+  "Colmena en vivo":
+    "Live hive",
+  "Temperatura y humedad de una colmena de <i>Apis mellifera</i> medidas cada cinco minutos con el Kit Apícola IoT, desarrollado en nuestro laboratorio por Edgardo Díaz.":
+    "Temperature and humidity of an <i>Apis mellifera</i> hive, measured every five minutes with the IoT Beekeeping Kit developed in our laboratory by Edgardo Díaz.",
+  "Conectando…":
+    "Connecting…",
+  "Últimas horas":
+    "Last hours",
+  "Período del gráfico":
+    "Chart period",
+  "Temperatura (°C)":
+    "Temperature (°C)",
+  "Humedad (%)":
+    "Humidity (%)",
+  "¿Cómo leer estos datos?":
+    "How to read these data?",
+  "<b>Las abejas regulan la temperatura de las crías.</b> Cuando hay cría, las obreras mantienen el centro del nido cerca de 34–35 °C, generando calor con sus músculos de vuelo o ventilando y acarreando agua para enfriarlo.":
+    "<b>Bees regulate the brood temperature.</b> When there is brood, workers keep the center of the nest at around 34–35 °C, producing heat with their flight muscles or fanning and carrying water to cool it.",
+  "<b>El interior acompaña más al ambiente.</b> Fuera del área de cría, la temperatura varía más con el día y la noche, y la humedad suele ser alta por la respiración de las abejas y la maduración de la miel.":
+    "<b>The rest of the hive follows the environment more closely.</b> Outside the brood area, temperature varies more between day and night, and humidity is usually high because of the bees' respiration and the ripening of honey.",
+  "<b>Comparar interior y exterior</b> permite ver cuánto aísla y regula la colonia, y detectar problemas como una colonia débil o la pérdida de la reina.":
+    "<b>Comparing inside and outside</b> shows how well the colony insulates and regulates itself, and helps detect problems such as a weak colony or the loss of the queen.",
+  "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmena en vivo":
+    "<span class=\"punto-estado\" id=\"home-punto\"></span> Live hive",
+  "Ver datos y gráficos":
+    "See data and charts",
+  "hace instantes":
+    "just now",
+  "hace {n} min":
+    "{n} min ago",
+  "hace {n} h":
+    "{n} h ago",
+  "hace {n} días":
+    "{n} days ago",
+  "En línea":
+    "Online",
+  "Con retraso":
+    "Delayed",
+  "Sin conexión":
+    "Offline",
+  "Sin datos":
+    "No data",
+  "Temperatura interior de la colmena":
+    "Temperature inside the hive",
+  "Humedad interior de la colmena":
+    "Humidity inside the hive",
+  "Temperatura de las crías":
+    "Brood temperature",
+  "Humedad de las crías":
+    "Brood humidity",
+  "Temperatura exterior":
+    "Outside temperature",
+  "Humedad exterior":
+    "Outside humidity",
+  "Interior":
+    "Inside",
+  "Crías":
+    "Brood",
+  "Exterior":
+    "Outside",
+  "Interior de la colmena":
+    "Inside the hive",
+  "Área de cría":
+    "Brood area",
+  "Demasiadas consultas: se actualizará en unos minutos.":
+    "Too many requests: it will update in a few minutes.",
+  "Servicio de datos no disponible momentáneamente: se reintentará en unos minutos.":
+    "Data service temporarily unavailable: it will retry in a few minutes.",
+  "Datos no disponibles":
+    "Data unavailable",
+  "último dato {t}":
+    "last reading {t}",
+  "Todavía no hay datos de la colmena.":
+    "There are no hive data yet.",
+  "Temperatura":
+    "Temperature",
+  "Humedad":
+    "Humidity",
+  "sin dato":
+    "no data",
+  "sin lectura":
+    "no reading",
+  "El sensor exterior no está enviando lecturas válidas.":
+    "The outside sensor is not sending valid readings.",
+  "Datos no disponibles momentáneamente.":
+    "Data temporarily unavailable.",
+  "Para períodos de más de 24 horas, cada punto es el promedio de 15 minutos.":
+    "For periods longer than 24 hours, each point is a 15-minute average.",
+  "Cada punto es una lectura del sensor (una cada 5 minutos aproximadamente).":
+    "Each point is a sensor reading (about one every 5 minutes).",
+  "Sin datos en este período.":
+    "No data for this period.",
+  "Gráfico de las últimas horas":
+    "Chart of the last hours"
 };
