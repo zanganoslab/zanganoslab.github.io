@@ -857,5 +857,43 @@ TRAD.pt = {
   "Sin datos en este período.":
     "Sem dados neste período.",
   "Gráfico de las últimas horas":
-    "Gráfico das últimas horas"
+    "Gráfico das últimas horas",
+  "<span aria-hidden=\"true\">🎮</span> Jugar: La gran aventura de la colmena":
+    "<span aria-hidden=\"true\">🎮</span> Jogar: A grande aventura da colmeia",
+  "La gran aventura de la colmena: juego sobre reinas y zánganos | Zánganos Lab":
+    "A grande aventura da colmeia: jogo sobre rainhas e zangões | Zánganos Lab",
+  "La gran aventura de la colmena | Zánganos Lab":
+    "A grande aventura da colmeia | Zánganos Lab",
+  "Juego educativo para chicos de Zánganos Lab: descubra cómo nacen las reinas, las obreras y los zánganos de Apis mellifera y cómo es el vuelo nupcial.":
+    "Jogo educativo do Zánganos Lab para crianças: descubra como nascem as rainhas, as operárias e os zangões de Apis mellifera e como é o voo nupcial.",
+  "Un juego para aprender cómo se reproducen las abejas.":
+    "Um jogo para aprender como as abelhas se reproduzem.",
+  "Juego educativo para chicos":
+    "Jogo educativo para crianças",
+  "La gran aventura de la colmena":
+    "A grande aventura da colmeia",
+  "Cinco capítulos cortos para descubrir cómo nacen las reinas, las obreras y los zánganos de <i>Apis mellifera</i>, y qué pasa en el vuelo nupcial. Se juega con el dedo, el mouse o el teclado.":
+    "Cinco capítulos curtos para descobrir como nascem as rainhas, as operárias e os zangões de <i>Apis mellifera</i> e o que acontece no voo nupcial. Joga-se com o dedo, o mouse ou o teclado.",
+  "Para docentes y familias":
+    "Para professores e famílias",
+  "El juego está pensado para chicos de 6 a 12 años y dura unos 15 minutos. Cada capítulo trabaja una idea:":
+    "O jogo foi pensado para crianças de 6 a 12 anos e dura cerca de 15 minutos. Cada capítulo trabalha uma ideia:",
+  "<b>La familia de la colmena:</b> una reina, miles de obreras y los zánganos.":
+    "<b>A família da colmeia:</b> uma rainha, milhares de operárias e os zangões.",
+  "<b>¿Quién nace de cada celda?</b> Huevos fecundados (hembras) y sin fecundar (zánganos); la jalea real hace a la reina.":
+    "<b>Quem nasce de cada alvéolo?</b> Ovos fecundados (fêmeas) e não fecundados (zangões); a geleia real faz a rainha.",
+  "<b>El vuelo del zángano:</b> las áreas de congregación de zánganos (ACZ) y los peligros del vuelo.":
+    "<b>O voo do zangão:</b> as áreas de congregação de zangões (ACZ) e os perigos do voo.",
+  "<b>El vuelo nupcial:</b> la reina se aparea en el aire con muchos zánganos de otras colmenas.":
+    "<b>O voo nupcial:</b> a rainha acasala no ar com muitos zangões de outras colmeias.",
+  "<b>La nueva colonia:</b> la diversidad genética hace más fuerte a la colonia. Cierra con cinco preguntas y un diploma.":
+    "<b>A nova colônia:</b> a diversidade genética torna a colônia mais forte. Termina com cinco perguntas e um diploma.",
+  "Algunas cosas están simplificadas para el juego: por ejemplo, la reina lleva corona para encontrarla fácil y cada color de rayas representa una colmena distinta.":
+    "Algumas coisas estão simplificadas para o jogo: por exemplo, a rainha usa coroa para ser encontrada facilmente e cada cor de listras representa uma colmeia diferente.",
+  "¿Busca un desafío mayor? Pruebe <a href=\"juego.html\">Vuelo nupcial</a>, nuestro juego para encontrar la ACZ en un mapa.":
+    "Procura um desafio maior? Experimente <a href=\"juego.html\">Voo nupcial</a>, nosso jogo para encontrar a ACZ em um mapa.",
+  "Volver a los capítulos":
+    "Voltar aos capítulos",
+  "Escena del juego":
+    "Cena do jogo"
 };

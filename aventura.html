@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La gran aventura de la colmena: juego sobre reinas y zánganos | Zánganos Lab</title>
+  <meta name="description" content="Juego educativo para chicos de Zánganos Lab: descubra cómo nacen las reinas, las obreras y los zánganos de Apis mellifera y cómo es el vuelo nupcial.">
+  <meta name="theme-color" content="#301811">
+  <link rel="icon" href="img/logo/icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/logo/icono.png">
+  <link rel="canonical" href="https://zanganoslab.github.io/aventura.html">
+  <!-- Versiones en otros idiomas (para Google) -->
+  <link rel="alternate" hreflang="es" href="https://zanganoslab.github.io/aventura.html">
+  <link rel="alternate" hreflang="en" href="https://zanganoslab.github.io/aventura.html?lang=en">
+  <link rel="alternate" hreflang="pt" href="https://zanganoslab.github.io/aventura.html?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://zanganoslab.github.io/aventura.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zanganoslab.github.io/aventura.html">
+  <meta property="og:title" content="La gran aventura de la colmena | Zánganos Lab">
+  <meta property="og:description" content="Un juego para aprender cómo se reproducen las abejas.">
+  <meta property="og:image" content="https://zanganoslab.github.io/img/logo/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2026111902">
+  <link rel="stylesheet" href="css/aventura.css?v=2026111902">
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Zánganos Lab, inicio">
+        <img src="img/logo/logo-horizontal.svg" alt="Zánganos Lab" width="170" height="70">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="index.html#nosotros">¿Quiénes somos?</a>
+        <a href="index.html#investigacion">Investigación</a>
+        <a href="mapa.html">Mapa ACZ</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#publicaciones">Publicaciones</a>
+        <a href="index.html#noticias">Noticias</a>
+        <a href="index.html#multimedia">Multimedia</a>
+        <a href="index.html#contacto" class="btn btn-small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="juego-pagina">
+    <div class="container">
+      <p class="eyebrow">Juego educativo para chicos</p>
+      <h1>La gran aventura de la colmena</h1>
+      <p class="section-intro">Cinco capítulos cortos para descubrir cómo nacen las reinas, las obreras y los zánganos de <i>Apis mellifera</i>, y qué pasa en el vuelo nupcial. Se juega con el dedo, el mouse o el teclado.</p>
+
+      <div class="av" id="av">
+        <canvas id="av-lienzo" aria-label="Escena del juego"></canvas>
+        <div class="av-hud" id="av-hud"></div>
+        <div class="av-aviso" id="av-aviso" role="status" aria-live="polite"></div>
+        <div class="av-botones">
+          <button class="av-redondo" id="av-inicio" aria-label="Volver a los capítulos" title="Capítulos">🏠</button>
+          <button class="av-redondo" id="av-sonido" aria-label="Silenciar">🔊</button>
+          <button class="av-redondo" id="av-pantalla" aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+        </div>
+        <div class="av-capa" id="av-capa" hidden></div>
+      </div>
+
+      <div class="juego-ciencia av-docentes">
+        <div>
+          <h2>Para docentes y familias</h2>
+          <p>El juego está pensado para chicos de 6 a 12 años y dura unos 15 minutos. Cada capítulo trabaja una idea:</p>
+          <ol>
+            <li><b>La familia de la colmena:</b> una reina, miles de obreras y los zánganos.</li>
+            <li><b>¿Quién nace de cada celda?</b> Huevos fecundados (hembras) y sin fecundar (zánganos); la jalea real hace a la reina.</li>
+            <li><b>El vuelo del zángano:</b> las áreas de congregación de zánganos (ACZ) y los peligros del vuelo.</li>
+            <li><b>El vuelo nupcial:</b> la reina se aparea en el aire con muchos zánganos de otras colmenas.</li>
+            <li><b>La nueva colonia:</b> la diversidad genética hace más fuerte a la colonia. Cierra con cinco preguntas y un diploma.</li>
+          </ol>
+          <p>Algunas cosas están simplificadas para el juego: por ejemplo, la reina lleva corona para encontrarla fácil y cada color de rayas representa una colmena distinta.</p>
+          <p>¿Busca un desafío mayor? Pruebe <a href="juego.html">Vuelo nupcial</a>, nuestro juego para encontrar la ACZ en un mapa.</p>
+        </div>
+        <a class="btn" href="mapa.html">Explorar el mapa de ACZ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <img src="img/logo/logo-horizontal-fondo-oscuro.svg" alt="Zánganos Lab" class="footer-logo" width="200" height="82">
+      <a class="footer-sede" href="https://ier.conicet.gov.ar/" target="_blank" rel="noopener">
+        <img src="img/instituciones/ier.png" alt="Instituto de Ecología Regional (IER), UNT – CONICET" width="113" height="89">
+        <span>Lugar de trabajo<b>Instituto de Ecología Regional (IER)</b>UNT – CONICET · Yerba Buena, Tucumán ↗</span>
+      </a>
+      <div>
+        <p>Laboratorio de investigación en zánganos de <i>Apis mellifera</i>.</p>
+        <p>Síganos en Instagram: <a href="https://www.instagram.com/zanganoslab.ier/" target="_blank" rel="noopener">@zanganoslab.ier</a></p>
+        <p>© <span id="anio"></span> Zánganos Lab · <a href="#top">Volver arriba ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/trad-en.js?v=2026111902"></script>
+  <script src="js/trad-pt.js?v=2026111902"></script>
+  <script src="js/i18n.js?v=2026111902"></script>
+  <script src="js/aventura.js?v=2026111902"></script>
+</body>
+</html>

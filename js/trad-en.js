@@ -855,5 +855,43 @@ TRAD.en = {
   "Sin datos en este período.":
     "No data for this period.",
   "Gráfico de las últimas horas":
-    "Chart of the last hours"
+    "Chart of the last hours",
+  "<span aria-hidden=\"true\">🎮</span> Jugar: La gran aventura de la colmena":
+    "<span aria-hidden=\"true\">🎮</span> Play: The great hive adventure",
+  "La gran aventura de la colmena: juego sobre reinas y zánganos | Zánganos Lab":
+    "The great hive adventure: a game about queens and drones | Zánganos Lab",
+  "La gran aventura de la colmena | Zánganos Lab":
+    "The great hive adventure | Zánganos Lab",
+  "Juego educativo para chicos de Zánganos Lab: descubra cómo nacen las reinas, las obreras y los zánganos de Apis mellifera y cómo es el vuelo nupcial.":
+    "Zánganos Lab educational game for kids: discover how Apis mellifera queens, workers and drones are born, and what the mating flight is like.",
+  "Un juego para aprender cómo se reproducen las abejas.":
+    "A game to learn how honey bees reproduce.",
+  "Juego educativo para chicos":
+    "Educational game for kids",
+  "La gran aventura de la colmena":
+    "The great hive adventure",
+  "Cinco capítulos cortos para descubrir cómo nacen las reinas, las obreras y los zánganos de <i>Apis mellifera</i>, y qué pasa en el vuelo nupcial. Se juega con el dedo, el mouse o el teclado.":
+    "Five short chapters to discover how <i>Apis mellifera</i> queens, workers and drones are born, and what happens during the mating flight. Play with your finger, the mouse or the keyboard.",
+  "Para docentes y familias":
+    "For teachers and families",
+  "El juego está pensado para chicos de 6 a 12 años y dura unos 15 minutos. Cada capítulo trabaja una idea:":
+    "The game is designed for children aged 6 to 12 and takes about 15 minutes. Each chapter covers one idea:",
+  "<b>La familia de la colmena:</b> una reina, miles de obreras y los zánganos.":
+    "<b>The hive family:</b> one queen, thousands of workers and the drones.",
+  "<b>¿Quién nace de cada celda?</b> Huevos fecundados (hembras) y sin fecundar (zánganos); la jalea real hace a la reina.":
+    "<b>Who hatches from each cell?</b> Fertilized eggs (females) and unfertilized eggs (drones); royal jelly makes the queen.",
+  "<b>El vuelo del zángano:</b> las áreas de congregación de zánganos (ACZ) y los peligros del vuelo.":
+    "<b>The drone's flight:</b> drone congregation areas (DCAs) and the dangers of flying.",
+  "<b>El vuelo nupcial:</b> la reina se aparea en el aire con muchos zánganos de otras colmenas.":
+    "<b>The mating flight:</b> the queen mates in the air with many drones from other colonies.",
+  "<b>La nueva colonia:</b> la diversidad genética hace más fuerte a la colonia. Cierra con cinco preguntas y un diploma.":
+    "<b>The new colony:</b> genetic diversity makes the colony stronger. It ends with five questions and a diploma.",
+  "Algunas cosas están simplificadas para el juego: por ejemplo, la reina lleva corona para encontrarla fácil y cada color de rayas representa una colmena distinta.":
+    "Some things are simplified for the game: for example, the queen wears a crown so she is easy to find, and each stripe color stands for a different colony.",
+  "¿Busca un desafío mayor? Pruebe <a href=\"juego.html\">Vuelo nupcial</a>, nuestro juego para encontrar la ACZ en un mapa.":
+    "Looking for a bigger challenge? Try <a href=\"juego.html\">Mating flight</a>, our game about finding the DCA on a map.",
+  "Volver a los capítulos":
+    "Back to the chapters",
+  "Escena del juego":
+    "Game scene"
 };

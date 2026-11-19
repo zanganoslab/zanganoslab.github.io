@@ -1,0 +1,190 @@
+/* ==========================================================
+   La gran aventura de la colmena (aventura.html)
+   ========================================================== */
+.av {
+  position: relative; overflow: hidden; background: var(--cafe);
+  border-radius: 22px; border: 4px solid var(--cafe);
+  user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+  font-family: var(--principal);
+}
+.av:fullscreen { width: 100vw; height: 100vh; border-radius: 0; border: 0; }
+#av-lienzo { display: block; width: 100%; touch-action: none; background: #8fd3ff; }
+
+/* Botones redondos de arriba a la derecha */
+.av-botones { position: absolute; top: 10px; right: 10px; z-index: 8; display: flex; gap: 6px; }
+.av-redondo {
+  width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--cafe);
+  background: rgba(255, 255, 255, .92); font-size: 1.15rem; cursor: pointer; line-height: 1;
+  display: grid; place-items: center; padding: 0;
+}
+.av-redondo:hover { background: var(--amarillo); }
+.av-redondo[hidden] { display: none; }
+
+/* Botones del juego */
+.av-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .4em;
+  font: 700 1rem var(--principal); color: var(--amarillo); background: var(--cafe);
+  border: 3px solid var(--cafe); border-radius: 999px; padding: .55em 1.3em;
+  cursor: pointer; text-decoration: none; transition: transform .12s, background .15s, color .15s;
+}
+.av-btn:hover, .av-btn:focus-visible { background: var(--amarillo); color: var(--cafe); transform: translateY(-2px); }
+.av-btn-grande { font-size: 1.2rem; padding: .7em 1.6em; box-shadow: 0 5px 0 #1e0f0a; }
+.av-btn-grande:hover { box-shadow: 0 7px 0 #1e0f0a; }
+.av-btn-claro { background: #fff; color: var(--cafe); }
+
+/* Indicadores (HUD) */
+.av-hud { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+.av-hud > * { pointer-events: auto; }
+.av-hud-fila { position: absolute; top: 10px; left: 10px; right: 160px; display: flex; flex-wrap: wrap; gap: 6px; }
+.av-chip, .av-pildora {
+  display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, .94);
+  border: 2px solid var(--cafe); border-radius: 999px; padding: 5px 12px;
+  font: 600 .92rem var(--principal); color: var(--cafe); box-shadow: 0 3px 0 rgba(48, 24, 17, .25);
+}
+.av-chip-btn { cursor: pointer; }
+.av-chip-btn:hover { background: var(--amarillo); }
+.av-pildora { display: block; position: absolute; top: 10px; left: 10px; max-width: calc(100% - 170px); border-radius: 18px; font-size: 1rem; }
+.av-barra { display: inline-block; width: 90px; height: 12px; border-radius: 99px; background: #eadfd9; overflow: hidden; border: 1px solid var(--cafe); }
+.av-barra i { display: block; height: 100%; width: 25%; background: linear-gradient(90deg, #2ecc71, #a3e635); transition: width .2s; }
+.av-barra.sol i { width: 100%; background: linear-gradient(90deg, #ff8c1a, #ffd21f); }
+.av-puntos { display: inline-flex; flex-wrap: wrap; gap: 3px; max-width: 160px; }
+.av-puntos i { width: 11px; height: 11px; border-radius: 50%; border: 1.5px solid var(--cafe); display: inline-block; }
+
+/* Avisos */
+.av-aviso {
+  position: absolute; left: 50%; top: 62px; z-index: 5; transform: translate(-50%, -8px);
+  width: max-content; max-width: min(560px, 92%); text-align: center;
+  background: var(--cafe); color: #fff; border: 2px solid var(--amarillo);
+  border-radius: 18px; padding: 9px 16px; font-size: 1rem; line-height: 1.35;
+  opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+}
+.av-aviso.visible { opacity: 1; transform: translate(-50%, 0); }
+.av-aviso b { color: var(--amarillo); }
+
+/* Diálogo de los personajes */
+.av-dialogo {
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: 7;
+  width: min(700px, calc(100% - 20px)); display: flex; gap: 14px; align-items: center;
+  background: #fffaf0; border: 3px solid var(--cafe); border-radius: 22px; padding: 12px 16px 12px 12px;
+  box-shadow: 0 6px 0 rgba(48, 24, 17, .35); animation: av-sube .25s ease-out;
+}
+@keyframes av-sube { from { transform: translate(-50%, 20px); opacity: 0; } }
+.av-retrato { width: 84px; height: 84px; flex: none; }
+.av-dialogo-texto { flex: 1; min-width: 0; }
+.av-dialogo-texto > b { font: 700 .8rem var(--tech); text-transform: uppercase; letter-spacing: .1em; color: #b07d00; }
+.av-dialogo-texto p { margin: 2px 0 10px; font-size: 1.12rem; line-height: 1.4; color: var(--cafe); }
+.av-dialogo-texto .av-btn { float: right; }
+
+/* Capa de paneles (portada, resultados, preguntas) */
+.av-capa {
+  position: absolute; inset: 0; z-index: 9; overflow-y: auto; padding: 16px;
+  background: rgba(30, 15, 10, .5); display: flex; align-items: center; justify-content: center;
+}
+.av-capa[hidden] { display: none; }
+.av-panel {
+  margin: auto; width: 100%; max-width: 620px; background: #fffaf0; color: var(--cafe);
+  border: 4px solid var(--cafe); border-radius: 26px; padding: clamp(18px, 3vw, 30px);
+  text-align: center; box-shadow: 0 8px 0 rgba(48, 24, 17, .4); animation: av-aparece .3s ease-out;
+}
+@keyframes av-aparece { from { transform: scale(.92); opacity: 0; } }
+.av-panel h2 { font-size: clamp(1.35rem, 3vw, 1.9rem); margin-bottom: .4em; }
+.av-panel-ancho { max-width: 860px; }
+.av-panel-menu { max-width: 900px; background: rgba(255, 250, 240, .97); }
+.av-eyebrow { font: 700 .78rem var(--tech); text-transform: uppercase; letter-spacing: .14em; color: #b07d00; margin: 0 0 .4em; }
+.av-titulo { font-size: clamp(1.7rem, 4.5vw, 2.6rem) !important; }
+.av-sub { font-size: 1.08rem; color: var(--cafe-suave); margin: 0 auto 1.1em; max-width: 520px; }
+.av-acciones { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+
+.av-capitulos { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 20px 0 8px; }
+.av-cap {
+  display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer;
+  background: #fff; border: 3px solid var(--borde); border-radius: 18px; padding: 12px 8px;
+  font-family: var(--principal); color: var(--cafe); transition: transform .12s, border-color .12s;
+}
+.av-cap:hover, .av-cap:focus-visible { transform: translateY(-3px); border-color: var(--cafe); }
+.av-cap.sig { border-color: var(--amarillo); box-shadow: 0 0 0 4px rgba(246, 196, 1, .35); }
+.av-cap-emoji { font-size: 2rem; line-height: 1.1; }
+.av-cap-n { font: 700 .7rem var(--tech); letter-spacing: .1em; text-transform: uppercase; color: #b07d00; }
+.av-cap b { font-size: .98rem; line-height: 1.2; min-height: 2.4em; display: flex; align-items: center; }
+.av-cap-est { color: var(--amarillo); font-size: 1.1rem; letter-spacing: 2px; }
+.av-cap-est i { color: #ddd5cf; font-style: normal; }
+.av-total { margin: 8px 0 0; font-weight: 700; }
+
+.av-estrellas { font-size: 3rem; letter-spacing: 6px; color: var(--amarillo); margin: 0; line-height: 1.1; text-shadow: 0 3px 0 #b07d00; }
+.av-estrellas span { color: #ddd5cf; text-shadow: none; }
+.av-dato { background: #fff3c4; border-radius: 16px; padding: 14px 16px; text-align: left; font-size: 1.05rem; line-height: 1.45; }
+.av-dato b:first-child { display: block; font-family: var(--tech); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: #b07d00; margin-bottom: 4px; }
+
+/* Capítulo 1: tarjetas */
+.av-tarjetas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0 18px; }
+.av-tarjeta { background: #fff; border: 3px solid var(--borde); border-radius: 18px; padding: 10px 12px 14px; }
+.av-tarjeta canvas { width: 170px; max-width: 100%; height: auto; background: #fff4c2; border-radius: 14px; }
+.av-tarjeta h3 { margin: 8px 0 4px; font-size: 1.15rem; }
+.av-tarjeta p { margin: 0; font-size: .98rem; line-height: 1.4; color: var(--cafe-suave); }
+
+/* Capítulo 2: pregunta y explicación */
+.av-pregunta, .av-explica {
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%);
+  width: min(640px, calc(100% - 20px)); background: #fffaf0; border: 3px solid var(--cafe);
+  border-radius: 22px; padding: 12px 14px; text-align: center; box-shadow: 0 6px 0 rgba(48, 24, 17, .35);
+}
+.av-pregunta p { margin: 0 0 8px; font-weight: 700; font-size: 1.15rem; }
+.av-opciones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.av-opcion {
+  display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer;
+  background: #fff; border: 3px solid var(--borde); border-radius: 16px; padding: 6px 4px 8px;
+  font: 700 1.05rem var(--principal); color: var(--cafe); transition: transform .12s, border-color .12s;
+}
+.av-opcion:hover, .av-opcion:focus-visible { border-color: var(--amarillo); transform: translateY(-3px); }
+.av-opcion canvas { width: 120px; max-width: 100%; height: auto; }
+.av-explica { text-align: left; border-left-width: 10px; }
+.av-explica.bien { border-left-color: #2ecc71; }
+.av-explica.mal { border-left-color: #ff8c1a; }
+.av-explica > b { font-size: 1.2rem; }
+.av-explica p { margin: 4px 0 10px; font-size: 1.05rem; line-height: 1.45; }
+.av-explica .av-btn { float: right; }
+
+/* Capítulo 5: preguntas y diploma */
+.av-respuestas { display: grid; gap: 10px; margin: 14px 0; }
+.av-resp {
+  font: 600 1.08rem var(--principal); color: var(--cafe); background: #fff; cursor: pointer;
+  border: 3px solid var(--borde); border-radius: 16px; padding: 12px 14px; text-align: left;
+  transition: transform .12s, border-color .12s;
+}
+.av-resp:hover:not(:disabled) { border-color: var(--amarillo); transform: translateX(4px); }
+.av-resp:disabled { cursor: default; opacity: .65; }
+.av-resp.bien { border-color: #2ecc71; background: #e8faef; opacity: 1; }
+.av-resp.mal { border-color: #ff8c1a; background: #fff1e3; opacity: 1; }
+.av-feedback { background: #fff3c4; border-radius: 16px; padding: 12px 14px; font-size: 1.05rem; line-height: 1.45; }
+.av-feedback .av-btn { margin-top: 12px; }
+.av-diploma { border: 3px dashed var(--amarillo); border-radius: 18px; padding: 16px; }
+.av-medalla { font-size: 3.4rem; margin: 0; line-height: 1; }
+.av-aprendido { text-align: left; max-width: 560px; margin: 12px auto 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.av-aprendido li { background: #fff; border-radius: 12px; padding: 8px 12px; font-size: 1rem; }
+
+.av-docentes ol { color: var(--cafe-suave); padding-left: 1.2em; }
+.av-docentes li { margin-bottom: .3em; }
+
+@media (max-width: 640px) {
+  .av { border-radius: 16px; border-width: 3px; }
+  .av-redondo { width: 36px; height: 36px; font-size: 1rem; }
+  .av-hud-fila { right: 128px; top: 8px; left: 8px; gap: 4px; }
+  .av-chip { font-size: .78rem; padding: 3px 8px; }
+  .av-barra { width: 56px; }
+  .av-pildora { font-size: .85rem; max-width: calc(100% - 136px); top: 8px; left: 8px; }
+  .av-aviso { top: 74px; font-size: .92rem; }
+  .av-dialogo { gap: 8px; padding: 10px; bottom: 8px; }
+  .av-retrato { width: 60px; height: 60px; }
+  .av-dialogo-texto p { font-size: 1rem; }
+  .av-tarjetas { grid-template-columns: 1fr; }
+  .av-tarjeta { display: grid; grid-template-columns: 110px 1fr; gap: 0 10px; text-align: left; align-items: center; }
+  .av-tarjeta canvas { grid-row: span 2; width: 110px; }
+  .av-tarjeta h3 { margin: 0; }
+  .av-pregunta, .av-explica { bottom: 8px; padding: 10px; }
+  .av-opcion { font-size: .92rem; }
+  .av-estrellas { font-size: 2.4rem; }
+  .av-capitulos { grid-template-columns: 1fr 1fr; }
+  .av-cap { padding: 8px 6px; }
+  .av-cap-emoji { font-size: 1.5rem; }
+  .av-cap b { font-size: .88rem; }
+}
