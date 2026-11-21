@@ -1,5 +1,5 @@
 /* ==========================================================
-   Página "Colmena en vivo" (monitoreo.html). Datos: js/colmena-api.js
+   Página "Colmena sensorizada" (monitoreo.html). Datos: js/colmena-api.js
    ========================================================== */
 
 const $ = (sel) => document.querySelector(sel);

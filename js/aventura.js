@@ -78,7 +78,7 @@
     miel: () => tono(520, 780, 0.12, "sine", 0.12)
   };
   const btnSonido = $("#av-sonido");
-  const pintarSonido = () => { btnSonido.textContent = sonidoOn ? "🔊" : "🔇"; btnSonido.setAttribute("aria-label", sonidoOn ? "Silenciar" : "Activar sonido"); };
+  const pintarSonido = () => { btnSonido.textContent = sonidoOn ? "🔊" : "🔇"; btnSonido.setAttribute("aria-label", T(sonidoOn ? "Silenciar" : "Activar sonido")); };
   btnSonido.addEventListener("click", () => {
     sonidoOn = !sonidoOn; pintarSonido();
     try { localStorage.setItem("aventura-sonido", sonidoOn ? "1" : "0"); } catch (e) { /* */ }
@@ -174,6 +174,7 @@
     c.closePath();
   }
   function etiqueta(c, txt, x, y, fondo = "rgba(255,255,255,.93)", color = CAFE, tam = 15) {
+    txt = T(txt);
     c.save();
     c.font = `700 ${tam}px Jost, sans-serif`;
     const w = c.measureText(txt).width + 20;
@@ -448,6 +449,29 @@
     c.globalAlpha = 1;
   }
 
+  /* ---------- Traducción automática de lo que aparece en el juego ----------
+     Cada elemento cuyo contenido coincide con una frase de los diccionarios
+     (js/trad-en.js, js/trad-pt.js) se reemplaza por su traducción. */
+  const DIC = (typeof LANG !== "undefined" && LANG !== "es" && window.TRAD && TRAD[LANG]) || null;
+  const SEL_TRAD = "h2,h3,p,li,b,span,button,a,div.av-pildora";
+  function traducirDOM(raiz) {
+    if (!DIC || !raiz || raiz.nodeType !== 1) return;
+    const lista = raiz.matches(SEL_TRAD) ? [raiz, ...raiz.querySelectorAll(SEL_TRAD)] : [...raiz.querySelectorAll(SEL_TRAD)];
+    for (const el of lista) {
+      if (!el.isConnected) continue;
+      const v = DIC[el.innerHTML.replace(/\s+/g, " ").trim()];
+      if (v && v !== el.innerHTML) el.innerHTML = v;
+    }
+    for (const el of [raiz, ...raiz.querySelectorAll("[aria-label]")]) {
+      const a = el.getAttribute && el.getAttribute("aria-label");
+      const v = a && DIC[a.trim()];
+      if (v && v !== a) el.setAttribute("aria-label", v);
+    }
+  }
+  if (DIC) new MutationObserver((cambios) => {
+    for (const m of cambios) for (const n of m.addedNodes) traducirDOM(n);
+  }).observe(cont, { childList: true, subtree: true });
+
   /* ==========================================================
      Diálogos, avisos y paneles
      ========================================================== */
@@ -500,7 +524,7 @@
     return capa.firstElementChild;
   }
   function cerrarPanel() { capa.hidden = true; capa.innerHTML = ""; }
-  const estrellasHTML = (n) => `<p class="av-estrellas" aria-label="${n} de 3 estrellas">${"★".repeat(n)}<span>${"★".repeat(3 - n)}</span></p>`;
+  const estrellasHTML = (n) => `<p class="av-estrellas" aria-label="${T("{n} de 3 estrellas", { n })}">${"★".repeat(n)}<span>${"★".repeat(3 - n)}</span></p>`;
 
   /* ==========================================================
      Navegación entre capítulos
@@ -529,8 +553,8 @@
     guardar(); SON.premio();
     hud.innerHTML = "";
     const p = panel(`${estrellasHTML(estrellas)}
-      <h2>¡Capítulo ${i + 1} completado!</h2>
-      <div class="av-dato"><b>¿Sabía que…?</b> ${dato}</div>
+      <h2>${T("¡Capítulo {n} completado!", { n: i + 1 })}</h2>
+      <div class="av-dato"><b>¿Sabía que…?</b> <span>${dato}</span></div>
       <div class="av-acciones">
         <button class="av-btn av-btn-grande" data-a="sig">Siguiente capítulo ▶</button>
         <button class="av-btn av-btn-claro" data-a="rep">↺ Repetir</button>
@@ -562,16 +586,16 @@
       <p class="av-eyebrow">Zánganos Lab presenta</p>
       <h2 class="av-titulo">La gran aventura de la colmena</h2>
       <p class="av-sub">Descubra cómo nacen las reinas y los zánganos… ¡y qué pasa en el vuelo nupcial!</p>
-      <button class="av-btn av-btn-grande" data-c="${sig < 0 ? 0 : sig}">▶ ${sig === 0 ? "Empezar la aventura" : sig < 0 ? "Jugar de nuevo" : "Seguir jugando"}</button>
+      <button class="av-btn av-btn-grande" data-c="${sig < 0 ? 0 : sig}">▶ ${T(sig === 0 ? "Empezar la aventura" : sig < 0 ? "Jugar de nuevo" : "Seguir jugando")}</button>
       <div class="av-capitulos">
         ${CAPITULOS.map((k, i) => `<button class="av-cap${i === sig ? " sig" : ""}" data-c="${i}">
           <span class="av-cap-emoji" aria-hidden="true">${k.emoji}</span>
-          <span class="av-cap-n">Capítulo ${i + 1}</span>
-          <b>${k.titulo}</b>
-          <span class="av-cap-est" aria-label="${prog.estrellas[i]} estrellas">${"★".repeat(prog.estrellas[i])}<i>${"★".repeat(3 - prog.estrellas[i])}</i></span>
+          <span class="av-cap-n">${T("Capítulo {n}", { n: i + 1 })}</span>
+          <b>${T(k.titulo)}</b>
+          <span class="av-cap-est" aria-label="${T("{n} estrellas", { n: prog.estrellas[i] })}">${"★".repeat(prog.estrellas[i])}<i>${"★".repeat(3 - prog.estrellas[i])}</i></span>
         </button>`).join("")}
       </div>
-      <p class="av-total">⭐ ${total} de 15 estrellas</p>`, "av-panel-menu");
+      <p class="av-total">${T("⭐ {n} de 15 estrellas", { n: total })}</p>`, "av-panel-menu");
     p.addEventListener("click", (e) => {
       const b = e.target.closest("[data-c]");
       if (b) { SON.clic(); irA(Number(b.dataset.c)); }
@@ -608,7 +632,7 @@
     function pildora() {
       hud.innerHTML = fase === "reina"
         ? '<div class="av-pildora">👑 Toque a la <b>reina</b>: es la abeja más larga</div>'
-        : `<div class="av-pildora">👀 Toque a los <b>zánganos</b>: ojos enormes y cuerpo redondo · <b>${hallados} / ${META}</b></div>`;
+        : `<div class="av-pildora">${T("👀 Toque a los <b>zánganos</b>: ojos enormes y cuerpo redondo · <b>{a} / {b}</b>", { a: hallados, b: META })}</div>`;
     }
     dialogo([
       "¡Hola! Soy <b>Meli</b>, una abeja obrera. ¡Bienvenidos a nuestra colmena!",
@@ -720,7 +744,7 @@
 
     function pregunta() {
       actual = rondas[r]; ani = 0; fase = "pregunta";
-      hud.innerHTML = `<div class="av-pildora">Celda ${r + 1} de ${rondas.length}</div>
+      hud.innerHTML = `<div class="av-pildora">${T("Celda {a} de {b}", { a: r + 1, b: rondas.length })}</div>
         <div class="av-pregunta"><p>¿Qué abeja nacerá de esta celda?</p>
         <div class="av-opciones">${["obrera", "zangano", "reina"].map((t) => `<button class="av-opcion" data-t="${t}"><canvas width="120" height="76" aria-hidden="true"></canvas><span>${NOMBRE[t]}</span></button>`).join("")}</div></div>`;
       hud.querySelectorAll(".av-opcion").forEach((btn) => {
@@ -734,8 +758,8 @@
       const bien = t === actual;
       if (bien) { aciertos++; SON.ok(); } else SON.mal();
       fase = "crece"; ani = 0;
-      hud.innerHTML = `<div class="av-pildora">Celda ${r + 1} de ${rondas.length}</div>
-        <div class="av-explica ${bien ? "bien" : "mal"}"><b>${bien ? "¡Correcto! 🎉" : "¡Casi! Era: " + NOMBRE[actual]}</b>
+      hud.innerHTML = `<div class="av-pildora">${T("Celda {a} de {b}", { a: r + 1, b: rondas.length })}</div>
+        <div class="av-explica ${bien ? "bien" : "mal"}"><b>${bien ? T("¡Correcto! 🎉") : T("¡Casi! Era: {x}", { x: T(NOMBRE[actual]) })}</b>
         <p>${EXPLICA[actual]}</p>
         <button class="av-btn">${r < rondas.length - 1 ? "Siguiente celda ▶" : "Terminar ▶"}</button></div>`;
       const b = hud.querySelector(".av-explica button");
@@ -810,7 +834,7 @@
             c.fillStyle = t === tipo ? "#ffe9a6" : "rgba(233,184,74,.35)"; c.fill();
             c.strokeStyle = t === tipo ? CAFE : "rgba(169,106,18,.6)"; c.lineWidth = t === tipo ? 3 : 2; c.stroke();
             c.font = "600 12px Jost, sans-serif"; c.fillStyle = CAFE; c.textAlign = "center";
-            c.fillText(txt, bx + dx, by + R * 0.27 + 14);
+            c.fillText(T(txt), bx + dx, by + R * 0.27 + 14);
           });
           hexPath(c, cx, cy, rc);
           const g = c.createRadialGradient(cx, cy, 2, cx, cy, rc);
@@ -828,7 +852,7 @@
           const nombres = ["Huevo", "Larva", "Pupa (celda tapada)", "¡Nació!"];
           const d = DIAS[tipo];
           const dia = Math.round(ani < 0.75 ? d[etapa] + (d[etapa + 1] - d[etapa]) * ((ani * 4) % 1) : d[3]);
-          etiqueta(c, `${nombres[etapa]} · día ${dia}`, cx, cy + R * 1.12, "#fff", CAFE, 15);
+          etiqueta(c, `${T(nombres[etapa])} · ${T("día {n}", { n: dia })}`, cx, cy + R * 1.12, "#fff", CAFE, 15);
         }
         dibujarChispas(c);
       }
@@ -863,7 +887,7 @@
 
     let hMiel, hEnergia;
     function montarHud() {
-      hud.innerHTML = `<div class="av-hud-fila"><span class="av-chip">🍯 Miel <b id="h-miel">${miel} / 3</b></span><span class="av-chip">⚡ Energía <span class="av-barra"><i id="h-energia"></i></span></span></div>`;
+      hud.innerHTML = `<div class="av-hud-fila"><span class="av-chip">🍯 <span>Miel</span> <b id="h-miel">${miel} / 3</b></span><span class="av-chip">⚡ <span>Energía</span> <span class="av-barra"><i id="h-energia"></i></span></span></div>`;
       hMiel = $("#h-miel"); hEnergia = $("#h-energia");
     }
 
@@ -996,9 +1020,9 @@
     let hV, hA, hD, hS;
     function montarHud() {
       hud.innerHTML = `<div class="av-hud-fila">
-        <span class="av-chip" id="h-vidas" aria-label="Vidas"></span>
-        <span class="av-chip">🫙 Espermateca <b id="h-ap">0 / ${META}</b><span class="av-puntos" id="h-dots"></span></span>
-        <span class="av-chip">☀️ Tarde <span class="av-barra sol"><i id="h-sol"></i></span></span></div>`;
+        <span class="av-chip" id="h-vidas" aria-label="${T("Vidas")}"></span>
+        <span class="av-chip">🫙 <span>Espermateca</span> <b id="h-ap">0 / ${META}</b><span class="av-puntos" id="h-dots"></span></span>
+        <span class="av-chip">☀️ <span>Tarde</span> <span class="av-barra sol"><i id="h-sol"></i></span></span></div>`;
       hV = $("#h-vidas"); hA = $("#h-ap"); hD = $("#h-dots"); hS = $("#h-sol");
       pintarHud();
     }
@@ -1127,7 +1151,7 @@
           const est = 1 + (vidas >= 2 ? 1 : 0) + (colonias >= 4 ? 1 : 0);
           hud.innerHTML = ""; SON.premio(); chispa(reina.x, reina.y, "#ffd21f", 24, "¡En casa!");
           setTimeout(() => dialogo([
-            { q: "lia", t: `¡Lo logramos! Me apareé con <b>${apareos.length} zánganos</b> de <b>${colonias} colmenas distintas</b>. ¡Ya puedo ser la mamá de una gran colonia!` }
+            { q: "lia", t: T("¡Lo logramos! Me apareé con <b>{a} zánganos</b> de <b>{b} colmenas distintas</b>. ¡Ya puedo ser la mamá de una gran colonia!", { a: apareos.length, b: colonias }) }
           ], () => completar(3, est,
             "En la vida real, una reina se aparea con <b>unos 12 a 20 zánganos</b>, en uno o pocos vuelos. Guarda sus espermatozoides en la <b>espermateca</b> y los usa <b>toda su vida</b>, que puede durar varios años.")), 900);
         }
@@ -1195,10 +1219,10 @@
     ], () => {
       fase = "pone";
       const unicos = [...new Set(padres)];
-      hud.innerHTML = `<div class="av-hud-fila"><span class="av-chip">Papás de las obreras: <span class="av-puntos">${unicos.map((c) => `<i style="background:${c}"></i>`).join("")}</span></span>
-        <span class="av-chip">Zánganos: solo mamá <span class="av-puntos"><i style="background:${AMARILLO}"></i></span></span>
+      hud.innerHTML = `<div class="av-hud-fila"><span class="av-chip"><span>Papás de las obreras:</span> <span class="av-puntos">${unicos.map((c) => `<i style="background:${c}"></i>`).join("")}</span></span>
+        <span class="av-chip"><span>Zánganos: solo mamá</span> <span class="av-puntos"><i style="background:${AMARILLO}"></i></span></span>
         <button class="av-chip av-chip-btn" id="h-rapido">⏩ Más rápido</button></div>`;
-      $("#h-rapido").addEventListener("click", (e) => { rapido = rapido === 1 ? 3 : 1; e.currentTarget.textContent = rapido === 1 ? "⏩ Más rápido" : "▶ Normal"; });
+      $("#h-rapido").addEventListener("click", (e) => { rapido = rapido === 1 ? 3 : 1; e.currentTarget.textContent = T(rapido === 1 ? "⏩ Más rápido" : "▶ Normal"); });
     });
 
     function cuento() {
@@ -1222,7 +1246,7 @@
       let q = 0, bien = 0;
       function mostrar() {
         const P_ = PREG[q];
-        const p = panel(`<p class="av-eyebrow">Pregunta ${q + 1} de ${PREG.length}</p><h2>${P_.p}</h2>
+        const p = panel(`<p class="av-eyebrow">${T("Pregunta {a} de {b}", { a: q + 1, b: PREG.length })}</p><h2>${P_.p}</h2>
           <div class="av-respuestas">${P_.o.map((o, i) => `<button class="av-resp" data-i="${i}">${o}</button>`).join("")}</div>
           <div class="av-feedback" hidden></div>`);
         p.querySelectorAll(".av-resp").forEach((btn) => btn.addEventListener("click", () => {
@@ -1233,7 +1257,7 @@
           p.querySelectorAll(".av-resp").forEach((b, j) => { b.disabled = true; if (j === P_.b) b.classList.add("bien"); else if (j === i) b.classList.add("mal"); });
           const fb = p.querySelector(".av-feedback");
           fb.hidden = false;
-          fb.innerHTML = `<b>${ok ? "¡Correcto! 🎉" : "¡Casi!"}</b> ${P_.e}<br><button class="av-btn av-btn-grande">${q < PREG.length - 1 ? "Siguiente pregunta ▶" : "Ver mi diploma 🏅"}</button>`;
+          fb.innerHTML = `<b>${T(ok ? "¡Correcto! 🎉" : "¡Casi!")}</b> <span>${T(P_.e)}</span><br><button class="av-btn av-btn-grande">${T(q < PREG.length - 1 ? "Siguiente pregunta ▶" : "Ver mi diploma 🏅")}</button>`;
           const sig = fb.querySelector("button");
           sig.focus({ preventScroll: true });
           sig.addEventListener("click", () => { SON.clic(); q++; if (q < PREG.length) mostrar(); else diploma(bien); });
@@ -1250,7 +1274,7 @@
         <p class="av-eyebrow">Diploma de la colmena</p>
         <h2>¡Experto o experta en reinas y zánganos!</h2>
         ${estrellasHTML(est)}
-        <p>Respondió bien <b>${bien} de ${PREG.length}</b> preguntas · Total de la aventura: <b>⭐ ${total} de 15</b></p>
+        <p>${T("Respondió bien <b>{a} de {b}</b> preguntas · Total de la aventura: <b>⭐ {c} de 15</b>", { a: bien, b: PREG.length, c: total })}</p>
         <ul class="av-aprendido">
           <li>👑 Hay <b>una reina</b>, la mamá de toda la colonia.</li>
           <li>🥚 Huevo <b>con papá</b> → hembra (obrera o reina). Huevo <b>sin papá</b> → zángano.</li>

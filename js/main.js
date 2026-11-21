@@ -73,7 +73,7 @@ if (typeof ACZ !== "undefined" && $("#mapa-home-cifras")) {
   obsMini.observe($("#mapa-mini"));
 }
 
-/* ---------- Colmena en vivo: adelanto (datos en js/colmena-api.js) ---------- */
+/* ---------- Colmena sensorizada: adelanto (datos en js/colmena-api.js) ---------- */
 if (typeof ColmenaAPI !== "undefined" && $("#envivo-home")) {
   const MOSTRAR = ["temperatura_crias", "temperatura_interior_colmena", "humedad_interior_colmena"];
   ColmenaAPI.ultimas((r) => {

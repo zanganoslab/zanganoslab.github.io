@@ -754,16 +754,16 @@ TRAD.en = {
     "Visit the IER website ↗",
   "Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Los informes completos son confidenciales: aquí mostramos solo una vista previa.":
     "Some of the work we have done for producers, cooperatives and institutions in Argentina and Bolivia. The full reports are confidential: here we only show a preview.",
-  "Colmena en vivo: monitoreo de temperatura y humedad | Zánganos Lab":
-    "Live hive: temperature and humidity monitoring | Zánganos Lab",
+  "Colmena sensorizada: monitoreo de temperatura y humedad | Zánganos Lab":
+    "Sensor-equipped hive: temperature and humidity monitoring | Zánganos Lab",
   "Datos en tiempo real de una colmena de Apis mellifera monitoreada por Zánganos Lab con el Kit Apícola IoT: temperatura y humedad del interior, de las crías y del exterior.":
     "Real-time data from an Apis mellifera hive monitored by Zánganos Lab with the IoT Beekeeping Kit: temperature and humidity inside the hive, in the brood area and outside.",
-  "Colmena en vivo | Zánganos Lab":
-    "Live hive | Zánganos Lab",
+  "Colmena sensorizada | Zánganos Lab":
+    "Sensor-equipped hive | Zánganos Lab",
   "Temperatura y humedad de una colmena monitoreada en tiempo real.":
     "Temperature and humidity of a hive monitored in real time.",
-  "Colmena en vivo":
-    "Live hive",
+  "Colmena sensorizada":
+    "Sensor-equipped hive",
   "Temperatura y humedad de una colmena de <i>Apis mellifera</i> medidas cada cinco minutos con el Kit Apícola IoT, desarrollado en nuestro laboratorio por Edgardo Díaz.":
     "Temperature and humidity of an <i>Apis mellifera</i> hive, measured every five minutes with the IoT Beekeeping Kit developed in our laboratory by Edgardo Díaz.",
   "Conectando…":
@@ -784,8 +784,8 @@ TRAD.en = {
     "<b>The rest of the hive follows the environment more closely.</b> Outside the brood area, temperature varies more between day and night, and humidity is usually high because of the bees' respiration and the ripening of honey.",
   "<b>Comparar interior y exterior</b> permite ver cuánto aísla y regula la colonia, y detectar problemas como una colonia débil o la pérdida de la reina.":
     "<b>Comparing inside and outside</b> shows how well the colony insulates and regulates itself, and helps detect problems such as a weak colony or the loss of the queen.",
-  "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmena en vivo":
-    "<span class=\"punto-estado\" id=\"home-punto\"></span> Live hive",
+  "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmena sensorizada":
+    "<span class=\"punto-estado\" id=\"home-punto\"></span> Sensor-equipped hive",
   "Ver datos y gráficos":
     "See data and charts",
   "hace instantes":
@@ -893,5 +893,387 @@ TRAD.en = {
   "Volver a los capítulos":
     "Back to the chapters",
   "Escena del juego":
-    "Game scene"
+    "Game scene",
+  "Apóyenos":
+    "Support us",
+  "Apóyenos: done a Zánganos Lab | Zánganos Lab":
+    "Support us: donate to Zánganos Lab | Zánganos Lab",
+  "Apóyenos | Zánganos Lab":
+    "Support us | Zánganos Lab",
+  "Apoye la investigación de Zánganos Lab (IER-CONICET, Tucumán) sobre los zánganos de Apis mellifera. Su donación financia análisis genéticos, sensores, trabajo de campo y la formación de estudiantes.":
+    "Support the research of Zánganos Lab (IER-CONICET, Tucumán) on Apis mellifera drones. Your donation funds genetic analyses, sensors, fieldwork and student training.",
+  "Las abejas no pueden hablar. Su donación, sí.":
+    "Bees cannot speak. Your donation can.",
+  "Somos un laboratorio de investigación del IER–CONICET (Tucumán) que estudia a los zánganos de <i>Apis mellifera</i>: su genética, su comportamiento y su papel en la salud de las colmenas. Con RFID, códigos QR, drones, sensores y genética mapeamos las áreas de congregación de zánganos para entender por qué las colmenas prosperan… o colapsan.":
+    "We are a research laboratory at IER–CONICET (Tucumán) that studies <i>Apis mellifera</i> drones: their genetics, their behavior and their role in colony health. Using RFID, QR codes, drones, sensors and genetics, we map drone congregation areas to understand why colonies thrive… or collapse.",
+  "Puede ayudarnos con el monto que pueda. Las donaciones se reciben a través de la plataforma ayudar.ar.":
+    "Any amount helps. Donations are received through the ayudar.ar platform.",
+  "<span aria-hidden=\"true\">💛</span> Donar en ayudar.ar ↗":
+    "<span aria-hidden=\"true\">💛</span> Donate on ayudar.ar ↗",
+  "<span aria-hidden=\"true\">💛</span> Donar ahora ↗":
+    "<span aria-hidden=\"true\">💛</span> Donate now ↗",
+  "<span aria-hidden=\"true\">💛</span> Donar ↗":
+    "<span aria-hidden=\"true\">💛</span> Donate ↗",
+  "Logo de Zánganos Lab con un código QR en el chip del engranaje que lleva a zanganoslab.github.io":
+    "Zánganos Lab logo with a QR code on the gear chip that links to zanganoslab.github.io",
+  "Escanee el código del chip para abrir nuestra página.":
+    "Scan the code on the chip to open our website.",
+  "¿Para qué usamos su aporte?":
+    "What does your contribution fund?",
+  "Un código QR y los reactivos para analizar el ADN de un zángano.":
+    "A QR code and the reagents to analyze the DNA of one drone.",
+  "Mantener durante un mes un sensor de la <a href=\"monitoreo.html\">Colmena sensorizada</a> transmitiendo datos.":
+    "Keeping a sensor of the <a href=\"monitoreo.html\">sensor-equipped hive</a> sending data for one month.",
+  "El combustible de una jornada de campo para revisitar un <a href=\"mapa.html\">área de congregación</a>.":
+    "Fuel for one field day to revisit a <a href=\"mapa.html\">congregation area</a>.",
+  "Los viáticos de un/a estudiante o pasante durante un mes.":
+    "One month of travel expenses for a student or intern.",
+  "Cada tres meses compartimos un boletín con los avances en esta página y en <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>.":
+    "Every three months we share a newsletter with our progress on this page and on <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>.",
+  "Otras formas de ayudar":
+    "Other ways to help",
+  "Comparta nuestra página":
+    "Share our website",
+  "Descargue nuestro logo con código QR para usarlo en presentaciones, pósters o folletos. Para que se pueda escanear, imprímalo con al menos 12 cm de ancho.":
+    "Download our logo with a QR code to use in presentations, posters or leaflets. To make it scannable, print it at least 12 cm wide.",
+  "Descargar PNG":
+    "Download PNG",
+  "Descargar SVG":
+    "Download SVG",
+  "Colabore con nosotros":
+    "Work with us",
+  "Si es investigador, estudiante, apicultor o forma parte de una institución, podemos trabajar juntos.":
+    "If you are a researcher, student, beekeeper or part of an institution, we can work together.",
+  "Contactarnos":
+    "Contact us",
+  "Síganos":
+    "Follow us",
+  "Las novedades del día a día del laboratorio están en Instagram.":
+    "Day-to-day news from the lab is on Instagram.",
+  "Gracias por apostar por la ciencia y por las abejas.":
+    "Thank you for betting on science and on bees.",
+  "Con su aporte financiamos análisis genéticos, sensores, jornadas de campo y la formación de estudiantes.":
+    "Your contribution funds genetic analyses, sensors, field days and student training.",
+  "Obrera":
+    "Worker",
+  "Zángano":
+    "Drone",
+  "Reina":
+    "Queen",
+  "Silenciar":
+    "Mute",
+  "Activar sonido":
+    "Turn sound on",
+  "Pantalla completa":
+    "Full screen",
+  "Siguiente ▶":
+    "Next ▶",
+  "¡Vamos! ▶":
+    "Let's go! ▶",
+  "Vidas":
+    "Lives",
+  "La familia de la colmena":
+    "The hive family",
+  "¿Quién nace de cada celda?":
+    "Who hatches from each cell?",
+  "El gran vuelo del zángano":
+    "The drone's big flight",
+  "El vuelo nupcial de la reina":
+    "The queen's mating flight",
+  "¡Nace una nueva colonia!":
+    "A new colony is born!",
+  "¡Capítulo {n} completado!":
+    "Chapter {n} complete!",
+  "Empezar la aventura":
+    "Start the adventure",
+  "Jugar de nuevo":
+    "Play again",
+  "Seguir jugando":
+    "Keep playing",
+  "Capítulo {n}":
+    "Chapter {n}",
+  "{n} estrellas":
+    "{n} stars",
+  "{n} de 3 estrellas":
+    "{n} of 3 stars",
+  "⭐ {n} de 15 estrellas":
+    "⭐ {n} of 15 stars",
+  "Zánganos Lab presenta":
+    "Zánganos Lab presents",
+  "Descubra cómo nacen las reinas y los zánganos… ¡y qué pasa en el vuelo nupcial!":
+    "Discover how queens and drones are born… and what happens on the mating flight!",
+  "Siguiente capítulo ▶":
+    "Next chapter ▶",
+  "↺ Repetir":
+    "↺ Play again",
+  "Capítulos":
+    "Chapters",
+  "👑 Toque a la <b>reina</b>: es la abeja más larga":
+    "👑 Tap the <b>queen</b>: she is the longest bee",
+  "👀 Toque a los <b>zánganos</b>: ojos enormes y cuerpo redondo · <b>{a} / {b}</b>":
+    "👀 Tap the <b>drones</b>: huge eyes and a round body · <b>{a} / {b}</b>",
+  "¡Hola! Soy <b>Meli</b>, una abeja obrera. ¡Bienvenidos a nuestra colmena!":
+    "Hi! I'm <b>Meli</b>, a worker bee. Welcome to our hive!",
+  "En una colmena viven <b>tres tipos de abejas</b>. Conozcámoslas.":
+    "<b>Three kinds of bees</b> live in a hive. Let's meet them.",
+  "La reina":
+    "The queen",
+  "Hay <b>una sola</b>. Es la <b>mamá de toda la colonia</b>: pone todos los huevos. Su abdomen es <b>largo</b>.":
+    "There is <b>only one</b>. She is the <b>mother of the whole colony</b>: she lays all the eggs. Her abdomen is <b>long</b>.",
+  "Las obreras":
+    "The workers",
+  "Son <b>miles</b> y todas son <b>hembras</b>. Limpian, cuidan a las crías, hacen la miel y defienden la colmena con su <b>aguijón</b>.":
+    "There are <b>thousands</b> of them and they are all <b>females</b>. They clean, look after the brood, make honey and defend the hive with their <b>sting</b>.",
+  "Los zánganos":
+    "The drones",
+  "Son los <b>machos</b>. Tienen <b>ojos enormes</b>, cuerpo redondo y <b>no tienen aguijón</b>. Su misión: aparearse con una reina.":
+    "They are the <b>males</b>. They have <b>huge eyes</b>, a round body and <b>no sting</b>. Their mission: to mate with a queen.",
+  "¡A buscarlas! ▶":
+    "Let's find them! ▶",
+  "¡La reina!":
+    "The queen!",
+  "¡Muy bien! Le ponemos una corona para no perderla de vista (las reinas de verdad no tienen).":
+    "Well done! We'll give her a crown so we don't lose sight of her (real queens don't have one).",
+  "Ese es un zángano: mire sus ojos enormes. La reina es más larga.":
+    "That's a drone: look at his huge eyes. The queen is longer.",
+  "Esa es una obrera. La reina es más grande y su abdomen es más largo.":
+    "That's a worker. The queen is bigger and her abdomen is longer.",
+  "¡Zángano!":
+    "Drone!",
+  "¡Excelente! Ya conoce a toda la familia: <b>una reina</b>, <b>miles de obreras</b> y, en primavera y verano, <b>cientos de zánganos</b>.":
+    "Excellent! Now you know the whole family: <b>one queen</b>, <b>thousands of workers</b> and, in spring and summer, <b>hundreds of drones</b>.",
+  "En una colmena fuerte puede haber entre <b>20 000 y 60 000 obreras</b>, algunos cientos o miles de zánganos… ¡y una sola reina!":
+    "A strong hive can have between <b>20,000 and 60,000 workers</b>, a few hundred or thousand drones… and only one queen!",
+  "Esa es una obrera: es más chica y tiene aguijón. Los zánganos tienen ojos enormes.":
+    "That's a worker: she is smaller and has a sting. Drones have huge eyes.",
+  "👑 Reina":
+    "👑 Queen",
+  "✓ Zángano":
+    "✓ Drone",
+  "La reina pone <b>un huevo en cada celda</b> del panal. Pero las celdas no son todas iguales…":
+    "The queen lays <b>one egg in each cell</b> of the comb. But not all cells are the same…",
+  "Según la celda, nace una abeja distinta. ¿Adivinamos qué abeja nacerá en cada una?":
+    "Depending on the cell, a different bee hatches. Can we guess which bee will hatch from each one?",
+  "Celda {a} de {b}":
+    "Cell {a} of {b}",
+  "¿Qué abeja nacerá de esta celda?":
+    "Which bee will hatch from this cell?",
+  "¡Correcto! 🎉":
+    "Correct! 🎉",
+  "¡Casi! Era: {x}":
+    "Almost! It was: {x}",
+  "¡Casi!":
+    "Almost!",
+  "Siguiente celda ▶":
+    "Next cell ▶",
+  "Terminar ▶":
+    "Finish ▶",
+  "Celda chica":
+    "Small cell",
+  "Celda grande":
+    "Large cell",
+  "Celda real (con forma de maní)":
+    "Queen cell (peanut-shaped)",
+  "chica":
+    "small",
+  "grande":
+    "large",
+  "En las <b>celdas chicas</b> la reina pone un <b>huevo fecundado</b> (con papá). De él nace una <b>obrera</b>, que es hembra. Tarda <b>21 días</b>.":
+    "In <b>small cells</b> the queen lays a <b>fertilized egg</b> (with a dad). A <b>worker</b> hatches from it, and she is female. It takes <b>21 days</b>.",
+  "En las <b>celdas grandes</b> la reina pone un <b>huevo sin fecundar</b> (sin papá). De él nace un <b>zángano</b>, que es macho. Tarda <b>24 días</b>. ¡Los zánganos tienen mamá, pero no papá!":
+    "In <b>large cells</b> the queen lays an <b>unfertilized egg</b> (without a dad). A <b>drone</b> hatches from it, and he is male. It takes <b>24 days</b>. Drones have a mom, but no dad!",
+  "La <b>celda real</b> tiene un huevo fecundado, igual que una obrera. Pero la larva come <b>mucha jalea real</b>… ¡y se convierte en <b>reina</b>! Tarda solo <b>16 días</b>.":
+    "The <b>queen cell</b> holds a fertilized egg, just like a worker's. But the larva eats <b>lots of royal jelly</b>… and becomes a <b>queen</b>! It takes only <b>16 days</b>.",
+  "La reina y las obreras nacen del <b>mismo tipo de huevo</b>. Lo que convierte a una larva en reina es la <b>jalea real</b>, un alimento especial que preparan las obreras jóvenes.":
+    "The queen and the workers hatch from the <b>same kind of egg</b>. What turns a larva into a queen is <b>royal jelly</b>, a special food made by young workers.",
+  "Tapa abombada":
+    "Domed cap",
+  "Tapa de cera":
+    "Wax cap",
+  "Huevo":
+    "Egg",
+  "Larva":
+    "Larva",
+  "Pupa (celda tapada)":
+    "Pupa (capped cell)",
+  "¡Nació!":
+    "Hatched!",
+  "día {n}":
+    "day {n}",
+  "¡Hola! Soy <b>Zumbo</b>, un zángano. Ya tengo 12 días y estoy listo para mi gran vuelo.":
+    "Hi! I'm <b>Zumbo</b>, a drone. I'm 12 days old and ready for my big flight.",
+  "Los zánganos salen en las <b>tardes de sol</b>, cuando hace calor y hay poco viento.":
+    "Drones fly out on <b>sunny afternoons</b>, when it is warm and there is little wind.",
+  "Antes de salir, comen <b>miel</b> de la colmena para tener energía. Primero, ayudemos a Zumbo a comer <b>3 gotas de miel</b>.":
+    "Before leaving, they eat <b>honey</b> from the hive for energy. First, let's help Zumbo eat <b>3 drops of honey</b>.",
+  "Después volaré alto, hasta un <b>área de congregación de zánganos (ACZ)</b>: un lugar del cielo donde nos juntamos zánganos de muchas colmenas.":
+    "Then I'll fly high, up to a <b>drone congregation area (DCA)</b>: a place in the sky where drones from many hives gather.",
+  "Mueva a Zumbo con el <b>dedo</b>, el <b>mouse</b> o las <b>flechas</b> del teclado. ¡Cuidado con los pájaros!":
+    "Move Zumbo with your <b>finger</b>, the <b>mouse</b> or the <b>arrow keys</b>. Watch out for the birds!",
+  "Miel":
+    "Honey",
+  "¡Todavía no! Primero hay que comer las 3 gotas de miel 🍯":
+    "Not yet! First eat the 3 drops of honey 🍯",
+  "+ miel":
+    "+ honey",
+  "¡Panza llena! Ahora, ¡a volar alto hasta la ACZ! ↗":
+    "Tummy full! Now fly high up to the DCA! ↗",
+  "Zumbo se quedó sin energía y volvió a la colmena. ¡A comer más miel!":
+    "Zumbo ran out of energy and went back to the hive. Time for more honey!",
+  "¡Uy, un pájaro! Algunas aves cazan zánganos en el aire. Zumbo se asustó y volvió a casa.":
+    "Oops, a bird! Some birds hunt drones in the air. Zumbo got scared and went home.",
+  "ACZ":
+    "DCA",
+  "¡Llegó a la ACZ!":
+    "He reached the DCA!",
+  "¡Llegué a la ACZ! Hay zánganos de colmenas de todos lados. Ahora, a esperar que pase una reina…":
+    "I made it to the DCA! There are drones from hives all around. Now to wait for a queen to fly by…",
+  "Solo algunos zánganos logran aparearse. Los demás vuelven a la colmena al atardecer y lo intentan otro día.":
+    "Only some drones manage to mate. The rest return to the hive at dusk and try again another day.",
+  "Las ACZ están a entre <b>10 y 40 metros de altura</b> y los zánganos las usan <b>año tras año</b>. En una sola ACZ se pueden juntar <b>miles de zánganos</b> de muchas colmenas.":
+    "DCAs are <b>10 to 40 meters above the ground</b> and drones use them <b>year after year</b>. A single DCA can gather <b>thousands of drones</b> from many hives.",
+  "¡Hola! Soy <b>Lía</b>, una reina joven. Nací hace 6 días y hoy salgo por primera vez: ¡es mi <b>vuelo nupcial</b>!":
+    "Hi! I'm <b>Lía</b>, a young queen. I hatched 6 days ago and today I'm going out for the first time: it's my <b>mating flight</b>!",
+  "Cerca de casa hay una ACZ con muchos de sus <b>hermanos</b> (los de rayas <b>amarillas</b>). Por eso las reinas suelen volar <b>más lejos</b>.":
+    "Near home there is a DCA with many of her <b>brothers</b> (the ones with <b>yellow</b> stripes). That's why queens usually fly <b>farther away</b>.",
+  "En la <b>ACZ lejana</b> hay zánganos de muchas colmenas: <b>cada color es una colmena distinta</b>.":
+    "At the <b>far DCA</b> there are drones from many hives: <b>each color is a different hive</b>.",
+  "Mi misión: aparearme con <b>12 zánganos</b> de otras colmenas y <b>volver a casa</b> antes de que se haga tarde.":
+    "My mission: mate with <b>12 drones</b> from other hives and <b>get back home</b> before it gets late.",
+  "Los zánganos la encuentran por su <b>olor</b> (una feromona) y la ven con sus <b>ojos enormes</b>. ¡Cuidado con los pájaros!":
+    "Drones find her by her <b>scent</b> (a pheromone) and spot her with their <b>huge eyes</b>. Watch out for the birds!",
+  "Espermateca":
+    "Spermatheca",
+  "Tarde":
+    "Afternoon",
+  "Ese zángano de rayas amarillas es su <b>hermano</b> 💛. ¡Busquemos zánganos de otras colmenas!":
+    "That yellow-striped drone is her <b>brother</b> 💛. Let's look for drones from other hives!",
+  "¡Apareamiento! El zángano le entrega sus espermatozoides a la reina… y ahí termina su vida: cumplió su misión.":
+    "Mating! The drone gives his sperm to the queen… and his life ends there: he has fulfilled his mission.",
+  "¡La espermateca está llena! Ahora, ¡de vuelta a casa! 🏠":
+    "The spermatheca is full! Now, back home! 🏠",
+  "¡Uy!":
+    "Oops!",
+  "↺ Intentar de nuevo":
+    "↺ Try again",
+  "Los pájaros asustaron mucho a Lía y tuvo que volver a la colmena. Las reinas corren peligros en su vuelo nupcial. ¡Probemos otra vez!":
+    "The birds scared Lía and she had to go back to the hive. Queens face dangers on their mating flight. Let's try again!",
+  "¡Cuidado, un pájaro! Las aves cazan abejas en el aire.":
+    "Watch out, a bird! Birds hunt bees in the air.",
+  "¡Se está haciendo tarde! ☀️ Las reinas vuelven a casa antes de que refresque.":
+    "It's getting late! ☀️ Queens fly home before it cools down.",
+  "Se hizo tarde y empezó a refrescar. Las reinas vuelan solo en las horas cálidas de la tarde. ¡Probemos otra vez!":
+    "It got late and started to cool down. Queens only fly in the warm hours of the afternoon. Let's try again!",
+  "¡En casa!":
+    "Home!",
+  "¡Lo logramos! Me apareé con <b>{a} zánganos</b> de <b>{b} colmenas distintas</b>. ¡Ya puedo ser la mamá de una gran colonia!":
+    "We did it! I mated with <b>{a} drones</b> from <b>{b} different hives</b>. Now I can be the mother of a great colony!",
+  "En la vida real, una reina se aparea con <b>unos 12 a 20 zánganos</b>, en uno o pocos vuelos. Guarda sus espermatozoides en la <b>espermateca</b> y los usa <b>toda su vida</b>, que puede durar varios años.":
+    "In real life, a queen mates with <b>about 12 to 20 drones</b>, in one or a few flights. She stores their sperm in her <b>spermatheca</b> and uses it <b>for her whole life</b>, which can last several years.",
+  "ACZ cercana":
+    "Nearby DCA",
+  "ACZ lejana":
+    "Far DCA",
+  "🏠 ¡Casa!":
+    "🏠 Home!",
+  "Casa":
+    "Home",
+  "¡Volví a casa! Guardé los espermatozoides de mis zánganos en un saquito llamado <b>espermateca</b>. ¡Me alcanzan para toda la vida!":
+    "I'm back home! I stored my drones' sperm in a little sac called the <b>spermatheca</b>. It will last me my whole life!",
+  "A los pocos días, la reina empieza a poner huevos: ¡<b>hasta 2000 por día</b>! Miremos cómo crece la colonia.":
+    "A few days later, the queen starts laying eggs: <b>up to 2,000 a day</b>! Let's watch the colony grow.",
+  "Papás de las obreras:":
+    "Workers' dads:",
+  "Zánganos: solo mamá":
+    "Drones: mom only",
+  "⏩ Más rápido":
+    "⏩ Faster",
+  "▶ Normal":
+    "▶ Normal",
+  "¿Vio los colores? Cada obrera tiene los colores de <b>su papá</b>. Como la reina se apareó con muchos zánganos, ¡la colonia es muy variada!":
+    "See the colors? Each worker has the colors of <b>her dad</b>. Because the queen mated with many drones, the colony is very diverse!",
+  "Esa variedad hace a la colonia <b>más fuerte</b>: resiste mejor las enfermedades y los cambios del clima.":
+    "That variety makes the colony <b>stronger</b>: it copes better with diseases and changes in the weather.",
+  "Y los zánganos nuevos (rayas amarillas) nacieron de <b>huevos sin fecundar</b>: solo tienen mamá. En primavera volarán a una ACZ… ¡y la historia vuelve a empezar!":
+    "And the new drones (yellow stripes) hatched from <b>unfertilized eggs</b>: they only have a mom. In spring they will fly to a DCA… and the story starts all over again!",
+  "¿Jugamos a las preguntas? 🤓":
+    "Shall we play the quiz? 🤓",
+  "¡Sí! ▶":
+    "Yes! ▶",
+  "Pregunta {a} de {b}":
+    "Question {a} of {b}",
+  "¿De qué huevo nace un zángano?":
+    "What kind of egg does a drone hatch from?",
+  "De un huevo sin fecundar (sin papá)":
+    "An unfertilized egg (no dad)",
+  "De un huevo fecundado (con papá)":
+    "A fertilized egg (with a dad)",
+  "De un huevo con jalea real":
+    "An egg with royal jelly",
+  "Los zánganos nacen de huevos sin fecundar: tienen mamá, pero no papá.":
+    "Drones hatch from unfertilized eggs: they have a mom, but no dad.",
+  "¿Dónde se aparean la reina y los zánganos?":
+    "Where do the queen and the drones mate?",
+  "Dentro de la colmena":
+    "Inside the hive",
+  "En el aire, en un área de congregación de zánganos (ACZ)":
+    "In the air, in a drone congregation area (DCA)",
+  "Sobre las flores":
+    "On the flowers",
+  "Se aparean en pleno vuelo, en las ACZ, a entre 10 y 40 metros de altura.":
+    "They mate in mid-flight, in DCAs, 10 to 40 meters above the ground.",
+  "¿Con cuántos zánganos se aparea una reina?":
+    "How many drones does a queen mate with?",
+  "Con uno solo":
+    "Just one",
+  "Con ninguno":
+    "None",
+  "Con muchos: unos 12 a 20":
+    "Many: about 12 to 20",
+  "Se aparea con muchos zánganos de distintas colmenas y guarda sus espermatozoides en la espermateca.":
+    "She mates with many drones from different hives and stores their sperm in her spermatheca.",
+  "¿Qué convierte a una larva en reina?":
+    "What turns a larva into a queen?",
+  "Comer mucha jalea real":
+    "Eating lots of royal jelly",
+  "El color de la celda":
+    "The color of the cell",
+  "Nacer primero que las demás":
+    "Hatching before the others",
+  "Reinas y obreras nacen del mismo tipo de huevo, pero la futura reina come mucha jalea real.":
+    "Queens and workers hatch from the same kind of egg, but the future queen eats lots of royal jelly.",
+  "¿Por qué es bueno que las obreras tengan papás distintos?":
+    "Why is it good for workers to have different dads?",
+  "Porque así son más lindas":
+    "Because it makes them prettier",
+  "Porque la colonia es más fuerte y resiste mejor las enfermedades":
+    "Because the colony is stronger and copes better with diseases",
+  "No importa":
+    "It doesn't matter",
+  "La diversidad genética ayuda a la colonia a enfrentar enfermedades y cambios del ambiente.":
+    "Genetic diversity helps the colony cope with diseases and environmental changes.",
+  "Siguiente pregunta ▶":
+    "Next question ▶",
+  "Ver mi diploma 🏅":
+    "See my diploma 🏅",
+  "Diploma de la colmena":
+    "Hive diploma",
+  "¡Experto o experta en reinas y zánganos!":
+    "Queen and drone expert!",
+  "Respondió bien <b>{a} de {b}</b> preguntas · Total de la aventura: <b>⭐ {c} de 15</b>":
+    "You got <b>{a} of {b}</b> questions right · Adventure total: <b>⭐ {c} of 15</b>",
+  "👑 Hay <b>una reina</b>, la mamá de toda la colonia.":
+    "👑 There is <b>one queen</b>, the mother of the whole colony.",
+  "🥚 Huevo <b>con papá</b> → hembra (obrera o reina). Huevo <b>sin papá</b> → zángano.":
+    "🥚 Egg <b>with a dad</b> → female (worker or queen). Egg <b>without a dad</b> → drone.",
+  "🍯 La <b>jalea real</b> convierte a una larva en reina.":
+    "🍯 <b>Royal jelly</b> turns a larva into a queen.",
+  "☁️ Reinas y zánganos se aparean <b>en el aire</b>, en las <b>ACZ</b>.":
+    "☁️ Queens and drones mate <b>in the air</b>, in <b>DCAs</b>.",
+  "🌈 La reina se aparea con <b>muchos zánganos</b>: así la colonia es más fuerte.":
+    "🌈 The queen mates with <b>many drones</b>: that makes the colony stronger.",
+  "↺ Volver a jugar":
+    "↺ Play again",
+  "📍 Ver las ACZ reales en el mapa":
+    "📍 See the real DCAs on the map"
 };

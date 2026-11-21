@@ -756,16 +756,16 @@ TRAD.pt = {
     "Visitar o site do IER ↗",
   "Algunos de los trabajos que realizamos para productores, cooperativas e instituciones de Argentina y Bolivia. Los informes completos son confidenciales: aquí mostramos solo una vista previa.":
     "Alguns dos trabalhos que realizamos para produtores, cooperativas e instituições da Argentina e da Bolívia. Os relatórios completos são confidenciais: aqui mostramos apenas uma prévia.",
-  "Colmena en vivo: monitoreo de temperatura y humedad | Zánganos Lab":
-    "Colmeia ao vivo: monitoramento de temperatura e umidade | Zánganos Lab",
+  "Colmena sensorizada: monitoreo de temperatura y humedad | Zánganos Lab":
+    "Colmeia sensorizada: monitoramento de temperatura e umidade | Zánganos Lab",
   "Datos en tiempo real de una colmena de Apis mellifera monitoreada por Zánganos Lab con el Kit Apícola IoT: temperatura y humedad del interior, de las crías y del exterior.":
     "Dados em tempo real de uma colmeia de Apis mellifera monitorada pelo Zánganos Lab com o Kit Apícola IoT: temperatura e umidade do interior, da cria e do exterior.",
-  "Colmena en vivo | Zánganos Lab":
-    "Colmeia ao vivo | Zánganos Lab",
+  "Colmena sensorizada | Zánganos Lab":
+    "Colmeia sensorizada | Zánganos Lab",
   "Temperatura y humedad de una colmena monitoreada en tiempo real.":
     "Temperatura e umidade de uma colmeia monitorada em tempo real.",
-  "Colmena en vivo":
-    "Colmeia ao vivo",
+  "Colmena sensorizada":
+    "Colmeia sensorizada",
   "Temperatura y humedad de una colmena de <i>Apis mellifera</i> medidas cada cinco minutos con el Kit Apícola IoT, desarrollado en nuestro laboratorio por Edgardo Díaz.":
     "Temperatura e umidade de uma colmeia de <i>Apis mellifera</i> medidas a cada cinco minutos com o Kit Apícola IoT, desenvolvido em nosso laboratório por Edgardo Díaz.",
   "Conectando…":
@@ -786,8 +786,8 @@ TRAD.pt = {
     "<b>O interior acompanha mais o ambiente.</b> Fora da área de cria, a temperatura varia mais entre o dia e a noite, e a umidade costuma ser alta por causa da respiração das abelhas e da maturação do mel.",
   "<b>Comparar interior y exterior</b> permite ver cuánto aísla y regula la colonia, y detectar problemas como una colonia débil o la pérdida de la reina.":
     "<b>Comparar interior e exterior</b> permite ver quanto a colônia isola e regula o ambiente, e detectar problemas como uma colônia fraca ou a perda da rainha.",
-  "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmena en vivo":
-    "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmeia ao vivo",
+  "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmena sensorizada":
+    "<span class=\"punto-estado\" id=\"home-punto\"></span> Colmeia sensorizada",
   "Ver datos y gráficos":
     "Ver dados e gráficos",
   "hace instantes":
@@ -895,5 +895,387 @@ TRAD.pt = {
   "Volver a los capítulos":
     "Voltar aos capítulos",
   "Escena del juego":
-    "Cena do jogo"
+    "Cena do jogo",
+  "Apóyenos":
+    "Apoie-nos",
+  "Apóyenos: done a Zánganos Lab | Zánganos Lab":
+    "Apoie-nos: doe ao Zánganos Lab | Zánganos Lab",
+  "Apóyenos | Zánganos Lab":
+    "Apoie-nos | Zánganos Lab",
+  "Apoye la investigación de Zánganos Lab (IER-CONICET, Tucumán) sobre los zánganos de Apis mellifera. Su donación financia análisis genéticos, sensores, trabajo de campo y la formación de estudiantes.":
+    "Apoie a pesquisa do Zánganos Lab (IER-CONICET, Tucumán) sobre os zangões de Apis mellifera. Sua doação financia análises genéticas, sensores, trabalho de campo e a formação de estudantes.",
+  "Las abejas no pueden hablar. Su donación, sí.":
+    "As abelhas não podem falar. Sua doação, sim.",
+  "Somos un laboratorio de investigación del IER–CONICET (Tucumán) que estudia a los zánganos de <i>Apis mellifera</i>: su genética, su comportamiento y su papel en la salud de las colmenas. Con RFID, códigos QR, drones, sensores y genética mapeamos las áreas de congregación de zánganos para entender por qué las colmenas prosperan… o colapsan.":
+    "Somos um laboratório de pesquisa do IER–CONICET (Tucumán) que estuda os zangões de <i>Apis mellifera</i>: sua genética, seu comportamento e seu papel na saúde das colmeias. Com RFID, códigos QR, drones, sensores e genética, mapeamos as áreas de congregação de zangões para entender por que as colmeias prosperam… ou colapsam.",
+  "Puede ayudarnos con el monto que pueda. Las donaciones se reciben a través de la plataforma ayudar.ar.":
+    "Qualquer valor ajuda. As doações são recebidas pela plataforma ayudar.ar.",
+  "<span aria-hidden=\"true\">💛</span> Donar en ayudar.ar ↗":
+    "<span aria-hidden=\"true\">💛</span> Doar no ayudar.ar ↗",
+  "<span aria-hidden=\"true\">💛</span> Donar ahora ↗":
+    "<span aria-hidden=\"true\">💛</span> Doar agora ↗",
+  "<span aria-hidden=\"true\">💛</span> Donar ↗":
+    "<span aria-hidden=\"true\">💛</span> Doar ↗",
+  "Logo de Zánganos Lab con un código QR en el chip del engranaje que lleva a zanganoslab.github.io":
+    "Logo do Zánganos Lab com um código QR no chip da engrenagem que leva a zanganoslab.github.io",
+  "Escanee el código del chip para abrir nuestra página.":
+    "Escaneie o código do chip para abrir nosso site.",
+  "¿Para qué usamos su aporte?":
+    "Para que usamos sua contribuição?",
+  "Un código QR y los reactivos para analizar el ADN de un zángano.":
+    "Um código QR e os reagentes para analisar o DNA de um zangão.",
+  "Mantener durante un mes un sensor de la <a href=\"monitoreo.html\">Colmena sensorizada</a> transmitiendo datos.":
+    "Manter por um mês um sensor da <a href=\"monitoreo.html\">Colmeia sensorizada</a> transmitindo dados.",
+  "El combustible de una jornada de campo para revisitar un <a href=\"mapa.html\">área de congregación</a>.":
+    "O combustível de um dia de campo para revisitar uma <a href=\"mapa.html\">área de congregação</a>.",
+  "Los viáticos de un/a estudiante o pasante durante un mes.":
+    "As despesas de um(a) estudante ou estagiário(a) durante um mês.",
+  "Cada tres meses compartimos un boletín con los avances en esta página y en <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>.":
+    "A cada três meses compartilhamos um boletim com os avanços nesta página e no <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>.",
+  "Otras formas de ayudar":
+    "Outras formas de ajudar",
+  "Comparta nuestra página":
+    "Compartilhe nosso site",
+  "Descargue nuestro logo con código QR para usarlo en presentaciones, pósters o folletos. Para que se pueda escanear, imprímalo con al menos 12 cm de ancho.":
+    "Baixe nosso logo com código QR para usar em apresentações, pôsteres ou folhetos. Para que possa ser escaneado, imprima-o com pelo menos 12 cm de largura.",
+  "Descargar PNG":
+    "Baixar PNG",
+  "Descargar SVG":
+    "Baixar SVG",
+  "Colabore con nosotros":
+    "Colabore conosco",
+  "Si es investigador, estudiante, apicultor o forma parte de una institución, podemos trabajar juntos.":
+    "Se você é pesquisador, estudante, apicultor ou faz parte de uma instituição, podemos trabalhar juntos.",
+  "Contactarnos":
+    "Fale conosco",
+  "Síganos":
+    "Siga-nos",
+  "Las novedades del día a día del laboratorio están en Instagram.":
+    "As novidades do dia a dia do laboratório estão no Instagram.",
+  "Gracias por apostar por la ciencia y por las abejas.":
+    "Obrigado por apostar na ciência e nas abelhas.",
+  "Con su aporte financiamos análisis genéticos, sensores, jornadas de campo y la formación de estudiantes.":
+    "Com sua contribuição financiamos análises genéticas, sensores, dias de campo e a formação de estudantes.",
+  "Obrera":
+    "Operária",
+  "Zángano":
+    "Zangão",
+  "Reina":
+    "Rainha",
+  "Silenciar":
+    "Silenciar",
+  "Activar sonido":
+    "Ativar som",
+  "Pantalla completa":
+    "Tela cheia",
+  "Siguiente ▶":
+    "Próximo ▶",
+  "¡Vamos! ▶":
+    "Vamos lá! ▶",
+  "Vidas":
+    "Vidas",
+  "La familia de la colmena":
+    "A família da colmeia",
+  "¿Quién nace de cada celda?":
+    "Quem nasce de cada alvéolo?",
+  "El gran vuelo del zángano":
+    "O grande voo do zangão",
+  "El vuelo nupcial de la reina":
+    "O voo nupcial da rainha",
+  "¡Nace una nueva colonia!":
+    "Nasce uma nova colônia!",
+  "¡Capítulo {n} completado!":
+    "Capítulo {n} concluído!",
+  "Empezar la aventura":
+    "Começar a aventura",
+  "Jugar de nuevo":
+    "Jogar de novo",
+  "Seguir jugando":
+    "Continuar jogando",
+  "Capítulo {n}":
+    "Capítulo {n}",
+  "{n} estrellas":
+    "{n} estrelas",
+  "{n} de 3 estrellas":
+    "{n} de 3 estrelas",
+  "⭐ {n} de 15 estrellas":
+    "⭐ {n} de 15 estrelas",
+  "Zánganos Lab presenta":
+    "Zánganos Lab apresenta",
+  "Descubra cómo nacen las reinas y los zánganos… ¡y qué pasa en el vuelo nupcial!":
+    "Descubra como nascem as rainhas e os zangões… e o que acontece no voo nupcial!",
+  "Siguiente capítulo ▶":
+    "Próximo capítulo ▶",
+  "↺ Repetir":
+    "↺ Repetir",
+  "Capítulos":
+    "Capítulos",
+  "👑 Toque a la <b>reina</b>: es la abeja más larga":
+    "👑 Toque na <b>rainha</b>: é a abelha mais comprida",
+  "👀 Toque a los <b>zánganos</b>: ojos enormes y cuerpo redondo · <b>{a} / {b}</b>":
+    "👀 Toque nos <b>zangões</b>: olhos enormes e corpo redondo · <b>{a} / {b}</b>",
+  "¡Hola! Soy <b>Meli</b>, una abeja obrera. ¡Bienvenidos a nuestra colmena!":
+    "Olá! Eu sou a <b>Meli</b>, uma abelha operária. Bem-vindos à nossa colmeia!",
+  "En una colmena viven <b>tres tipos de abejas</b>. Conozcámoslas.":
+    "Em uma colmeia vivem <b>três tipos de abelhas</b>. Vamos conhecê-las.",
+  "La reina":
+    "A rainha",
+  "Hay <b>una sola</b>. Es la <b>mamá de toda la colonia</b>: pone todos los huevos. Su abdomen es <b>largo</b>.":
+    "Há <b>só uma</b>. Ela é a <b>mãe de toda a colônia</b>: põe todos os ovos. Seu abdômen é <b>comprido</b>.",
+  "Las obreras":
+    "As operárias",
+  "Son <b>miles</b> y todas son <b>hembras</b>. Limpian, cuidan a las crías, hacen la miel y defienden la colmena con su <b>aguijón</b>.":
+    "São <b>milhares</b> e todas são <b>fêmeas</b>. Limpam, cuidam das crias, fazem o mel e defendem a colmeia com o <b>ferrão</b>.",
+  "Los zánganos":
+    "Os zangões",
+  "Son los <b>machos</b>. Tienen <b>ojos enormes</b>, cuerpo redondo y <b>no tienen aguijón</b>. Su misión: aparearse con una reina.":
+    "São os <b>machos</b>. Têm <b>olhos enormes</b>, corpo redondo e <b>não têm ferrão</b>. A missão deles: acasalar com uma rainha.",
+  "¡A buscarlas! ▶":
+    "Vamos procurá-las! ▶",
+  "¡La reina!":
+    "A rainha!",
+  "¡Muy bien! Le ponemos una corona para no perderla de vista (las reinas de verdad no tienen).":
+    "Muito bem! Vamos colocar uma coroa nela para não perdê-la de vista (as rainhas de verdade não têm).",
+  "Ese es un zángano: mire sus ojos enormes. La reina es más larga.":
+    "Esse é um zangão: veja os olhos enormes. A rainha é mais comprida.",
+  "Esa es una obrera. La reina es más grande y su abdomen es más largo.":
+    "Essa é uma operária. A rainha é maior e seu abdômen é mais comprido.",
+  "¡Zángano!":
+    "Zangão!",
+  "¡Excelente! Ya conoce a toda la familia: <b>una reina</b>, <b>miles de obreras</b> y, en primavera y verano, <b>cientos de zánganos</b>.":
+    "Excelente! Agora você conhece toda a família: <b>uma rainha</b>, <b>milhares de operárias</b> e, na primavera e no verão, <b>centenas de zangões</b>.",
+  "En una colmena fuerte puede haber entre <b>20 000 y 60 000 obreras</b>, algunos cientos o miles de zánganos… ¡y una sola reina!":
+    "Uma colmeia forte pode ter entre <b>20 000 e 60 000 operárias</b>, algumas centenas ou milhares de zangões… e uma só rainha!",
+  "Esa es una obrera: es más chica y tiene aguijón. Los zánganos tienen ojos enormes.":
+    "Essa é uma operária: é menor e tem ferrão. Os zangões têm olhos enormes.",
+  "👑 Reina":
+    "👑 Rainha",
+  "✓ Zángano":
+    "✓ Zangão",
+  "La reina pone <b>un huevo en cada celda</b> del panal. Pero las celdas no son todas iguales…":
+    "A rainha põe <b>um ovo em cada alvéolo</b> do favo. Mas os alvéolos não são todos iguais…",
+  "Según la celda, nace una abeja distinta. ¿Adivinamos qué abeja nacerá en cada una?":
+    "Dependendo do alvéolo, nasce uma abelha diferente. Vamos adivinhar qual abelha vai nascer em cada um?",
+  "Celda {a} de {b}":
+    "Alvéolo {a} de {b}",
+  "¿Qué abeja nacerá de esta celda?":
+    "Qual abelha vai nascer deste alvéolo?",
+  "¡Correcto! 🎉":
+    "Correto! 🎉",
+  "¡Casi! Era: {x}":
+    "Quase! Era: {x}",
+  "¡Casi!":
+    "Quase!",
+  "Siguiente celda ▶":
+    "Próximo alvéolo ▶",
+  "Terminar ▶":
+    "Terminar ▶",
+  "Celda chica":
+    "Alvéolo pequeno",
+  "Celda grande":
+    "Alvéolo grande",
+  "Celda real (con forma de maní)":
+    "Realeira (em forma de amendoim)",
+  "chica":
+    "pequeno",
+  "grande":
+    "grande",
+  "En las <b>celdas chicas</b> la reina pone un <b>huevo fecundado</b> (con papá). De él nace una <b>obrera</b>, que es hembra. Tarda <b>21 días</b>.":
+    "Nos <b>alvéolos pequenos</b> a rainha põe um <b>ovo fecundado</b> (com pai). Dele nasce uma <b>operária</b>, que é fêmea. Leva <b>21 dias</b>.",
+  "En las <b>celdas grandes</b> la reina pone un <b>huevo sin fecundar</b> (sin papá). De él nace un <b>zángano</b>, que es macho. Tarda <b>24 días</b>. ¡Los zánganos tienen mamá, pero no papá!":
+    "Nos <b>alvéolos grandes</b> a rainha põe um <b>ovo não fecundado</b> (sem pai). Dele nasce um <b>zangão</b>, que é macho. Leva <b>24 dias</b>. Os zangões têm mãe, mas não têm pai!",
+  "La <b>celda real</b> tiene un huevo fecundado, igual que una obrera. Pero la larva come <b>mucha jalea real</b>… ¡y se convierte en <b>reina</b>! Tarda solo <b>16 días</b>.":
+    "A <b>realeira</b> tem um ovo fecundado, igual ao de uma operária. Mas a larva come <b>muita geleia real</b>… e vira <b>rainha</b>! Leva só <b>16 dias</b>.",
+  "La reina y las obreras nacen del <b>mismo tipo de huevo</b>. Lo que convierte a una larva en reina es la <b>jalea real</b>, un alimento especial que preparan las obreras jóvenes.":
+    "A rainha e as operárias nascem do <b>mesmo tipo de ovo</b>. O que transforma uma larva em rainha é a <b>geleia real</b>, um alimento especial preparado pelas operárias jovens.",
+  "Tapa abombada":
+    "Opérculo abaulado",
+  "Tapa de cera":
+    "Opérculo de cera",
+  "Huevo":
+    "Ovo",
+  "Larva":
+    "Larva",
+  "Pupa (celda tapada)":
+    "Pupa (alvéolo operculado)",
+  "¡Nació!":
+    "Nasceu!",
+  "día {n}":
+    "dia {n}",
+  "¡Hola! Soy <b>Zumbo</b>, un zángano. Ya tengo 12 días y estoy listo para mi gran vuelo.":
+    "Olá! Eu sou o <b>Zumbo</b>, um zangão. Já tenho 12 dias e estou pronto para o meu grande voo.",
+  "Los zánganos salen en las <b>tardes de sol</b>, cuando hace calor y hay poco viento.":
+    "Os zangões saem nas <b>tardes de sol</b>, quando faz calor e há pouco vento.",
+  "Antes de salir, comen <b>miel</b> de la colmena para tener energía. Primero, ayudemos a Zumbo a comer <b>3 gotas de miel</b>.":
+    "Antes de sair, comem <b>mel</b> da colmeia para ter energia. Primeiro, vamos ajudar o Zumbo a comer <b>3 gotas de mel</b>.",
+  "Después volaré alto, hasta un <b>área de congregación de zánganos (ACZ)</b>: un lugar del cielo donde nos juntamos zánganos de muchas colmenas.":
+    "Depois vou voar alto, até uma <b>área de congregação de zangões (ACZ)</b>: um lugar no céu onde se reúnem zangões de muitas colmeias.",
+  "Mueva a Zumbo con el <b>dedo</b>, el <b>mouse</b> o las <b>flechas</b> del teclado. ¡Cuidado con los pájaros!":
+    "Mova o Zumbo com o <b>dedo</b>, o <b>mouse</b> ou as <b>setas</b> do teclado. Cuidado com os pássaros!",
+  "Miel":
+    "Mel",
+  "¡Todavía no! Primero hay que comer las 3 gotas de miel 🍯":
+    "Ainda não! Primeiro é preciso comer as 3 gotas de mel 🍯",
+  "+ miel":
+    "+ mel",
+  "¡Panza llena! Ahora, ¡a volar alto hasta la ACZ! ↗":
+    "Barriga cheia! Agora, voar alto até a ACZ! ↗",
+  "Zumbo se quedó sin energía y volvió a la colmena. ¡A comer más miel!":
+    "O Zumbo ficou sem energia e voltou para a colmeia. Hora de comer mais mel!",
+  "¡Uy, un pájaro! Algunas aves cazan zánganos en el aire. Zumbo se asustó y volvió a casa.":
+    "Opa, um pássaro! Algumas aves caçam zangões no ar. O Zumbo se assustou e voltou para casa.",
+  "ACZ":
+    "ACZ",
+  "¡Llegó a la ACZ!":
+    "Chegou à ACZ!",
+  "¡Llegué a la ACZ! Hay zánganos de colmenas de todos lados. Ahora, a esperar que pase una reina…":
+    "Cheguei à ACZ! Há zangões de colmeias de todos os lados. Agora é esperar uma rainha passar…",
+  "Solo algunos zánganos logran aparearse. Los demás vuelven a la colmena al atardecer y lo intentan otro día.":
+    "Só alguns zangões conseguem acasalar. Os outros voltam para a colmeia ao entardecer e tentam outro dia.",
+  "Las ACZ están a entre <b>10 y 40 metros de altura</b> y los zánganos las usan <b>año tras año</b>. En una sola ACZ se pueden juntar <b>miles de zánganos</b> de muchas colmenas.":
+    "As ACZ ficam entre <b>10 e 40 metros de altura</b> e os zangões as usam <b>ano após ano</b>. Em uma só ACZ podem se reunir <b>milhares de zangões</b> de muitas colmeias.",
+  "¡Hola! Soy <b>Lía</b>, una reina joven. Nací hace 6 días y hoy salgo por primera vez: ¡es mi <b>vuelo nupcial</b>!":
+    "Olá! Eu sou a <b>Lía</b>, uma rainha jovem. Nasci há 6 dias e hoje saio pela primeira vez: é o meu <b>voo nupcial</b>!",
+  "Cerca de casa hay una ACZ con muchos de sus <b>hermanos</b> (los de rayas <b>amarillas</b>). Por eso las reinas suelen volar <b>más lejos</b>.":
+    "Perto de casa há uma ACZ com muitos de seus <b>irmãos</b> (os de listras <b>amarelas</b>). Por isso as rainhas costumam voar <b>mais longe</b>.",
+  "En la <b>ACZ lejana</b> hay zánganos de muchas colmenas: <b>cada color es una colmena distinta</b>.":
+    "Na <b>ACZ distante</b> há zangões de muitas colmeias: <b>cada cor é uma colmeia diferente</b>.",
+  "Mi misión: aparearme con <b>12 zánganos</b> de otras colmenas y <b>volver a casa</b> antes de que se haga tarde.":
+    "Minha missão: acasalar com <b>12 zangões</b> de outras colmeias e <b>voltar para casa</b> antes que fique tarde.",
+  "Los zánganos la encuentran por su <b>olor</b> (una feromona) y la ven con sus <b>ojos enormes</b>. ¡Cuidado con los pájaros!":
+    "Os zangões a encontram pelo <b>cheiro</b> (um feromônio) e a veem com seus <b>olhos enormes</b>. Cuidado com os pássaros!",
+  "Espermateca":
+    "Espermateca",
+  "Tarde":
+    "Tarde",
+  "Ese zángano de rayas amarillas es su <b>hermano</b> 💛. ¡Busquemos zánganos de otras colmenas!":
+    "Esse zangão de listras amarelas é seu <b>irmão</b> 💛. Vamos procurar zangões de outras colmeias!",
+  "¡Apareamiento! El zángano le entrega sus espermatozoides a la reina… y ahí termina su vida: cumplió su misión.":
+    "Acasalamento! O zangão entrega seus espermatozoides à rainha… e aí termina sua vida: cumpriu sua missão.",
+  "¡La espermateca está llena! Ahora, ¡de vuelta a casa! 🏠":
+    "A espermateca está cheia! Agora, de volta para casa! 🏠",
+  "¡Uy!":
+    "Opa!",
+  "↺ Intentar de nuevo":
+    "↺ Tentar de novo",
+  "Los pájaros asustaron mucho a Lía y tuvo que volver a la colmena. Las reinas corren peligros en su vuelo nupcial. ¡Probemos otra vez!":
+    "Os pássaros assustaram muito a Lía e ela teve que voltar para a colmeia. As rainhas correm perigos no voo nupcial. Vamos tentar de novo!",
+  "¡Cuidado, un pájaro! Las aves cazan abejas en el aire.":
+    "Cuidado, um pássaro! As aves caçam abelhas no ar.",
+  "¡Se está haciendo tarde! ☀️ Las reinas vuelven a casa antes de que refresque.":
+    "Está ficando tarde! ☀️ As rainhas voltam para casa antes que esfrie.",
+  "Se hizo tarde y empezó a refrescar. Las reinas vuelan solo en las horas cálidas de la tarde. ¡Probemos otra vez!":
+    "Ficou tarde e começou a esfriar. As rainhas só voam nas horas quentes da tarde. Vamos tentar de novo!",
+  "¡En casa!":
+    "Em casa!",
+  "¡Lo logramos! Me apareé con <b>{a} zánganos</b> de <b>{b} colmenas distintas</b>. ¡Ya puedo ser la mamá de una gran colonia!":
+    "Conseguimos! Acasalei com <b>{a} zangões</b> de <b>{b} colmeias diferentes</b>. Agora posso ser a mãe de uma grande colônia!",
+  "En la vida real, una reina se aparea con <b>unos 12 a 20 zánganos</b>, en uno o pocos vuelos. Guarda sus espermatozoides en la <b>espermateca</b> y los usa <b>toda su vida</b>, que puede durar varios años.":
+    "Na vida real, uma rainha acasala com <b>cerca de 12 a 20 zangões</b>, em um ou poucos voos. Ela guarda os espermatozoides na <b>espermateca</b> e os usa <b>a vida toda</b>, que pode durar vários anos.",
+  "ACZ cercana":
+    "ACZ próxima",
+  "ACZ lejana":
+    "ACZ distante",
+  "🏠 ¡Casa!":
+    "🏠 Casa!",
+  "Casa":
+    "Casa",
+  "¡Volví a casa! Guardé los espermatozoides de mis zánganos en un saquito llamado <b>espermateca</b>. ¡Me alcanzan para toda la vida!":
+    "Voltei para casa! Guardei os espermatozoides dos meus zangões em um saquinho chamado <b>espermateca</b>. Vão durar a vida toda!",
+  "A los pocos días, la reina empieza a poner huevos: ¡<b>hasta 2000 por día</b>! Miremos cómo crece la colonia.":
+    "Poucos dias depois, a rainha começa a pôr ovos: <b>até 2000 por dia</b>! Vamos ver a colônia crescer.",
+  "Papás de las obreras:":
+    "Pais das operárias:",
+  "Zánganos: solo mamá":
+    "Zangões: só mãe",
+  "⏩ Más rápido":
+    "⏩ Mais rápido",
+  "▶ Normal":
+    "▶ Normal",
+  "¿Vio los colores? Cada obrera tiene los colores de <b>su papá</b>. Como la reina se apareó con muchos zánganos, ¡la colonia es muy variada!":
+    "Viu as cores? Cada operária tem as cores do <b>seu pai</b>. Como a rainha acasalou com muitos zangões, a colônia é muito variada!",
+  "Esa variedad hace a la colonia <b>más fuerte</b>: resiste mejor las enfermedades y los cambios del clima.":
+    "Essa variedade deixa a colônia <b>mais forte</b>: ela resiste melhor às doenças e às mudanças do clima.",
+  "Y los zánganos nuevos (rayas amarillas) nacieron de <b>huevos sin fecundar</b>: solo tienen mamá. En primavera volarán a una ACZ… ¡y la historia vuelve a empezar!":
+    "E os novos zangões (listras amarelas) nasceram de <b>ovos não fecundados</b>: só têm mãe. Na primavera vão voar até uma ACZ… e a história começa de novo!",
+  "¿Jugamos a las preguntas? 🤓":
+    "Vamos jogar as perguntas? 🤓",
+  "¡Sí! ▶":
+    "Sim! ▶",
+  "Pregunta {a} de {b}":
+    "Pergunta {a} de {b}",
+  "¿De qué huevo nace un zángano?":
+    "De que ovo nasce um zangão?",
+  "De un huevo sin fecundar (sin papá)":
+    "De um ovo não fecundado (sem pai)",
+  "De un huevo fecundado (con papá)":
+    "De um ovo fecundado (com pai)",
+  "De un huevo con jalea real":
+    "De um ovo com geleia real",
+  "Los zánganos nacen de huevos sin fecundar: tienen mamá, pero no papá.":
+    "Os zangões nascem de ovos não fecundados: têm mãe, mas não têm pai.",
+  "¿Dónde se aparean la reina y los zánganos?":
+    "Onde a rainha e os zangões acasalam?",
+  "Dentro de la colmena":
+    "Dentro da colmeia",
+  "En el aire, en un área de congregación de zánganos (ACZ)":
+    "No ar, em uma área de congregação de zangões (ACZ)",
+  "Sobre las flores":
+    "Sobre as flores",
+  "Se aparean en pleno vuelo, en las ACZ, a entre 10 y 40 metros de altura.":
+    "Acasalam em pleno voo, nas ACZ, entre 10 e 40 metros de altura.",
+  "¿Con cuántos zánganos se aparea una reina?":
+    "Com quantos zangões uma rainha acasala?",
+  "Con uno solo":
+    "Com um só",
+  "Con ninguno":
+    "Com nenhum",
+  "Con muchos: unos 12 a 20":
+    "Com muitos: cerca de 12 a 20",
+  "Se aparea con muchos zánganos de distintas colmenas y guarda sus espermatozoides en la espermateca.":
+    "Ela acasala com muitos zangões de colmeias diferentes e guarda os espermatozoides na espermateca.",
+  "¿Qué convierte a una larva en reina?":
+    "O que transforma uma larva em rainha?",
+  "Comer mucha jalea real":
+    "Comer muita geleia real",
+  "El color de la celda":
+    "A cor do alvéolo",
+  "Nacer primero que las demás":
+    "Nascer antes das outras",
+  "Reinas y obreras nacen del mismo tipo de huevo, pero la futura reina come mucha jalea real.":
+    "Rainhas e operárias nascem do mesmo tipo de ovo, mas a futura rainha come muita geleia real.",
+  "¿Por qué es bueno que las obreras tengan papás distintos?":
+    "Por que é bom que as operárias tenham pais diferentes?",
+  "Porque así son más lindas":
+    "Porque assim são mais bonitas",
+  "Porque la colonia es más fuerte y resiste mejor las enfermedades":
+    "Porque a colônia fica mais forte e resiste melhor às doenças",
+  "No importa":
+    "Não importa",
+  "La diversidad genética ayuda a la colonia a enfrentar enfermedades y cambios del ambiente.":
+    "A diversidade genética ajuda a colônia a enfrentar doenças e mudanças do ambiente.",
+  "Siguiente pregunta ▶":
+    "Próxima pergunta ▶",
+  "Ver mi diploma 🏅":
+    "Ver meu diploma 🏅",
+  "Diploma de la colmena":
+    "Diploma da colmeia",
+  "¡Experto o experta en reinas y zánganos!":
+    "Especialista em rainhas e zangões!",
+  "Respondió bien <b>{a} de {b}</b> preguntas · Total de la aventura: <b>⭐ {c} de 15</b>":
+    "Você acertou <b>{a} de {b}</b> perguntas · Total da aventura: <b>⭐ {c} de 15</b>",
+  "👑 Hay <b>una reina</b>, la mamá de toda la colonia.":
+    "👑 Há <b>uma rainha</b>, a mãe de toda a colônia.",
+  "🥚 Huevo <b>con papá</b> → hembra (obrera o reina). Huevo <b>sin papá</b> → zángano.":
+    "🥚 Ovo <b>com pai</b> → fêmea (operária ou rainha). Ovo <b>sem pai</b> → zangão.",
+  "🍯 La <b>jalea real</b> convierte a una larva en reina.":
+    "🍯 A <b>geleia real</b> transforma uma larva em rainha.",
+  "☁️ Reinas y zánganos se aparean <b>en el aire</b>, en las <b>ACZ</b>.":
+    "☁️ Rainhas e zangões acasalam <b>no ar</b>, nas <b>ACZ</b>.",
+  "🌈 La reina se aparea con <b>muchos zánganos</b>: así la colonia es más fuerte.":
+    "🌈 A rainha acasala com <b>muitos zangões</b>: assim a colônia fica mais forte.",
+  "↺ Volver a jugar":
+    "↺ Jogar de novo",
+  "📍 Ver las ACZ reales en el mapa":
+    "📍 Ver as ACZ reais no mapa"
 };

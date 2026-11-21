@@ -591,10 +591,43 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* ---------- Apóyenos (donaciones) ---------- */
+.menu a.menu-apoyo { font-weight: 600; }
+.menu a.menu-apoyo::before { content: "♥"; color: #e0a800; margin-right: 5px; }
+.btn-donar { background: var(--amarillo); border-color: var(--amarillo); color: var(--cafe); font-size: 1.05rem; padding: .8em 1.6em; }
+.btn-donar:hover { background: var(--cafe); border-color: var(--cafe); color: var(--amarillo); }
+.apoyo-banda { background: var(--cafe); color: #fff; padding: clamp(40px, 6vw, 64px) 0; }
+.apoyo-banda .eyebrow { color: var(--amarillo); }
+.apoyo-banda h2 { color: #fff; font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+.apoyo-banda p { color: #e6dcd8; margin: 0; }
+.apoyo-banda-grid { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+.apoyo-banda-botones { display: flex; flex-wrap: wrap; gap: 12px; }
+.apoyo-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+.apoyo-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); }
+.apoyo-logo { margin: 0; text-align: center; }
+.apoyo-logo img { width: min(360px, 80vw); height: auto; }
+.apoyo-logo figcaption { font-size: .9rem; color: var(--cafe-suave); margin-top: 8px; }
+.apoyo-titulo { margin-top: clamp(40px, 6vw, 64px); }
+.aportes { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+.aporte { background: var(--blanco); border: 1px solid var(--borde); border-top: 4px solid var(--amarillo); border-radius: var(--radio); padding: 20px; }
+.aporte-icono { font-size: 1.8rem; display: block; }
+.aporte b { display: block; font-family: var(--tech); font-size: 1.7rem; margin: 4px 0 6px; }
+.aporte p { margin: 0; color: var(--cafe-suave); }
+.apoyo-nota { margin-top: 18px; color: var(--cafe-suave); }
+.apoyo-formas .card p { margin-bottom: 1em; }
+.apoyo-descargas { display: flex; flex-wrap: wrap; gap: 8px; }
+.apoyo-final { margin-top: clamp(40px, 6vw, 64px); padding: 28px; border-radius: var(--radio); background: var(--fondo-alt); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+.apoyo-final p { margin: 0; font-size: 1.2rem; font-weight: 600; }
+@media (max-width: 900px) {
+  .apoyo-banda-grid, .apoyo-hero { grid-template-columns: 1fr; }
+  .apoyo-logo { order: 1; }
+  .apoyo-logo img { width: 220px; }
+}
+
 /* ---------- Responsive ---------- */
 .menu a { white-space: nowrap; }
 /* Menú desplegable: se activa antes que el resto del diseño móvil porque el menú tiene 9 enlaces y el selector de idioma */
-@media (max-width: 1240px) {
+@media (max-width: 1340px) {
   .idiomas { margin-left: auto; }
   .nav-toggle { display: block; }
   .menu {
