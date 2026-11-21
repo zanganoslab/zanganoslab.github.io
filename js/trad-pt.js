@@ -1277,5 +1277,7 @@ TRAD.pt = {
   "↺ Volver a jugar":
     "↺ Jogar de novo",
   "📍 Ver las ACZ reales en el mapa":
-    "📍 Ver as ACZ reais no mapa"
+    "📍 Ver as ACZ reais no mapa",
+  "Isologo de Zánganos Lab: un zángano dentro de un hexágono, con ADN en las alas y un chip con un código QR en el tórax":
+    "Logotipo do Zánganos Lab: um zangão dentro de um hexágono, com DNA nas asas e um chip com um código QR no tórax"
 };

@@ -1275,5 +1275,7 @@ TRAD.en = {
   "↺ Volver a jugar":
     "↺ Play again",
   "📍 Ver las ACZ reales en el mapa":
-    "📍 See the real DCAs on the map"
+    "📍 See the real DCAs on the map",
+  "Isologo de Zánganos Lab: un zángano dentro de un hexágono, con ADN en las alas y un chip con un código QR en el tórax":
+    "Zánganos Lab logo: a drone inside a hexagon, with DNA on its wings and a chip with a QR code on its thorax"
 };
