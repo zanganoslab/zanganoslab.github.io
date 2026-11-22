@@ -902,8 +902,8 @@ TRAD.en = {
     "Support us | Zánganos Lab",
   "Apoye la investigación de Zánganos Lab (IER-CONICET, Tucumán) sobre los zánganos de Apis mellifera. Su donación financia análisis genéticos, sensores, trabajo de campo y la formación de estudiantes.":
     "Support the research of Zánganos Lab (IER-CONICET, Tucumán) on Apis mellifera drones. Your donation funds genetic analyses, sensors, fieldwork and student training.",
-  "Las abejas no pueden hablar. Su donación, sí.":
-    "Bees cannot speak. Your donation can.",
+  "Ayúdenos a seguir investigando a las abejas":
+    "Help us keep researching bees",
   "Somos un laboratorio de investigación del IER–CONICET (Tucumán) que estudia a los zánganos de <i>Apis mellifera</i>: su genética, su comportamiento y su papel en la salud de las colmenas. Con RFID, códigos QR, drones, sensores y genética mapeamos las áreas de congregación de zánganos para entender por qué las colmenas prosperan… o colapsan.":
     "We are a research laboratory at IER–CONICET (Tucumán) that studies <i>Apis mellifera</i> drones: their genetics, their behavior and their role in colony health. Using RFID, QR codes, drones, sensors and genetics, we map drone congregation areas to understand why colonies thrive… or collapse.",
   "Puede ayudarnos con el monto que pueda. Las donaciones se reciben a través de la plataforma ayudar.ar.":

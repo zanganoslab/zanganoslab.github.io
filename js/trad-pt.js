@@ -904,8 +904,8 @@ TRAD.pt = {
     "Apoie-nos | Zánganos Lab",
   "Apoye la investigación de Zánganos Lab (IER-CONICET, Tucumán) sobre los zánganos de Apis mellifera. Su donación financia análisis genéticos, sensores, trabajo de campo y la formación de estudiantes.":
     "Apoie a pesquisa do Zánganos Lab (IER-CONICET, Tucumán) sobre os zangões de Apis mellifera. Sua doação financia análises genéticas, sensores, trabalho de campo e a formação de estudantes.",
-  "Las abejas no pueden hablar. Su donación, sí.":
-    "As abelhas não podem falar. Sua doação, sim.",
+  "Ayúdenos a seguir investigando a las abejas":
+    "Ajude-nos a continuar pesquisando as abelhas",
   "Somos un laboratorio de investigación del IER–CONICET (Tucumán) que estudia a los zánganos de <i>Apis mellifera</i>: su genética, su comportamiento y su papel en la salud de las colmenas. Con RFID, códigos QR, drones, sensores y genética mapeamos las áreas de congregación de zánganos para entender por qué las colmenas prosperan… o colapsan.":
     "Somos um laboratório de pesquisa do IER–CONICET (Tucumán) que estuda os zangões de <i>Apis mellifera</i>: sua genética, seu comportamento e seu papel na saúde das colmeias. Com RFID, códigos QR, drones, sensores e genética, mapeamos as áreas de congregação de zangões para entender por que as colmeias prosperam… ou colapsam.",
   "Puede ayudarnos con el monto que pueda. Las donaciones se reciben a través de la plataforma ayudar.ar.":
