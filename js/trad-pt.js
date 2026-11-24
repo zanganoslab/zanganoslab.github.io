@@ -1279,5 +1279,15 @@ TRAD.pt = {
   "📍 Ver las ACZ reales en el mapa":
     "📍 Ver as ACZ reais no mapa",
   "Isologo de Zánganos Lab: un zángano dentro de un hexágono, con ADN en las alas y un chip con un código QR en el tórax":
-    "Logotipo do Zánganos Lab: um zangão dentro de um hexágono, com DNA nas asas e um chip com um código QR no tórax"
+    "Logotipo do Zánganos Lab: um zangão dentro de um hexágono, com DNA nas asas e um chip com um código QR no tórax",
+  "¡Sin zánganos no hay abejas! Con su donación podemos estudiarlos.":
+    "Sem zangões não há abelhas! Com sua doação podemos estudá-los.",
+  "Puede ayudarnos con el monto que pueda: desde Argentina, a través de ayudar.ar; desde el exterior, con PayPal.":
+    "Qualquer valor ajuda: da Argentina, pelo ayudar.ar; do exterior, pelo PayPal.",
+  "Donar con PayPal ↗":
+    "Doar com PayPal ↗",
+  "Los viáticos de un/a estudiante o pasante durante un mes (¡y recibe una miel de regalo!).":
+    "As despesas de um(a) estudante ou estagiário(a) durante um mês (e você ganha um mel de presente!).",
+  "Montos en pesos argentinos. Cada tres meses compartimos un boletín con los avances en esta página y en <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>.":
+    "Valores em pesos argentinos. A cada três meses compartilhamos um boletim com os avanços nesta página e no <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>."
 };

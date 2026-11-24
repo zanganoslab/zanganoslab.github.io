@@ -1277,5 +1277,15 @@ TRAD.en = {
   "📍 Ver las ACZ reales en el mapa":
     "📍 See the real DCAs on the map",
   "Isologo de Zánganos Lab: un zángano dentro de un hexágono, con ADN en las alas y un chip con un código QR en el tórax":
-    "Zánganos Lab logo: a drone inside a hexagon, with DNA on its wings and a chip with a QR code on its thorax"
+    "Zánganos Lab logo: a drone inside a hexagon, with DNA on its wings and a chip with a QR code on its thorax",
+  "¡Sin zánganos no hay abejas! Con su donación podemos estudiarlos.":
+    "No drones, no bees! Your donation helps us study them.",
+  "Puede ayudarnos con el monto que pueda: desde Argentina, a través de ayudar.ar; desde el exterior, con PayPal.":
+    "Any amount helps: from Argentina, through ayudar.ar; from abroad, with PayPal.",
+  "Donar con PayPal ↗":
+    "Donate with PayPal ↗",
+  "Los viáticos de un/a estudiante o pasante durante un mes (¡y recibe una miel de regalo!).":
+    "One month of travel expenses for a student or intern (and you get a jar of honey as a gift!).",
+  "Montos en pesos argentinos. Cada tres meses compartimos un boletín con los avances en esta página y en <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>.":
+    "Amounts in Argentine pesos. Every three months we share a newsletter with our progress on this page and on <a href=\"https://www.instagram.com/zanganoslab.ier/\" target=\"_blank\" rel=\"noopener\">Instagram</a>."
 };

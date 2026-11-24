@@ -596,6 +596,10 @@ a.nota:hover h3 { text-decoration: underline; text-decoration-color: var(--amari
 .menu a.menu-apoyo::before { content: "♥"; color: #e0a800; margin-right: 5px; }
 .btn-donar { background: var(--amarillo); border-color: var(--amarillo); color: var(--cafe); font-size: 1.05rem; padding: .8em 1.6em; }
 .btn-donar:hover { background: var(--cafe); border-color: var(--cafe); color: var(--amarillo); }
+.btn-paypal { background: #fff; border-color: #fff; color: #003087; font-size: 1.05rem; padding: .8em 1.6em; }
+.btn-paypal:hover { background: #003087; border-color: #003087; color: #fff; }
+.apoyo-hero .btn-paypal, .apoyo-final .btn-paypal { border-color: #003087; }
+.apoyo-botones { display: flex; flex-wrap: wrap; gap: 12px; }
 .apoyo-banda { background: var(--cafe); color: #fff; padding: clamp(40px, 6vw, 64px) 0; }
 .apoyo-banda .eyebrow { color: var(--amarillo); }
 .apoyo-banda h2 { color: #fff; font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
